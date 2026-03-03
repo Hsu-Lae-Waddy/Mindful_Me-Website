@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #d0f5f5;
+    font-family: 'Noto Sans Myanmar', sans-serif;
+}
+.HomeSection h1{
+    font-size: 2rem;
+}
+.headerForMindFul{
+    font: 2em 'Courier New';
+    justify-self: center;
+    padding: 20px;
+    margin: 10px;
+    background-color: #5fe8b2;
+    border-radius: 10px 40px;
+}
+.mmbtn{
+    justify-self: end;
+    margin-right: 40px;
+}
+.btnInHome{
+    padding: 10px;
+    border-radius: 40px;
+    background-color: #9edbc3;
+    font: 1em  monospace;
+    justify-items: center;
+}
+.HomeSection{
+    line-height: 2.5rem;
+    justify-self: center;
+    padding: 20px;
+    margin: 20px;
+}
+.BoxForQuickExercise{
+    justify-self: center;
+    background-color: aliceblue;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 20px 60px;
+    border: 3px solid #9edbc3;
+    line-height: 1.3rem;
+}
+.cardsExercise{
+    display: flex;
+}
+.exercise1{
+    width: 30%;
+    background-color: #9edbc3;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 0px 50px 0px 0px;
+     border-bottom: 3px solid #1a2c25;
+}
+
+footer{
+   text-align: center;
+   padding: 20px;
+   background-color: #9edbc3;
+}
+/* Modal background */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); 
+}
+
+/* Modal box */
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+}

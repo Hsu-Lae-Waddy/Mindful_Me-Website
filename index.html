@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindFulMe</title>
+    <link rel="stylesheet" href="style.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/17d5dc0279.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="headerForMindFul">
+    <ul >
+       MindFul Me<i class="fa-regular fa-heart"></i>
+    </ul>
+    </header>
+    <div class="mmbtn"> 
+    <button id="langToggle" class="bg-white px-4 py-2 rounded-full text-sm">
+        မြန်မာ
+    </button></div>
+    <section class="HomeSection"> 
+    <h1  data-key="heroTitle">You're Not Alone.</h1>
+    <h3 data-key="heroSubtitle" class="transition-colors text-[#5a7d65]">A safe , comfort space for emotional support.</h3>
+    <button data-key="ReadingArticles" class="btnInHome  bg-[#8f5cdb] hover:bg-[#5f27b3]">Reading Articles</button>
+    <button data-key="EmotionalOutlets" class="btnInHome bg-[#34b1e3] hover:bg-[#056d96]">Emotional Outlets</button>
+    </section>
+
+    <section class="BoxForQuickExercise">
+    <h1 data-key="feelingrightnow" class="p-2">Feeling overwhelmed right now?</h1>
+    <h2 data-key="quickExercise" class="transition-colors text-[#5a7d65] p-2">Try one of these quick exercises</h2>
+    <div class="cardsExercise" >
+        <div id="breathingCard" class="exercise1 bg-[#e37dcd] hover:bg-[#e6a4ed] cursor-pointer">
+            <h2>Breathing Exercise</h2>
+        </div>
+
+         <div id="GroundingCard" class="exercise1 bg-[#b78ff2] hover:bg-[#c1a1ed] cursor-pointer">
+            <h2>5-4-3-2-1 Grounding</h2>
+        </div>
+
+          <div id="RelaxationCard" class="exercise1 bg-[#3ca1ba] hover:bg-[#74cde3] cursor-pointer">
+            <h2>Muscle Relaxation</h2>
+        </div>
+
+          <div id="ResetQCard" class="exercise1 bg-[#abd175] hover:bg-[#cef09e] cursor-pointer">
+            <h2>Cognitive Reset Question</h2>
+        </div>
+
+    </div>
+    </section>
+    <!-- The Modal -->
+<!-- Modal Background -->
+<div id="breathingModal" class="modal">
+
+    <!-- Modal Box -->
+    <div class="modal-content">
+
+        <!-- Close Button -->
+        <span id="closeModal" class="close">&times;</span>
+
+        <h2>Breathing Exercise</h2>
+        <p>
+            Inhale for 4 seconds...<br>
+            Hold for 4 seconds...<br>
+            Exhale for 4 seconds...
+        </p>
+
+    </div>
+</div>
+
+<div id="groundingModal" class="modal">
+
+    <!-- Modal Box -->
+    <div class="modal-content">
+
+        <!-- Close Button -->
+        <span id="closeModal" class="close">&times;</span>
+
+        <h2>5-4-3-2-1 Grounding</h2>
+        <p class="transition-colors text-[#5a7d65]">
+            Focus on your senses to anchor yourself in the present.
+        </p>
+        <div><span class="p-2 br-30 bg-[#905fc7]">5 </span>Things you can see</div>
+
+    </div>
+</div>
+    <footer data-key="footer" class="transition-colors text-[#5a7d65]">💚 Remember: You're not alone. Help is always available.</footer>
+</body>
+<script src="script.js"></script>
+</html>
