@@ -11,7 +11,10 @@ const translations = {
     Grounding5:"5-4-3-2-1 Grounding",
     MuscleRelaxation:"Muscle Relaxation",
     CognitiveQ:"Cognitive Reset Question",
-
+    Nurture:"🌿Nurture Your Mind",
+    healthywaysyoucanfind:"Discovering healthy ways to process feelings and cultivate inner peace",
+    pathways:"Pathways to Peace of mind",
+    Emergency:"Emergency Help",
   },
   my: {
     heroTitle: "မင်းတယောက်တည်းမဟုတ်ပါဘူး",
@@ -25,8 +28,10 @@ const translations = {
     Grounding5:"၅-၄-၃-၂-၁ လက်ရှိအခြေအနေ သတိပြု",
     MuscleRelaxation:"ကြွက်သားပြေလျော့စေခြင်း",
     CognitiveQ:"အတွေးအမြင် ပြန်လည်ညှိနှိုင်း မေးခွန်းများ",
-
-
+    Nurture:"🌿စိတ်ကို ပြုစုပျိုးထောင်ပါ",
+    healthywaysyoucanfind:"ခံစားချက်တွေကို ကျန်းမာတဲ့နည်းလမ်းတွေနဲ့ ကိုင်တွယ်ပြီး စိတ်အေးချမ်းမှုကို တည်ဆောက်ပါ",
+    pathways:"စိတ်ငြိမ်းချမ်းမှုဆီသို့ လမ်းကြောင်းများ",
+    Emergency:"အရေးပေါ်အကူအညီ"
   }
 };
 
@@ -58,16 +63,19 @@ const breathingCard = document.getElementById("BreathingCard");
 const groundingCard = document.getElementById("GroundingCard");
 const relaxationCard = document.getElementById("RelaxationCard");
 const resetQCard = document.getElementById("ResetQCard");
+const EmergencyCard = document.getElementById("EmergencyCard");
 
 const breathingModal = document.getElementById("breathingModal");
 const groundingModal = document.getElementById("groundingModal");
 const relaxationModal = document.getElementById("relaxationModal");
 const resetQModal = document.getElementById("resetQModal");
+const EmergencyModal = document.getElementById("EmergencyModal");
 
 const breathingCloseBtn = document.querySelector("#breathingModal .close");
 const groundingCloseBtn = document.querySelector("#groundingModal .close");
 const relaxationCloseBtn = document.querySelector("#relaxationModal .close");
 const resetQCloseBtn = document.querySelector("#resetQModal .close");
+const EmergencyCloseBtn =document.querySelector("#EmergencyModal .close");
 
 // Open modals
 breathingCard.addEventListener("click", () => {
@@ -84,6 +92,9 @@ relaxationCard.addEventListener("click", ()=> {
 
 resetQCard.addEventListener("click", ()=>{
   resetQModal.style.display="block";
+})
+EmergencyCard.addEventListener("click", ()=>{
+  EmergencyModal.style.display="block";
 })
 
 // Close modals when X clicked
@@ -103,6 +114,10 @@ resetQCloseBtn.addEventListener("click", ()=>{
    resetQModal.style.display="none";
 });
 
+EmergencyCloseBtn.addEventListener("click",()=>{
+  EmergencyModal.style.display="none";
+});
+
 // Close when clicking outside modal
 window.addEventListener("click", (event) => {
     if (event.target === breathingModal) {
@@ -116,5 +131,8 @@ window.addEventListener("click", (event) => {
     }
     if (event.target === resetQModal) {
       resetQModal.style.display ="none";
+    }
+    if (event.target === EmergencyModal) {
+      EmergencyModal.style.display ="none";
     }
 });

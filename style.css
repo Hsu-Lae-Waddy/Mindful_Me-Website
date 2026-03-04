@@ -75,9 +75,9 @@ footer{
 /* Modal box */
 .modal-content {
     background-color: white;
-    margin: 8% auto;
+    margin: 5% auto;
     padding: 20px;
-    width: 500px;
+    width: 600px;
     border-radius: 15px;
     text-align: center;
     position: relative;
@@ -107,4 +107,30 @@ footer{
     width: 300px;
     height: 80px;
 }
+.backbtn a::after, a::before , a:visited{
+    color: black;
+}
+.backbtn{
+    margin: 20px;
+}
 
+.EOHomepage{
+    justify-self: center;
+    text-align: center;
+    background-color: #97d9d9;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px 60px;
+    border: 3px solid green;
+}
+.SOScontacts li{
+    padding: 20px;
+    margin: 20px;
+
+}
+#EmergencyModal .red{
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid red;
+  border-radius: 20px;
+}

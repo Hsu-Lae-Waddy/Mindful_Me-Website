@@ -11,9 +11,7 @@
 </head>
 <body>
     <header class="headerForMindFul">
-    <ul >
-       MindFul Me<i class="fa-regular fa-heart"></i>
-    </ul>
+       <h1>MindFul Me<i class="fa-regular fa-heart"></i></h1>
     </header>
     <div class="mmbtn"> 
     <button id="langToggle" class="bg-white px-4 py-2 rounded-full text-sm">
@@ -23,31 +21,32 @@
     <h1  data-key="heroTitle">You're Not Alone.</h1>
     <h3 data-key="heroSubtitle" class="transition-colors text-[#5a7d65]">A safe , comfort space for emotional support.</h3>
     <button data-key="ReadingArticles" class="btnInHome  bg-[#8f5cdb] hover:bg-[#5f27b3]">Reading Articles</button>
-    <button data-key="EmotionalOutlets" class="btnInHome bg-[#34b1e3] hover:bg-[#056d96]">Emotional Outlets</button>
+   <a href="emotionalOutlets.html"> <button data-key="EmotionalOutlets" class="btnInHome bg-[#34b1e3] hover:bg-[#056d96]">Emotional Outlets</button></a>
+   <button class="btnInHome bg-red-600 hover:bg-red-700" data-key="Emergency" id="EmergencyCard">Emergency Help</button>
     </section>
 
     <section class="BoxForQuickExercise">
     <h1 data-key="feelingrightnow" class="p-2">Feeling overwhelmed right now?</h1>
     <h2 data-key="quickExercise" class="transition-colors text-[#5a7d65] p-2">Try one of these quick exercises</h2>
     <div class="cardsExercise" >
-        <div id="BreathingCard" class="exercise1 bg-[#e37dcd] hover:bg-[#e6a4ed] cursor-pointer">
+        <div id="BreathingCard" class="exercise1 bg-[#e37dcd] hover:bg-[#e6a4ed] cursor-pointer text-center p-6 m-3">
             <h2 data-key="breathingexercise">Breathing Exercise</h2>
-            <i class="fa-solid fa-lungs"></i>
+            <i class="fa-solid fa-lungs fa-2x m-5"></i>
         </div>
 
-         <div id="GroundingCard" class="exercise1 bg-[#b78ff2] hover:bg-[#c1a1ed] cursor-pointer">
+         <div id="GroundingCard" class="exercise1 bg-[#b78ff2] hover:bg-[#c1a1ed] cursor-pointer text-center p-6 m-3">
             <h2 data-key="Grounding5">5-4-3-2-1 Grounding</h2>
-            <i class="fa-regular fa-hand-peace"></i>
+            <i class="fa-regular fa-hand-peace fa-2x m-5"></i>
         </div>
 
-          <div id="RelaxationCard" class="exercise1 bg-[#3ca1ba] hover:bg-[#74cde3] cursor-pointer">
+          <div id="RelaxationCard" class="exercise1 bg-[#3ca1ba] hover:bg-[#74cde3] cursor-pointer text-center p-6 m-3">
             <h2 data-key="MuscleRelaxation">Muscle Relaxation</h2>
-            <i class="fa-solid fa-person"></i>
+            <i class="fa-solid fa-person fa-2x m-5"></i>
         </div>
 
-          <div id="ResetQCard" class="exercise1 bg-[#abd175] hover:bg-[#cef09e] cursor-pointer">
+          <div id="ResetQCard" class="exercise1 bg-[#abd175] hover:bg-[#cef09e] cursor-pointer text-center p-6 m-3">
             <h2 data-key="CognitiveQ">Cognitive Reset Question</h2>
-            <i class="fa-regular fa-circle-question"></i>
+            <i class="fa-regular fa-circle-question fa-2x m-5"></i>
         </div>
 
     </div>
@@ -130,6 +129,32 @@
             <li>What is one small action I can take now?</li>
         </ul>
         <p>Overwhelm often comes from vagueness. Precision reduces anxiety.</p>
+
+    </div>
+</div>
+
+<!-- Modal Background -->
+<div id="EmergencyModal" class="modal">
+
+    <!-- Modal Box -->
+    <div class="modal-content">
+
+        <!-- Close Button -->
+        <span class="close">&times;</span>
+
+        <h2 class="text-red text-2xl">🆘 Crisis Resources</h2>
+        <div class="bg-red-200/80 red">
+            <p class="text-red text-bold">If you're in immediate danger: </p>
+            <p class="text-red">Please contact emergency services or a crisis helpline.</p>
+        </div>
+        <div class="SOScontacts">
+            <ul>
+                <li>📞 Mental Health Support Line: <span style="color: forestgreen;">+95 9 765 400 200 </span></li>
+                <li>📞 Call or  💬 text: <span style="color: forestgreen;">988</span></li>
+                <li>🌐International Association: <span style="color: forestgreen;">findahelpline.com</span></li>
+            </ul>
+        </div>
+        <p class="transition-colors text-[#5a7d65]">You matter. Help is available. 💙</p>
 
     </div>
 </div>
