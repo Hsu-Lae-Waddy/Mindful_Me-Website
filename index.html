@@ -30,20 +30,24 @@
     <h1 data-key="feelingrightnow" class="p-2">Feeling overwhelmed right now?</h1>
     <h2 data-key="quickExercise" class="transition-colors text-[#5a7d65] p-2">Try one of these quick exercises</h2>
     <div class="cardsExercise" >
-        <div id="breathingCard" class="exercise1 bg-[#e37dcd] hover:bg-[#e6a4ed] cursor-pointer">
+        <div id="BreathingCard" class="exercise1 bg-[#e37dcd] hover:bg-[#e6a4ed] cursor-pointer">
             <h2>Breathing Exercise</h2>
+            <i class="fa-solid fa-lungs"></i>
         </div>
 
          <div id="GroundingCard" class="exercise1 bg-[#b78ff2] hover:bg-[#c1a1ed] cursor-pointer">
             <h2>5-4-3-2-1 Grounding</h2>
+            <i class="fa-regular fa-hand-peace"></i>
         </div>
 
           <div id="RelaxationCard" class="exercise1 bg-[#3ca1ba] hover:bg-[#74cde3] cursor-pointer">
             <h2>Muscle Relaxation</h2>
+            <i class="fa-solid fa-person"></i>
         </div>
 
           <div id="ResetQCard" class="exercise1 bg-[#abd175] hover:bg-[#cef09e] cursor-pointer">
             <h2>Cognitive Reset Question</h2>
+            <i class="fa-regular fa-circle-question"></i>
         </div>
 
     </div>
@@ -56,7 +60,7 @@
     <div class="modal-content">
 
         <!-- Close Button -->
-        <span id="closeModal" class="close">&times;</span>
+        <span class="close">&times;</span>
 
         <h2>Breathing Exercise</h2>
         <p>
@@ -67,20 +71,25 @@
 
     </div>
 </div>
-
+<!-- Modal Background -->
 <div id="groundingModal" class="modal">
 
     <!-- Modal Box -->
     <div class="modal-content">
 
         <!-- Close Button -->
-        <span id="closeModal" class="close">&times;</span>
-
+        <span class="close">&times;</span>
         <h2>5-4-3-2-1 Grounding</h2>
         <p class="transition-colors text-[#5a7d65]">
             Focus on your senses to anchor yourself in the present.
         </p>
-        <div><span class="p-2 br-30 bg-[#905fc7]">5 </span>Things you can see</div>
+        <div class="boxforGrounding">
+        <div><span class="circlepurple"> 5 </span>Things you can <strong>see</strong></div>
+        <div><span class="circlepurple"> 4 </span>Things you can <strong>touch</strong></div>
+        <div><span class="circlepurple"> 3 </span>Things you can <strong>hear</strong></div>
+        <div><span class="circlepurple"> 2 </span>Things you can <strong>smell</strong>l</div>
+        <div><span class="circlepurple"> 1 </span>Things you can <strong>taste</strong></div>
+        </div>
 
     </div>
 </div>

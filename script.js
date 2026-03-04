@@ -43,45 +43,40 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+// Get elements
+const breathingCard = document.getElementById("BreathingCard");
+const groundingCard = document.getElementById("GroundingCard");
 
-const breathingCard = document.getElementById("breathingCard");
 const breathingModal = document.getElementById("breathingModal");
-const breathingcloseBtn = document.getElementById("closeModal");
+const groundingModal = document.getElementById("groundingModal");
 
-// Open modal
-breathingCard.onclick = function() {
+const breathingCloseBtn = document.querySelector("#breathingModal .close");
+const groundingCloseBtn = document.querySelector("#groundingModal .close");
+
+// Open modals
+breathingCard.addEventListener("click", () => {
     breathingModal.style.display = "block";
-}
+});
 
-// Close modal when X clicked
-breathingcloseBtn.onclick = function() {
+groundingCard.addEventListener("click", () => {
+    groundingModal.style.display = "block";
+});
+
+// Close modals when X clicked
+breathingCloseBtn.addEventListener("click", () => {
     breathingModal.style.display = "none";
-}
+});
 
-// Close when clicking outside box
-window.onclick = function(event) {
-    if (event.target == breathingModal) {
+groundingCloseBtn.addEventListener("click", () => {
+    groundingModal.style.display = "none";
+});
+
+// Close when clicking outside modal
+window.addEventListener("click", (event) => {
+    if (event.target === breathingModal) {
         breathingModal.style.display = "none";
     }
-}
-
-const groundingCard = document.getElementById("groundingCard");
-const groundingModal = document.getElementById("groundingModal");
-const groundingcloseBtn = document.getElementById("closeModal");
-
-// Open modal
-groundingCard.onclick = function() {
-    groundingModal.style.display = "block";
-}
-
-// Close modal when X clicked
-groundingcloseBtn.onclick = function() {
-    groundingModal.style.display = "none";
-}
-
-// Close when clicking outside box
-window.onclick = function(event) {
-    if (event.target == groundingModal) {
+    if (event.target === groundingModal) {
         groundingModal.style.display = "none";
     }
-}
+});
