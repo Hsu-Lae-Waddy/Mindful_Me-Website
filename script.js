@@ -7,6 +7,11 @@ const translations = {
     footer: "💚 Remember: You're not alone. Help is always available.",
     feelingrightnow:"Feeling overwhelmed right now?",
     quickExercise:"Try one of these quick exercises",
+    breathingexercise:"Breathing Exercise",
+    Grounding5:"5-4-3-2-1 Grounding",
+    MuscleRelaxation:"Muscle Relaxation",
+    CognitiveQ:"Cognitive Reset Question",
+
   },
   my: {
     heroTitle: "မင်းတယောက်တည်းမဟုတ်ပါဘူး",
@@ -16,6 +21,11 @@ const translations = {
     footer:"💚 သတိရပါ- သင်တစ်ယောက်တည်း မဟုတ်ပါဘူး။ အကူအညီ အမြဲရရှိနိုင်ပါတယ်။",
     feelingrightnow : "စိတ်ရှုပ်ထွေးနေသလို ခံစားရလား?",
     quickExercise:"ဒီလေ့ကျင့်ခန်းသေးသေးလေးတွေကို စမ်းကြည့်ပါနော်",
+    breathingexercise:"အသက်ရှုလေ့ကျင့်ခန်း",
+    Grounding5:"၅-၄-၃-၂-၁ လက်ရှိအခြေအနေ သတိပြု",
+    MuscleRelaxation:"ကြွက်သားပြေလျော့စေခြင်း",
+    CognitiveQ:"အတွေးအမြင် ပြန်လည်ညှိနှိုင်း မေးခွန်းများ",
+
 
   }
 };
