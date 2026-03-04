@@ -91,15 +91,20 @@ footer{
     font-size: 22px;
     cursor: pointer;
 }
-.circlepurple{
-    padding: 2px;
+.boxforGrounding .circlepurple{
+    padding: 10px;
     background-color: #905fc7;
-    border-radius: 30px;
-    margin: 20px;
+    border-radius: 60%;
+    margin:10px;
 }
 .boxforGrounding div{
     line-height: 2rem;
     padding: 20px;
     margin: 10px 40px;
     background-color: #cdb0ef;
+    justify-self: left;
+    text-align: center;
+    width: 300px;
+    height: 80px;
 }
+

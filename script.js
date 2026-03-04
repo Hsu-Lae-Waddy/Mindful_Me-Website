@@ -46,12 +46,18 @@ document.addEventListener("DOMContentLoaded", () => {
 // Get elements
 const breathingCard = document.getElementById("BreathingCard");
 const groundingCard = document.getElementById("GroundingCard");
+const relaxationCard = document.getElementById("RelaxationCard");
+const resetQCard = document.getElementById("ResetQCard");
 
 const breathingModal = document.getElementById("breathingModal");
 const groundingModal = document.getElementById("groundingModal");
+const relaxationModal = document.getElementById("relaxationModal");
+const resetQModal = document.getElementById("resetQModal");
 
 const breathingCloseBtn = document.querySelector("#breathingModal .close");
 const groundingCloseBtn = document.querySelector("#groundingModal .close");
+const relaxationCloseBtn = document.querySelector("#relaxationModal .close");
+const resetQCloseBtn = document.querySelector("#resetQModal .close");
 
 // Open modals
 breathingCard.addEventListener("click", () => {
@@ -62,6 +68,14 @@ groundingCard.addEventListener("click", () => {
     groundingModal.style.display = "block";
 });
 
+relaxationCard.addEventListener("click", ()=> {
+  relaxationModal.style.display="block";
+});
+
+resetQCard.addEventListener("click", ()=>{
+  resetQModal.style.display="block";
+})
+
 // Close modals when X clicked
 breathingCloseBtn.addEventListener("click", () => {
     breathingModal.style.display = "none";
@@ -71,6 +85,14 @@ groundingCloseBtn.addEventListener("click", () => {
     groundingModal.style.display = "none";
 });
 
+relaxationCloseBtn.addEventListener("click", ()=>{
+   relaxationModal.style.display ="none";
+});
+
+resetQCloseBtn.addEventListener("click", ()=>{
+   resetQModal.style.display="none";
+});
+
 // Close when clicking outside modal
 window.addEventListener("click", (event) => {
     if (event.target === breathingModal) {
@@ -78,5 +100,11 @@ window.addEventListener("click", (event) => {
     }
     if (event.target === groundingModal) {
         groundingModal.style.display = "none";
+    }
+    if (event.target === relaxationModal) {
+      relaxationModal.style.display = "none";
+    }
+    if (event.target === resetQModal) {
+      resetQModal.style.display ="none";
     }
 });
