@@ -15,6 +15,10 @@ const translations = {
     healthywaysyoucanfind:"Discovering healthy ways to process feelings and cultivate inner peace",
     pathways:"Pathways to Peace of mind",
     Emergency:"Emergency Help",
+    dangertext:"If you're in immediate danger: ",
+    dangertext2:"Please contact emergency services or a crisis helpline.",
+    dangerTextfooter:"You matter. Help is available. 💙"
+
   },
   my: {
     heroTitle: "မင်းတယောက်တည်းမဟုတ်ပါဘူး",
@@ -31,7 +35,10 @@ const translations = {
     Nurture:"🌿စိတ်ကို ပြုစုပျိုးထောင်ပါ",
     healthywaysyoucanfind:"ခံစားချက်တွေကို ကျန်းမာတဲ့နည်းလမ်းတွေနဲ့ ကိုင်တွယ်ပြီး စိတ်အေးချမ်းမှုကို တည်ဆောက်ပါ",
     pathways:"စိတ်ငြိမ်းချမ်းမှုဆီသို့ လမ်းကြောင်းများ",
-    Emergency:"အရေးပေါ်အကူအညီ"
+    Emergency:"အရေးပေါ်အကူအညီ",
+    dangertext:"အရေးပေါ်အန္တရာယ်ကျရောက်နေပါက- ",
+    dangertext2:"အရေးပေါ်ဝန်ဆောင်မှု သို့မဟုတ် အရေးပေါ်အကူအညီပေးရေးဌာနသို့ ဆက်သွယ်ပါ။",
+    dangerTextfooter:"မင်းကအရေးပါတယ်။ အကူအညီရရှိနိုင်ပါသည်။ 💙"
   }
 };
 
