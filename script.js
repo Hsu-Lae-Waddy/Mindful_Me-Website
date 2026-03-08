@@ -19,6 +19,8 @@ const translations = {
     dangertext2:"Please contact emergency services or a crisis helpline.",
     dangerTextfooter:"You matter. Help is available. 💙",
     Explore:"Explore different categories of emotional outlets and find what resonates with you",
+    ExandotherPE:"Exercise and other physical activity can lessen anxiety and help mood and other health problems get better",
+    Wrting:"Regularly recording thoughts, emotions, and experiences to boost self-awareness, reduce stress, and manage anxiety or depression",
 
   },
   my: {
@@ -41,6 +43,9 @@ const translations = {
     dangertext2:"အရေးပေါ်ဝန်ဆောင်မှု သို့မဟုတ် အရေးပေါ်အကူအညီပေးရေးဌာနသို့ ဆက်သွယ်ပါ။",
     dangerTextfooter:"မင်းကအရေးပါတယ်။ အကူအညီရရှိနိုင်ပါသည်။ 💙",
     Explore:"စိတ်ခံစားချက်တွေကို ထုတ်ဖော်ပေးနိုင်တဲ့ နည်းလမ်းအမျိုးမျိုးကို စမ်းကြည့်ပြီး မိမိနဲ့ ကိုက်ညီတဲ့ နည်းလမ်းကို ရှာဖွေကြည့်ပါ။",
+    ExandotherPE:"လေ့ကျင့်ခန်းနှင့် အခြားရုပ်ပိုင်းဆိုင်ရာလှုပ်ရှားမှုများသည် စိုးရိမ်ပူပန်မှုကို လျှော့ချပေးပြီး စိတ်ခံစားချက်နှင့် အခြားကျန်းမာရေးပြဿနာများကို ပိုမိုကောင်းမွန်လာစေရန် ကူညီပေးသည်။",
+    Wrting:"အတွေးများ၊ စိတ်ခံစားချက်များနှင့် နေ့စဉ်အတွေ့အကြုံများကို ပုံမှန်ရေးမှတ်ခြင်းက ကိုယ့်ကိုယ်ကို ပိုနားလည်လာစေပြီး စိတ်ဖိစီးမှုကို လျှော့ချပေးကာ စိုးရိမ်ပူပန်မှုနှင့် စိတ်ကျမှုကို ထိန်းညှိနိုင်စေသည်။",
+
   }
 };
 

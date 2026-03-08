@@ -141,7 +141,7 @@ footer{
     margin: 40px;
 }
 .boxForActivity{
-    border: 2px solid green;
+    border: 3px outset green;
 }
 .categoriesForEx .boxForActivity{
     padding: 30px;
