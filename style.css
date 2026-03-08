@@ -4,7 +4,9 @@
 }
 body{
     background-color: #d0f5f5;
+    font-family: 'Times New Roman', Times, serif;
     font-family: 'Noto Sans Myanmar', sans-serif;
+
 }
 .HomeSection h1{
     font-size: 2rem;
@@ -133,4 +135,25 @@ footer{
   margin: 10px;
   border: 2px solid red;
   border-radius: 20px;
+}
+.categoriesForEx{
+    padding: 20px;
+    margin: 40px;
+}
+.boxForActivity{
+    border: 2px solid green;
+}
+.categoriesForEx .boxForActivity{
+    padding: 30px;
+    margin: 10px;
+    border-radius: 20px;
+}
+.boxForActivity p{
+  font-family: "Times New Roman", Times, serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.boxForActivity h2{
+    border: 2px double black;
+    width: 250px;
 }

@@ -17,7 +17,8 @@ const translations = {
     Emergency:"Emergency Help",
     dangertext:"If you're in immediate danger: ",
     dangertext2:"Please contact emergency services or a crisis helpline.",
-    dangerTextfooter:"You matter. Help is available. 💙"
+    dangerTextfooter:"You matter. Help is available. 💙",
+    Explore:"Explore different categories of emotional outlets and find what resonates with you",
 
   },
   my: {
@@ -38,7 +39,8 @@ const translations = {
     Emergency:"အရေးပေါ်အကူအညီ",
     dangertext:"အရေးပေါ်အန္တရာယ်ကျရောက်နေပါက- ",
     dangertext2:"အရေးပေါ်ဝန်ဆောင်မှု သို့မဟုတ် အရေးပေါ်အကူအညီပေးရေးဌာနသို့ ဆက်သွယ်ပါ။",
-    dangerTextfooter:"မင်းကအရေးပါတယ်။ အကူအညီရရှိနိုင်ပါသည်။ 💙"
+    dangerTextfooter:"မင်းကအရေးပါတယ်။ အကူအညီရရှိနိုင်ပါသည်။ 💙",
+    Explore:"စိတ်ခံစားချက်တွေကို ထုတ်ဖော်ပေးနိုင်တဲ့ နည်းလမ်းအမျိုးမျိုးကို စမ်းကြည့်ပြီး မိမိနဲ့ ကိုက်ညီတဲ့ နည်းလမ်းကို ရှာဖွေကြည့်ပါ။",
   }
 };
 
