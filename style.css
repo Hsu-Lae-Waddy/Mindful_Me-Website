@@ -156,4 +156,5 @@ footer{
 .boxForActivity h2{
     border: 2px double black;
     width: 250px;
+    border-radius: 20px;
 }
