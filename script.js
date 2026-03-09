@@ -21,7 +21,9 @@ const translations = {
     Explore:"Explore different categories of emotional outlets and find what resonates with you",
     ExandotherPE:"Exercise and other physical activity can lessen anxiety and help mood and other health problems get better",
     Wrting:"Regularly recording thoughts, emotions, and experiences to boost self-awareness, reduce stress, and manage anxiety or depression",
-
+    LsM:"Listen to smoothing music",
+    MindFul:"Practice being present and aware of your thoughts.",
+    CArt:"Creative arts (painting, singing, dancing, writing, crafts) reduce stress and make the mind happier and calmer.",
   },
   my: {
     heroTitle: "မင်းတယောက်တည်းမဟုတ်ပါဘူး",
@@ -45,7 +47,9 @@ const translations = {
     Explore:"စိတ်ခံစားချက်တွေကို ထုတ်ဖော်ပေးနိုင်တဲ့ နည်းလမ်းအမျိုးမျိုးကို စမ်းကြည့်ပြီး မိမိနဲ့ ကိုက်ညီတဲ့ နည်းလမ်းကို ရှာဖွေကြည့်ပါ။",
     ExandotherPE:"လေ့ကျင့်ခန်းနှင့် အခြားရုပ်ပိုင်းဆိုင်ရာလှုပ်ရှားမှုများသည် စိုးရိမ်ပူပန်မှုကို လျှော့ချပေးပြီး စိတ်ခံစားချက်နှင့် အခြားကျန်းမာရေးပြဿနာများကို ပိုမိုကောင်းမွန်လာစေရန် ကူညီပေးသည်။",
     Wrting:"အတွေးများ၊ စိတ်ခံစားချက်များနှင့် နေ့စဉ်အတွေ့အကြုံများကို ပုံမှန်ရေးမှတ်ခြင်းက ကိုယ့်ကိုယ်ကို ပိုနားလည်လာစေပြီး စိတ်ဖိစီးမှုကို လျှော့ချပေးကာ စိုးရိမ်ပူပန်မှုနှင့် စိတ်ကျမှုကို ထိန်းညှိနိုင်စေသည်။",
-
+    LsM:"သာယာတဲ့ တေးဂီတကို နားထောင်ပါ",
+    MindFul:"လက်ရှိအခြေအနေမှာ ရှိနေပြီး ကိုယ့်အတွေးတွေကို သတိထားတတ်အောင် လေ့ကျင့်ပါ။",
+    CArt:"ဖန်တီးမှုအနုပညာများ (ပန်းချီ၊ သီချင်း၊ ကခြင်း၊ စာရေးခြင်း၊ လက်မှုလုပ်ငန်းများ) က စိတ်ဖိစီးမှုကို လျှော့ချပေးပြီး စိတ်ကို ပိုမိုပျော်ရွှင်တည်ငြိမ်စေပါသည်။",
   }
 };
 
