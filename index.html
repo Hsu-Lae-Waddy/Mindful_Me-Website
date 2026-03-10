@@ -62,11 +62,18 @@
         <span class="close">&times;</span>
 
         <h2>Breathing Exercise</h2>
-        <p>
-            Inhale for 4 seconds...<br>
-            Hold for 4 seconds...<br>
-            Exhale for 4 seconds...
-        </p>
+        <div class="buttons">
+    <button onclick="startBeginner()" class="Bbuttons">Beginner</button>
+    <button onclick="startIntermediate()" class="Ibuttons">Intermediate</button>
+</div>
+
+<div class="brcircle1">
+    <div class="brcircle" id="circle">
+        <span class="text" id="breathText">Choose Mode</span>
+    </div>
+</div>
+
+<p id="guideText"></p>
 
     </div>
 </div>

@@ -76,6 +76,8 @@ footer{
 
 /* Modal box */
 .modal-content {
+    display:flex;
+    flex-direction:column;
     background-color: white;
     margin: 5% auto;
     padding: 20px;
@@ -83,6 +85,8 @@ footer{
     border-radius: 15px;
     text-align: center;
     position: relative;
+    align-items:center;
+    justify-content:center;
 }
 
 /* Close button */
@@ -156,5 +160,56 @@ footer{
 .boxForActivity h2{
     border: 2px double black;
     width: 250px;
+    border-radius: 20px;
+}
+.modal-content{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+.buttons{
+    margin-bottom:15px;
+    margin: 5px;
+}
+
+button{
+    padding:8px 15px;
+    margin:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.brcircle1{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.brcircle{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background-color:rgb(141,208,156);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    transition:all 4s ease-in-out;
+}
+
+.text{
+    font-size:20px;
+    color:blueviolet;
+}
+.Bbuttons, .Ibuttons{
+    padding: 5px;
+    background-color: #9edbc3;
+    border: 2px outset green;
     border-radius: 20px;
 }

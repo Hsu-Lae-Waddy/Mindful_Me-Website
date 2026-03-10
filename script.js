@@ -154,3 +154,69 @@ window.addEventListener("click", (event) => {
       EmergencyModal.style.display ="none";
     }
 });
+
+let interval;
+
+function startBeginner(){
+
+clearInterval(interval);
+
+const circle = document.getElementById("circle");
+const text = document.getElementById("breathText");
+const guide = document.getElementById("guideText");
+
+guide.innerText = "Inhale 4s • Exhale 4s";
+
+function cycle(){
+
+text.innerText = "Inhale";
+circle.style.width = "200px";
+circle.style.height = "200px";
+
+setTimeout(()=>{
+text.innerText = "Exhale";
+circle.style.width = "80px";
+circle.style.height = "80px";
+},4000);
+
+}
+
+cycle();
+interval = setInterval(cycle,8000);
+
+}
+
+
+
+function startIntermediate(){
+
+clearInterval(interval);
+
+const circle = document.getElementById("circle");
+const text = document.getElementById("breathText");
+const guide = document.getElementById("guideText");
+
+guide.innerText = "Inhale 4s • Hold 4s • Exhale 4s";
+
+function cycle(){
+
+text.innerText = "Inhale";
+circle.style.width = "200px";
+circle.style.height = "200px";
+
+setTimeout(()=>{
+text.innerText = "Hold";
+},4000);
+
+setTimeout(()=>{
+text.innerText = "Exhale";
+circle.style.width = "80px";
+circle.style.height = "80px";
+},8000);
+
+}
+
+cycle();
+interval = setInterval(cycle,12000);
+
+}
