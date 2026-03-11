@@ -24,6 +24,12 @@ const translations = {
     LsM:"Listen to smoothing music",
     MindFul:"Practice being present and aware of your thoughts.",
     CArt:"Creative arts (painting, singing, dancing, writing, crafts) reduce stress and make the mind happier and calmer.",
+    askQ:"After calming your body, ask",
+    Q1ForResetQ:"What exactly am I afraid will happen?",
+    Q2ForResetQ:"Is this a current threat or a future possibility?",
+    Q3ForResetQ:"What is one small action I can take now?",
+    ResetQFooter:"Precision reduces anxiety",
+    ResetQFooter2:"Think carefully about each question. Write your thoughts."
   },
   my: {
     heroTitle: "မင်းတယောက်တည်းမဟုတ်ပါဘူး",
@@ -50,6 +56,12 @@ const translations = {
     LsM:"သာယာတဲ့ တေးဂီတကို နားထောင်ပါ။",
     MindFul:"လက်ရှိအခြေအနေမှာ ရှိနေပြီး ကိုယ့်အတွေးတွေကို သတိထားတတ်အောင် လေ့ကျင့်ပါ။",
     CArt:"ဖန်တီးမှုအနုပညာများ (ပန်းချီ၊ သီချင်း၊ ကခြင်း၊ စာရေးခြင်း၊ လက်မှုလုပ်ငန်းများ) က စိတ်ဖိစီးမှုကို လျှော့ချပေးပြီး စိတ်ကို ပိုမိုပျော်ရွှင်တည်ငြိမ်စေပါသည်။",
+    askQ:"ခန္ဓာကိုယ်ကို ငြိမ်သက်အောင်ထားပြီးနောက် မေးခွန်းလေးတွေ မေးကြည့်ပါ",
+    Q1ForResetQ:"ငါဘာတွေဖြစ်လာမှာကို တကယ်ကြောက်နေတာလဲ?",
+    Q2ForResetQ:"ဒါက လက်ရှိမှာ တကယ်ဖြစ်နေတဲ့ ပြဿနာလား၊\n ဒါမှမဟုတ် အနာဂတ်မှာ ဖြစ်နိုင်တဲ့ အရာတစ်ခုပဲလား?",
+    Q3ForResetQ:"အခုချိန်မှာ လုပ်နိုင်တဲ့ အရာက ဘာဖြစ်နိုင်မလဲ?",
+    ResetQFooter:"တိကျမှုက စိုးရိမ်ပူပန်မှုကို လျော့ကျစေတယ်။", 
+    ResetQFooter2:"မေးခွန်းတိုင်းကို သေချာစဉ်းစားပြီး သင့်အတွေးများကို ရေးမှတ်ပါ။"
   }
 };
 
