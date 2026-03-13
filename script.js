@@ -33,7 +33,14 @@ const translations = {
     tension:"When overwhelmed, the body holds tension.",
     Mstep1:"Tighten your fists for 5 seconds → release.",
     Mstep2:"Shoulders tightly → release.",
+    Mstep3:"Clench jaw → release.",
+    Mstep4:"Press toes downward → release.",
     G1:"Focus on your senses to anchor yourself in the present.",
+    Gstep1:"5 Things you can see",
+    Gstep2:"4 Things you can touch",
+    Gstep3:"3 Things you can hear",
+    Gstep4:"2 Things you can smell",
+    Gstep5:"1 Things you can taste",
   },
   my: {
     heroTitle: "မင်းတယောက်တည်းမဟုတ်ပါဘူး",
@@ -69,7 +76,14 @@ const translations = {
     tension:"စိတ်ဖိစီးမှုများလာတဲ့အခါ ကိုယ်ခန္ဓာထဲမှာ တင်းမာမှုတွေ စုနေတတ်ပါတယ်။",
     Mstep1:"လက်သီးကို ၅ စက္ကန့်ကြာ တင်းတင်းဆုပ်ပါ -> ပြီးရင် ဖြေလျှော့ပါ။",
     Mstep2:"ပခုံး တင်းထားပါ -> ပြီးရင် ဖြေလျှော့ပါ။",
+    Mstep3:"သွားကို စိပြီ မေးကိုတင်းထားပါ -> ပြီးရင် ဖြေလျှော့ပါ။",
+    Mstep4:"ခြေချောင်းတွေကို အောက်ဘက်သို့ ဆွဲချထားပါ → ပြီးရင် ဖြေလျှော့ပါ။",
     G1:"လက်ရှိအချိန်ကို ခံစားနိုင်ဖို့ မိမိရဲ့ အာရုံခံစားမှုတွေကို အာရုံစိုက်ပါ။",
+    Gstep1:"မြင်နိုင်သော အရာ ၅မျိူး",
+    Gstep2:"ထိတွေ့ နိုင်သော အရာ ၄ မျိုး",
+    Gstep3:"ကြား နိုင်သော အရာ ၃ မျိုး",
+    Gstep4:"ရနံ့ ရနိုင်သော အရာ ၂ မျိုး",
+    Gstep5:"ခံစား နိုင်သော အရာ ၁ မျိုး",
   }
 };
 
