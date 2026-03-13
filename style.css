@@ -98,22 +98,7 @@ footer{
     font-size: 22px;
     cursor: pointer;
 }
-.boxforGrounding .circlepurple{
-    padding: 10px;
-    background-color: #905fc7;
-    border-radius: 60%;
-    margin:10px;
-}
-.boxforGrounding div{
-    line-height: 2rem;
-    padding: 20px;
-    margin: 10px 40px;
-    background-color: #cdb0ef;
-    justify-self: left;
-    text-align: center;
-    width: 300px;
-    height: 80px;
-}
+
 .backbtn a::after, a::before , a:visited{
     color: black;
 }
@@ -209,8 +194,9 @@ button{
     color:blueviolet;
 }
 .Bbuttons, .Ibuttons{
-    padding: 5px;
-    background-color: #9edbc3;
+    color: black;
+    padding: 3px;
+    background-color: #46a57f;
     border: 2px outset green;
     border-radius: 20px;
 }

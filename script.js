@@ -29,7 +29,11 @@ const translations = {
     Q2ForResetQ:"Is this a current threat or a future possibility?",
     Q3ForResetQ:"What is one small action I can take now?",
     ResetQFooter:"Precision reduces anxiety",
-    ResetQFooter2:"Think carefully about each question. Write your thoughts."
+    ResetQFooter2:"Think carefully about each question. Write your thoughts.",
+    tension:"When overwhelmed, the body holds tension.",
+    Mstep1:"Tighten your fists for 5 seconds → release.",
+    Mstep2:"Shoulders tightly → release.",
+    G1:"Focus on your senses to anchor yourself in the present.",
   },
   my: {
     heroTitle: "မင်းတယောက်တည်းမဟုတ်ပါဘူး",
@@ -61,7 +65,11 @@ const translations = {
     Q2ForResetQ:"ဒါက လက်ရှိမှာ တကယ်ဖြစ်နေတဲ့ ပြဿနာလား၊\n ဒါမှမဟုတ် အနာဂတ်မှာ ဖြစ်နိုင်တဲ့ အရာတစ်ခုပဲလား?",
     Q3ForResetQ:"အခုချိန်မှာ လုပ်နိုင်တဲ့ အရာက ဘာဖြစ်နိုင်မလဲ?",
     ResetQFooter:"တိကျမှုက စိုးရိမ်ပူပန်မှုကို လျော့ကျစေတယ်။", 
-    ResetQFooter2:"မေးခွန်းတိုင်းကို သေချာစဉ်းစားပြီး သင့်အတွေးများကို ရေးမှတ်ပါ။"
+    ResetQFooter2:"မေးခွန်းတိုင်းကို သေချာစဉ်းစားပြီး သင့်အတွေးများကို ရေးမှတ်ပါ။",
+    tension:"စိတ်ဖိစီးမှုများလာတဲ့အခါ ကိုယ်ခန္ဓာထဲမှာ တင်းမာမှုတွေ စုနေတတ်ပါတယ်။",
+    Mstep1:"လက်သီးကို ၅ စက္ကန့်ကြာ တင်းတင်းဆုပ်ပါ -> ပြီးရင် ဖြေလျှော့ပါ။",
+    Mstep2:"ပခုံး တင်းထားပါ -> ပြီးရင် ဖြေလျှော့ပါ။",
+    G1:"လက်ရှိအချိန်ကို ခံစားနိုင်ဖို့ မိမိရဲ့ အာရုံခံစားမှုတွေကို အာရုံစိုက်ပါ။",
   }
 };
 
