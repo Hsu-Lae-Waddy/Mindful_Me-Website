@@ -6,6 +6,8 @@ body{
     background-color: #d0f5f5;
     font-family: 'Times New Roman', Times, serif;
     font-family: 'Noto Sans Myanmar', sans-serif;
+    overflow-y: auto;   
+    scroll-behavior: smooth;
 
 }
 .HomeSection h1{
@@ -48,6 +50,26 @@ body{
 .cardsExercise{
     display: flex;
 }
+@media (max-width:600px) {
+   .cardsExercise{
+    display: block;
+   }
+   .cardsExercise div{
+    padding-left: 100px;
+    padding-right: 100px;
+    font-size: small;
+   }
+   .modal{
+    width: 50%;
+    height: 50%;
+   }
+   .modal .modal-content {
+    width: 300px;
+    margin: 5% auto;
+    font-size: small;
+   }
+
+}
 .exercise1{
     width: 30%;
     background-color: #9edbc3;
@@ -88,6 +110,10 @@ footer{
     position: relative;
     align-items:center;
     justify-content:center;
+    max-width: 600px;
+    max-height: 80vh;   
+    overflow-y: auto;   
+    scroll-behavior: smooth;
 }
 
 /* Close button */

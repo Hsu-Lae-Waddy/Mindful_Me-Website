@@ -41,6 +41,7 @@ const translations = {
     Gstep3:"3 Things you can hear",
     Gstep4:"2 Things you can smell",
     Gstep5:"1 Things you can taste",
+    exsubtitle:"Any exercise is better than none and even a brisk 10-minute walk can clear your mind and help you relax."
   },
   my: {
     heroTitle: "မင်းတယောက်တည်းမဟုတ်ပါဘူး",
@@ -84,6 +85,8 @@ const translations = {
     Gstep3:"ကြား နိုင်သော အရာ ၃ မျိုး",
     Gstep4:"ရနံ့ ရနိုင်သော အရာ ၂ မျိုး",
     Gstep5:"ခံစား နိုင်သော အရာ ၁ မျိုး",
+    exsubtitle:"လေ့ကျင့်ခန်းတစ်ခုခုလုပ်တာက ဘာမှမလုပ်တာထက်စာရင် ပိုကောင်းပါတယ်။ မိနစ် ၁၀ လောက် လမ်းလျှောက်တာကတောင် စိတ်ကို ကြည်လင်စေပြီး အပန်းဖြေစေနိုင်ပါတယ်။"
+    
   }
 };
 
