@@ -276,7 +276,7 @@ physical page
     background-color: #9edbc3;
 }
 .imageForbox:hover{
-    background-color: #6d9054;
+    background-color: #395822;
     cursor: pointer;
 }
 .BigBox{
@@ -284,6 +284,9 @@ physical page
     border-radius: 20px;
     background-color: #a5df7b;
 }
-.box2{
-   background-color: #6d9054;
+.boxOdd{
+   background-color: #719c52;
+}
+.boxEven{
+   background-color: #28c177;
 }
