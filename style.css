@@ -255,3 +255,35 @@ button{
     border: 3px outset rgb(35, 105, 29);
     background-color: #6d9054;
 }
+
+/*
+physical page
+*/
+
+.boxForAnxiety{
+    padding: 20px;
+    margin: 20px;
+    justify-self: center;
+    border-radius: 20px;
+    display: flex;
+}
+.imageForbox{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px double brown;
+    margin: 5px;
+    background-color: #9edbc3;
+}
+.imageForbox:hover{
+    background-color: #6d9054;
+    cursor: pointer;
+}
+.BigBox{
+    border: 2px outset darkslategrey;
+    border-radius: 20px;
+    background-color: #a5df7b;
+}
+.box2{
+   background-color: #6d9054;
+}
