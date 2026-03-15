@@ -71,14 +71,24 @@ body{
    .modal .modal-content {
       width:100%;
       max-width:400px;
-      max-height:100vh;
+      max-height:200vh;
       overflow-y:auto;
       margin:20px auto;
       font-size:14px;
       padding:20px;
       align-items:center;
       padding-top:60px;
-     
+   }
+   .box1 .imageForbox{
+    width: 70px;
+    height: 70px;
+   }
+   .box1 h1{
+    font-size: x-small;
+   }
+   .BigBox img{
+    width: 230px;
+    height: 280px ;
    }
 
 }
@@ -158,12 +168,8 @@ footer{
     margin: 20px;
 
 }
-#EmergencyModal .modal-content{
-    padding: 10px;
-}
+
 #EmergencyModal .red{
-  padding: 10px;
-  margin: 20px;
   border: 2px solid red;
   border-radius: 20px;
 }
