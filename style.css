@@ -60,13 +60,24 @@ body{
     font-size: small;
    }
    .modal{
-    width: 50%;
-    height: 50%;
+     width:100%;
+      height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px;
    }
    .modal .modal-content {
-    width: 300px;
-    margin: 5% auto;
-    font-size: small;
+      width:100%;
+      max-width:400px;
+      max-height:100vh;
+      overflow-y:auto;
+      margin:20px auto;
+      font-size:14px;
+      padding:20px;
+      align-items:center;
+      padding-top:60px;
+     
    }
 
 }
@@ -103,7 +114,7 @@ footer{
     background-color: #d0f5f5;
     margin: 5% auto;
     line-height: 2rem;
-    padding: 15px;
+    padding: 20px;
     width: 600px;
     border-radius: 15px;
     text-align: center;
@@ -146,9 +157,12 @@ footer{
     margin: 20px;
 
 }
+#EmergencyModal .modal-content{
+    padding: 10px;
+}
 #EmergencyModal .red{
   padding: 10px;
-  margin: 10px;
+  margin: 20px;
   border: 2px solid red;
   border-radius: 20px;
 }
