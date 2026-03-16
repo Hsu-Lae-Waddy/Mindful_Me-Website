@@ -172,6 +172,7 @@ footer{
 #EmergencyModal .red{
   border: 2px solid red;
   border-radius: 20px;
+  padding: 5px;
 }
 .categoriesForEx{
     padding: 20px;
@@ -296,4 +297,18 @@ physical page
 }
 .boxEven{
    background-color: #28c177;
+}
+/* writting */
+.notefirstone{
+    text-align: center;
+}
+.notefirstone div{
+    background-color: #a5df7b;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 10px 30px;
+    border-top: 4px solid #132619;
+    width: 500px;
+    text-align: center;
+    justify-self: center;
 }

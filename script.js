@@ -43,6 +43,9 @@ const translations = {
     Gstep5:"1 Things you can taste",
     exsubtitle:"Any exercise is better than none. Move Your Body, Calm Your Mind",
     footerForsmall:"💚 Every movement helps.",
+    Jsubtitle:"Writing down your thoughts can help you understand your feelings and release stress.",
+    writingFooter:"Take your time. There are no right or wrong answers. ✨",
+    w1:"Take a quiet moment and write in your notebook.",
   },
   my: {
     heroTitle: "မင်းတယောက်တည်းမဟုတ်ပါဘူး",
@@ -88,6 +91,9 @@ const translations = {
     Gstep5:"ခံစား နိုင်သော အရာ ၁ မျိုး",
     exsubtitle:"လေ့ကျင့်ခန်းတစ်ခုခုလုပ်တာက ဘာမှမလုပ်တာထက်စာရင် ပိုကောင်းပါတယ်။ ကိုယ်ခန္ဓာကို လှုပ်ရှားပြီး စိတ်ကို တည်ငြိမ်စေပါ။ ",
     footerForsmall:"💚 လှုပ်ရှားမှုတိုင်းက အထောက်အကူဖြစ်ပါတယ်။",
+    Jsubtitle:"စာရေးချခြင်းက သင့်ခံစားချက်တွေကို နားလည်စေပြီး စိတ်ဖိစီးမှုတွေကို လျော့ပါးစေနိုင်ပါတယ်။",
+    writingFooter:"အချိန်ယူပါ။ မှန်သည် မှားသည် မရှိပါဘူး။ ✨",
+    w1:"ခဏလောက် တိတ်ဆိတ်ငြိမ်သက်စွာနေပြီး မှတ်စုစာအုပ်ထဲမှာ ရေးမှတ်ထားပါ",
     
   }
 };
