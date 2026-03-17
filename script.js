@@ -46,6 +46,8 @@ const translations = {
     Jsubtitle:"Writing down your thoughts can help you understand your feelings and release stress.",
     writingFooter:"Take your time. There are no right or wrong answers. ✨",
     w1:"Take a quiet moment and write in your notebook.",
+    note1:"1️⃣ : How do I feel right now?",
+    note11:"Write a few words about your emotions.",
   },
   my: {
     heroTitle: "မင်းတယောက်တည်းမဟုတ်ပါဘူး",
@@ -94,6 +96,8 @@ const translations = {
     Jsubtitle:"စာရေးချခြင်းက သင့်ခံစားချက်တွေကို နားလည်စေပြီး စိတ်ဖိစီးမှုတွေကို လျော့ပါးစေနိုင်ပါတယ်။",
     writingFooter:"အချိန်ယူပါ။ မှန်သည် မှားသည် မရှိပါဘူး။ ✨",
     w1:"ခဏလောက် တိတ်ဆိတ်ငြိမ်သက်စွာနေပြီး မှတ်စုစာအုပ်ထဲမှာ ရေးမှတ်ထားပါ",
+    note1:"1️⃣ :အခုချိန်မှာ ဘယ်လိုခံစားရလဲ?",
+    note11:"သင့်ခံစားချက်များအကြောင်း စကားအနည်းငယ်ရေးပါ",
     
   }
 };
