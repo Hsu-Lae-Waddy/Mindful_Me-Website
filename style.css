@@ -325,7 +325,7 @@ physical page
     overflow:hidden; /* important for rounded corners */
     margin: 20px;
 }
-.feelingbox h1{
+.feelingbox h1, .feelingbox span{
     margin:0;
     padding:15px;
     background-color:#0f5438; /* dark green */
