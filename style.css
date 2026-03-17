@@ -313,34 +313,33 @@ physical page
     justify-self: center;
 }
 .feelingboxparent{
-    display: flex;
-     justify-self: center;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap; 
+
 }
 .feelingbox{
-    display: inline;
-    padding-top: 20px;
-    margin: 10px;
-    background-color: #0f5438;
-    border-radius: 20px;
-    border-top:4px inset #0d2d21 ;
+    width:260px;
+    border-radius:20px;
+    overflow:hidden; /* important for rounded corners */
+    margin: 20px;
 }
 .feelingbox h1{
-    font-size: large;
+    margin:0;
+    padding:15px;
+    background-color:#0f5438; /* dark green */
+    color:white;
+    font-size:18px;
+    text-align:center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding-left: 5px;
-    padding-right: 5px;
 }
 .insideboxsmall{
-    background-color:rgb(119, 185, 119);
-    padding-top:10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-    border-bottom: 2px outset gray;
+    background-color:#77b977; /* light green */
+    padding:15px;
+    border-top:2px solid #0d2d21;
     border-radius: 0px 0px 20px 20px;
 }
-
 .insideboxsmall p{
     margin:8px 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
