@@ -63,6 +63,7 @@ const translations = {
     happy:"If you feel happy",
     happy1:"- What made me feel happy today?",
     happy2:"- How can I keep this feeling?",
+    musicsub:"Music can calm your mind and lift your mood."
   },
   my: {
     heroTitle: "မင်းတယောက်တည်းမဟုတ်ပါဘူး",
@@ -128,6 +129,7 @@ const translations = {
     happy:"ပျော်ရွှင်နေရရင်",
     happy1:"- ဒီနေ့ ဘာက ကျွန်တော့်ကို ပျော်ရွှင်စေခဲ့လဲ။",
     happy2:"- ဒီခံစားချက်ကို ဘယ်လိုထိန်းထားရမလဲ။",
+    musicsub:"သီချင်းများက စိတ်ကို တည်ငြိမ်စေပြီး စိတ်အခြေအနေကို မြှင့်တင်ပေးနိုင်ပါသည်။",
 
 
     

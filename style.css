@@ -344,3 +344,10 @@ physical page
     margin:8px 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+/* Music */
+.imagforMusic {
+    border-radius: 20px;
+    background-color: #132619;
+    padding: 10px;
+}
