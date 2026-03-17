@@ -312,3 +312,36 @@ physical page
     text-align: center;
     justify-self: center;
 }
+.feelingboxparent{
+    display: flex;
+     justify-self: center;
+}
+.feelingbox{
+    display: inline;
+    padding-top: 20px;
+    margin: 10px;
+    background-color: #0f5438;
+    border-radius: 20px;
+    border-top:4px inset #0d2d21 ;
+}
+.feelingbox h1{
+    font-size: large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.insideboxsmall{
+    background-color:rgb(119, 185, 119);
+    padding-top:10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    border-bottom: 2px outset gray;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.insideboxsmall p{
+    margin:8px 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
