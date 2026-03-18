@@ -63,7 +63,14 @@ const translations = {
     happy:"If you feel happy",
     happy1:"- What made me feel happy today?",
     happy2:"- How can I keep this feeling?",
-    musicsub:"Music can calm your mind and lift your mood."
+    musicsub:"Music can calm your mind and lift your mood.",
+    M:"Morning",
+    E:"Evening",
+    M1:"What am I grateful for?",
+    M2:"What is one goal for today?",
+    E1:"What went well today?",
+    E2:"What did I learn?",
+    REM:"5 Minute Reflection",
   },
   my: {
     heroTitle: "မင်းတယောက်တည်းမဟုတ်ပါဘူး",
@@ -130,6 +137,13 @@ const translations = {
     happy1:"- ဒီနေ့ ဘာက ကျွန်တော့်ကို ပျော်ရွှင်စေခဲ့လဲ။",
     happy2:"- ဒီခံစားချက်ကို ဘယ်လိုထိန်းထားရမလဲ။",
     musicsub:"သီချင်းများက စိတ်ကို တည်ငြိမ်စေပြီး စိတ်အခြေအနေကို မြှင့်တင်ပေးနိုင်ပါသည်။",
+    M:"မနက်ပိုင်း",
+    E:"ညပိုင်း",
+    M1:"ဒီနေ့ ကျေးဇူးတင်မိတာဘာလဲ?",
+    M2:"ဒီနေ့အတွက် ရည်မှန်းချက်တစ်ခုက ဘာလဲ?",
+    E1:"ဒီနေ့မှာ အဆင်ပြေခဲ့တဲ့ အရာတွေက ဘာတွေလဲ?",
+    E2:"ဒီနေ့ ဘာတွေကို လေ့လာခဲ့သလဲ?",
+    REM:"၅ မိနစ် ဆင်ခြင်သုံးသပ်ခြင်း",
 
 
     

@@ -344,6 +344,27 @@ physical page
     margin:8px 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+.reflectionSection {
+    background-color: #b8eb93;
+    padding: 40px;
+    margin: 20px;
+    justify-self: center;
+    border-radius: 20px 60px;
+    border: 2px outset green;
+    line-height: 2rem;
+    
+}
+.reflectionSection  li{
+    list-style-type: circle;
+    padding-left: 10px;
+    color: #1b452d;
+}
+.reflectionSection h1{
+    font-size: large;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
 /* Music */
 .imagforMusic {
