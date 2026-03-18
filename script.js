@@ -71,6 +71,8 @@ const translations = {
     E1:"What went well today?",
     E2:"What did I learn?",
     REM:"5 Minute Reflection",
+    Mtitle:"Choose what you need and take a moment to relax.",
+    footerMusic:"🎧  Music can gently support your mental wellbeing.",
   },
   my: {
     heroTitle: "မင်းတယောက်တည်းမဟုတ်ပါဘူး",
@@ -144,7 +146,8 @@ const translations = {
     E1:"ဒီနေ့မှာ အဆင်ပြေခဲ့တဲ့ အရာတွေက ဘာတွေလဲ?",
     E2:"ဒီနေ့ ဘာတွေကို လေ့လာခဲ့သလဲ?",
     REM:"၅ မိနစ် ဆင်ခြင်သုံးသပ်ခြင်း",
-
+    Mtitle:" သင်လိုအပ်တာကို ရွေးချယ်ပြီး ခဏလောက် အနားယူလိုက်ပါ။",
+    footerMusic:"🎧 ဂီတဟာ စိတ်ပိုင်းဆိုင်ရာ ကျန်းမာရေးကို ညင်သာစွာ အထောက်အကူပြုနိုင်ပါတယ်။",
 
     
   }

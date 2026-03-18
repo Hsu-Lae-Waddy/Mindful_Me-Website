@@ -372,3 +372,19 @@ physical page
     background-color: #132619;
     padding: 10px;
 }
+.Musicblocks{
+    border-radius: 10px;
+}
+.Musicblocks div{
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px;
+}
+.Musicblocks h1{
+    background-color: #1b452d;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+    width: 200px;
+    text-align: center;
+}
