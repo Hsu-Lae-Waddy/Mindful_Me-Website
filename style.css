@@ -375,12 +375,7 @@ physical page
 .Musicblocks{
     border-radius: 10px;
 }
-.Musicblocks div{
-    border-radius: 20px;
-    margin: 20px;
-    padding: 10px;
-    background-color: #3f917b ;
-}
+
 .Musicblocks h1{
     background-color: #1b452d;
     padding: 10px;

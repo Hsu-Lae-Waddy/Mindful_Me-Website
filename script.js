@@ -75,6 +75,7 @@ const translations = {
     footerMusic:"🎧  Music can gently support your mental wellbeing.",
     Mindfulsub:"A Step-by-Step Guide to Mental Wellness",
     MindfulQ:"What happens to your brain when you meditate  for 10 minutes?",
+    Mindfulsub2:"You don’t need an hour of silence to change your life. Neuroscience reveals that just 10 minutes of daily meditation can physically restructure your brain, shrink your stress center, and boost focus."
   },
   my: {
     heroTitle: "မင်းတယောက်တည်းမဟုတ်ပါဘူး",
@@ -152,7 +153,7 @@ const translations = {
     footerMusic:"🎧 ဂီတဟာ စိတ်ပိုင်းဆိုင်ရာ ကျန်းမာရေးကို ညင်သာစွာ အထောက်အကူပြုနိုင်ပါတယ်။",
     Mindfulsub:"စိတ်ပိုင်းဆိုင်ရာ ကျန်းမာရေးအတွက် အဆင့်ဆင့်လမ်းညွှန်ချက်",
     MindfulQ:" ၁၀ မိနစ် တရားထိုင်တဲ့အခါ ဦးနှောက်မှာ ဘာတွေဖြစ်လာမလဲ",
-    
+    Mindfulsub2:"သင့်ဘဝကို ပြောင်းလဲဖို့ အချိန်ရှည်ကြာ မလိုအပ်ပါဘူး။ နေ့စဉ် ၁၀ မိနစ်သာ တရားထိုင်ခြင်းက ဦးနှောက်ကို အမှန်တကယ် ပြောင်းလဲစေနိုင်ပြီး စိတ်ဖိစီးမှုကို ထိန်းချုပ်ပေးတဲ့ အပိုင်းကို လျှော့ချကာ အာရုံစိုက်နိုင်စွမ်းကို တိုးတက်စေပါတယ်။",
   }
 };
 
