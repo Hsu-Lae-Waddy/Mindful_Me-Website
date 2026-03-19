@@ -73,6 +73,8 @@ const translations = {
     REM:"5 Minute Reflection",
     Mtitle:"Choose what you need and take a moment to relax.",
     footerMusic:"🎧  Music can gently support your mental wellbeing.",
+    Mindfulsub:"A Step-by-Step Guide to Mental Wellness",
+    MindfulQ:"What happens to your brain when you meditate  for 10 minutes?",
   },
   my: {
     heroTitle: "မင်းတယောက်တည်းမဟုတ်ပါဘူး",
@@ -148,7 +150,8 @@ const translations = {
     REM:"၅ မိနစ် ဆင်ခြင်သုံးသပ်ခြင်း",
     Mtitle:" သင်လိုအပ်တာကို ရွေးချယ်ပြီး ခဏလောက် အနားယူလိုက်ပါ။",
     footerMusic:"🎧 ဂီတဟာ စိတ်ပိုင်းဆိုင်ရာ ကျန်းမာရေးကို ညင်သာစွာ အထောက်အကူပြုနိုင်ပါတယ်။",
-
+    Mindfulsub:"စိတ်ပိုင်းဆိုင်ရာ ကျန်းမာရေးအတွက် အဆင့်ဆင့်လမ်းညွှန်ချက်",
+    MindfulQ:" ၁၀ မိနစ် တရားထိုင်တဲ့အခါ ဦးနှောက်မှာ ဘာတွေဖြစ်လာမလဲ",
     
   }
 };

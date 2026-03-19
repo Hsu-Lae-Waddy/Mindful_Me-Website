@@ -392,3 +392,8 @@ physical page
 .Musicblocks p{
     padding-bottom: 10px;
 }
+
+/* Mindful */
+.imgformindfulcover{
+    border-radius: 10px;
+}
