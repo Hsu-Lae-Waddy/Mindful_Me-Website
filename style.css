@@ -367,11 +367,7 @@ physical page
 }
 
 /* Music */
-.imagforMusic {
-    border-radius: 20px;
-    background-color: #132619;
-    padding: 10px;
-}
+
 .Musicblocks{
     border-radius: 10px;
 }
@@ -391,4 +387,21 @@ physical page
 /* Mindful */
 .imgformindfulcover{
     border-radius: 10px;
+}
+.parentforboxes{
+    display: flex;
+}
+.childbox{
+    display: inline;
+    margin: 7px;
+    padding: 5px;
+    border-radius: 20px;
+    border: 2px outset darkcyan;
+    box-shadow: #46a57f;
+}
+.parentforboxes li{
+    list-style-type:square;
+    list-style-position: inside;
+    padding-left: 2px;
+
 }

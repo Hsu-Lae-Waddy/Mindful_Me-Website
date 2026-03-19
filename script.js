@@ -74,8 +74,19 @@ const translations = {
     Mtitle:"Choose what you need and take a moment to relax.",
     footerMusic:"🎧  Music can gently support your mental wellbeing.",
     Mindfulsub:"A Step-by-Step Guide to Mental Wellness",
-    MindfulQ:"What happens to your brain when you meditate  for 10 minutes?",
-    Mindfulsub2:"You don’t need an hour of silence to change your life. Neuroscience reveals that just 10 minutes of daily meditation can physically restructure your brain, shrink your stress center, and boost focus."
+    Mindful1:"When to Practice Mindfulness",
+    MindFul2:"Practice mindfulness whenever you feel overwhelmed, anxious, or simply want to be present.",
+    Mindfulstress:"When you feel overwhelmed",
+    MFstress1:"Stress from study, work, or life",
+    MFstress2:"Too many thoughts at once",
+    MFanxious:"When you feel anxious",
+    MFanxious1:"Worrying about the future",
+    MFanxious2:"Racing thoughts",
+    MFdepression:"When you feel low or unmotivated",
+    MFdepression1:"Sadness or emptiness",
+    MFdepression2:"Lack of energy",
+    MFfootersmall:"“Mindfulness can be practiced anytime — it reduces stress and calms the mind.”",
+
   },
   my: {
     heroTitle: "မင်းတယောက်တည်းမဟုတ်ပါဘူး",
@@ -152,8 +163,18 @@ const translations = {
     Mtitle:" သင်လိုအပ်တာကို ရွေးချယ်ပြီး ခဏလောက် အနားယူလိုက်ပါ။",
     footerMusic:"🎧 ဂီတဟာ စိတ်ပိုင်းဆိုင်ရာ ကျန်းမာရေးကို ညင်သာစွာ အထောက်အကူပြုနိုင်ပါတယ်။",
     Mindfulsub:"စိတ်ပိုင်းဆိုင်ရာ ကျန်းမာရေးအတွက် အဆင့်ဆင့်လမ်းညွှန်ချက်",
-    MindfulQ:" ၁၀ မိနစ် တရားထိုင်တဲ့အခါ ဦးနှောက်မှာ ဘာတွေဖြစ်လာမလဲ",
-    Mindfulsub2:"သင့်ဘဝကို ပြောင်းလဲဖို့ အချိန်ရှည်ကြာ မလိုအပ်ပါဘူး။ နေ့စဉ် ၁၀ မိနစ်သာ တရားထိုင်ခြင်းက ဦးနှောက်ကို အမှန်တကယ် ပြောင်းလဲစေနိုင်ပြီး စိတ်ဖိစီးမှုကို ထိန်းချုပ်ပေးတဲ့ အပိုင်းကို လျှော့ချကာ အာရုံစိုက်နိုင်စွမ်းကို တိုးတက်စေပါတယ်။",
+    Mindful1:" Mindfulness ကို ဘယ်အချိန်မှာ လေ့ကျင့်သင့်လဲ",
+    Mindful2:"စိတ်ဖိစီးနေချိန်၊ စိုးရိမ်နေချိန် သို့မဟုတ် လက်ရှိအချိန်ကို ပိုမိုအာရုံစိုက်လိုတဲ့အခါတိုင်း mindfulness ကို လေ့ကျင့်နိုင်ပါတယ်။",
+    Mindfulstress:"စိတ်ဖိစီးနေတဲ့အခါ",
+    MFstress1:"စာ၊ အလုပ် သို့မဟုတ် နေထိုင်မှုကြောင့် စိတ်ဖိစီးမှုများရှိလာခြင်း",
+    MFstress2:"အတွေးတွေ အရမ်းများလွန်းတယ်",
+    MFanxious:"စိုးရိမ်ပူပန်နေတဲ့အခါ",
+    MFanxious1:"အနာဂတ်ကို စိုးရိမ်နေခြင်း",
+    MFanxious2:"အတွေးတွေ မြန်လွန်းနေခြင်း",
+    MFdepression:"စိတ်ဓာတ်ကျနေချိန် ဒါမှမဟုတ် စိတ်အားထက်သန်မှု ကင်းမဲ့နေချိန်",
+    MFdepression1:"ဝမ်းနည်းခြင်း သို့မဟုတ် ဗလာနတ္ထိဖြစ်ခြင်း",
+    MFdepression2:"အားအင် မရှိခြင်း",
+    MFfootersmall:"“Mindfulness ကို အချိန်မရွေး လေ့ကျင့်နိုင်ပါတယ် — စိတ်ဖိစီးမှုကို လျှော့ချပြီး စိတ်ကို တည်ငြိမ်စေပါသည်။”",
   }
 };
 
