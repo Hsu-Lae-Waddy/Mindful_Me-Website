@@ -405,3 +405,20 @@ physical page
     padding-left: 2px;
 
 }
+.boxoverwhelmed{
+    border-radius: 20px;
+    border: 2px outset darkcyan;
+    box-shadow: #46a57f;
+    padding: 20px  50px;
+    margin: 20px 70px;
+    background-color: #4ac7b0;
+    font: 1.5em sans-serif;
+}
+.insideboxoverwhelmed{
+    padding: 20px;
+    margin: 20px;
+    line-height: 3rem;
+    border-radius: 30px;
+    border: 2px double darkgreen;
+    width: 800px;
+}
