@@ -390,12 +390,14 @@ physical page
 }
 .parentforboxes{
     display: flex;
+     border-radius: 30px;
 }
 .childbox{
     display: inline;
+    width: 40%;
     margin: 7px;
-    padding: 5px;
-    border-radius: 20px;
+    padding: 10px;
+    border-radius: 30px;
     border: 2px outset darkcyan;
     box-shadow: #46a57f;
 }
@@ -409,8 +411,8 @@ physical page
     border-radius: 20px;
     border: 2px outset darkcyan;
     box-shadow: #46a57f;
-    padding: 20px  50px;
-    margin: 20px 70px;
+    padding: 20px  100px;
+    margin: 20px 100px;
     background-color: #4ac7b0;
     font: 1.5em sans-serif;
 }
@@ -421,4 +423,61 @@ physical page
     border-radius: 30px;
     border: 2px double darkgreen;
     width: 800px;
+}
+.Step-by-Stepbox{
+    padding: 20px;
+    margin: 30px 120px;
+    background-color: #46a57f;
+    border-radius: 30px;
+    border: 3px outset darkgreen;
+
+}
+.Step-by-StepboxTitle{
+    font-size: larger;
+    padding: 20px;
+    margin: 20px;
+    background-color: beige;
+    border-radius: 30px;
+    text-align: center;
+}
+.Step-by-Stepbox div{
+    padding: 5px 20px;
+    margin: 20px;
+
+}
+.Step-by-Stepbox div h2 {
+    font-family:'Gill Sans';
+    font-size: medium;
+    padding: 10px;
+    margin: 10px;
+    background-color: bisque;
+    border-radius: 10px;
+    text-align: center;
+
+}
+.Step-by-Stepbox div h3{
+    font-family: 'Gill Sans';
+    font-size: medium;
+    padding-left: 30px;
+}
+.Step-by-Stepbox div p{
+    padding: 5px;
+    font-size: medium;
+    color: rgb(42, 34, 34);
+    font-family:'Gill Sans';
+}
+.Step-by-Stepbox div li{
+    list-style-type: disc;
+    padding-left: 70px;
+    list-style: inside;
+    font-size: medium;
+    font-family: 'Gill Sans';
+}
+.parentforboxes button{
+    padding: 5px 20px;
+    margin: 20px;
+    background-color: burlywood;
+    color: black;
+    border-radius: 20px;
+    border: 2px outset sienna;
 }
