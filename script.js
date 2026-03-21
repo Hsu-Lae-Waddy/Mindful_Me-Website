@@ -86,7 +86,7 @@ const translations = {
     MFdepression1:"Sadness or emptiness",
     MFdepression2:"Lack of energy",
     MFfootersmall:"“Mindfulness can be practiced anytime — it reduces stress and calms the mind.”",
-    overwhelmedtitle:"When overwhelmed, use the RAIN technique",
+    overwhelmedtitle:"The RAIN technique",
     Rainmeaning:"-RAIN is an acronym for a powerful mindfulness practice in which you recognize your experience, allow it to be as it is, investigate it with curiosity, and nurture it with self-compassion."
 
   },
@@ -177,7 +177,7 @@ const translations = {
     MFdepression1:"ဝမ်းနည်းခြင်း သို့မဟုတ် ဗလာနတ္ထိဖြစ်ခြင်း",
     MFdepression2:"အားအင် မရှိခြင်း",
     MFfootersmall:"“Mindfulness ကို အချိန်မရွေး လေ့ကျင့်နိုင်ပါတယ် — စိတ်ဖိစီးမှုကို လျှော့ချပြီး စိတ်ကို တည်ငြိမ်စေပါသည်။”",
-    overwhelmedtitle:"စိတ်ဖိစီးနေချိန်တွင် RAIN နည်းလမ်းကို အသုံးပြုပါ",
+    overwhelmedtitle:"RAIN နည်းလမ်း",
     Rainmeaning:"-RAIN ဆိုတာ ကိုယ့်ရဲ့အတွေ့အကြုံကို သိရှိနားလည်ပြီး အရှိအတိုင်းဖြစ်အောင် ခွင့်ပြုလိုက်၊ စူးစမ်းလိုစိတ်နဲ့ စူးစမ်းလေ့လာ၊ ကိုယ့်ကိုယ်ကိုယ် ကရုဏာနဲ့ ပြုစုပျိုးထောင်တဲ့ အစွမ်းထက်တဲ့ သတိပဋ္ဌာန်လေ့ကျင့်ခန်းတစ်ခုရဲ့ အတိုကောက်စကားလုံး ဖြစ်ပါတယ်။",
   }
 };

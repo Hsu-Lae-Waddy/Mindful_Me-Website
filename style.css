@@ -404,7 +404,7 @@ physical page
 .parentforboxes li{
     list-style-type:square;
     list-style-position: inside;
-    padding-left: 2px;
+    padding-left: 20px;
 
 }
 .boxoverwhelmed{
@@ -413,15 +413,14 @@ physical page
     box-shadow: #46a57f;
     padding: 20px  100px;
     margin: 20px 100px;
-    background-color: #4ac7b0;
     font: 1.5em sans-serif;
 }
 .insideboxoverwhelmed{
-    padding: 20px;
-    margin: 20px;
+    padding: 30px;
+    margin: 30px;
     line-height: 3rem;
     border-radius: 30px;
-    border: 2px double darkgreen;
+    border: 4px double darkgreen;
     width: 800px;
 }
 .Step-by-Stepbox{
@@ -453,6 +452,7 @@ physical page
     background-color: bisque;
     border-radius: 10px;
     text-align: center;
+    font-weight: 400;
 
 }
 .Step-by-Stepbox div h3{
@@ -472,6 +472,11 @@ physical page
     list-style: inside;
     font-size: medium;
     font-family: 'Gill Sans';
+}
+.insideboxoverwhelmed li{
+    list-style-type: disc;
+    padding-left: 70px;
+    list-style: inside;
 }
 .parentforboxes button{
     padding: 5px 20px;
