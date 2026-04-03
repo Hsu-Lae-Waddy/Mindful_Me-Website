@@ -90,6 +90,7 @@ body{
     width: 230px;
     height: 280px ;
    }
+  
 
 }
 .exercise1{
@@ -485,4 +486,19 @@ physical page
     color: black;
     border-radius: 20px;
     border: 2px outset sienna;
+}
+/*Art*/
+.btncontainersForArt{
+    display: flex;
+    gap: 2px;
+    padding: 10px;
+    margin: 10px;
+}
+.btncontainersForArt button{
+    padding: 10px;
+    margin: 10px;
+    background-color: #1b452d;
+    border: 2px inset green;
+    border-radius: 20px;
+    color: white;
 }
