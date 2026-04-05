@@ -109,6 +109,28 @@ const translations = {
     Medi2:"Improve focus",
     Medi3:"Control emotions",
     Medi4:"Feel more peaceful",
+    pageSubtitle: 'Gentle reads for your emotional well-being',
+                footerText: "💚 Remember: You're not alone. Help is always available.",
+                readMore: 'Read More',
+                readLess: 'Read Less',
+                titles: [
+                    'Why You Feel Overwhelmed',
+                    'You Are Not Behind in Life',
+                    'Overthinking Is Not Problem Solving',
+                    'Rest Is Not Laziness'
+                ],
+                summaries: [
+                    'Sometimes life feels too heavy because your brain is trying to solve too many problems at once. Instead of solving everything, try solving just one small thing.',
+                    'Many people think they are late in life. But life is not a race. Everyone moves at a different speed and different path.',
+                    'Thinking about a problem again and again does not always solve it. Sometimes your brain just needs rest, not more thinking.',
+                    'Rest is important for your brain and emotions. Resting does not mean you are lazy. It means you are human.'
+                ],
+                fulls: [
+                    '<p>When we carry multiple worries at once, our brain enters a state of cognitive overload. This isn\'t a sign of weakness — it\'s simply how the brain works when it has too many tabs open.</p><p class="mt-2"><strong>Try this:</strong> Write down everything on your mind. Then circle just ONE thing you can act on today. Let the rest wait.</p><p class="mt-2">Remember: you don\'t have to solve your entire life today. Just take the next small step.</p>',
+                    '<p>Social media often makes us compare our Chapter 1 with someone else\'s Chapter 20. But comparison steals the joy of your own unique journey.</p><p class="mt-2"><strong>Consider this:</strong> Some people graduate at 25 and get a job at 27. Others graduate at 27 and get a job immediately. Everyone has their own timeline.</p><p class="mt-2">Your path is valid. Your pace is enough. Trust the process of your own story.</p>',
+                    '<p>Overthinking creates an illusion of productivity. You feel like you\'re "working on the problem," but you\'re actually just circling around it.</p><p class="mt-2"><strong>A helpful technique:</strong> Set a 10-minute timer to think about the problem. When the timer ends, write down your best answer — even if it\'s imperfect — and move on.</p><p class="mt-2">Sometimes the best thing you can do for a problem is to stop thinking about it for a while.</p>',
+                    '<p>We live in a culture that glorifies being busy. But constant doing without resting leads to burnout, not success.</p><p class="mt-2"><strong>Remember:</strong> Even nature rests. Trees lose their leaves in winter to grow stronger in spring. Your rest period is preparing you for what comes next.</p><p class="mt-2">Give yourself permission to pause. You deserve it — not because you earned it, but because you need it.</p>'
+                ]
 
     
 
@@ -223,6 +245,29 @@ const translations = {
     Medi2:"အာရုံစူးစိုက်မှု တိုးစေတယ်၊ ",
     Medi3:"စိတ်ခံစားချက်ကို ထိန်းနိုင်စေတယ်၊ ",
     Medi4:"စိတ်ကို ပိုပြီး ငြိမ်သက်စေပါတယ်။",
+    pageSubtitle: 'စိတ်ခံစားမှု ကျန်းမာရေးအတွက် ဖတ်စရာများ',
+                footerText: '💚 မှတ်ထားပါ: သင်တစ်ယောက်တည်း မဟုတ်ပါ။ အကူအညီ အမြဲရနိုင်ပါတယ်။',
+                readMore: 'ဆက်ဖတ်ရန်',
+                readLess: 'ပိတ်ရန်',
+                titles: [
+                    'ဘာကြောင့် စိတ်ဖိစီးမှုများတာလဲ',
+                    'ဘဝမှာ နောက်ကျနေတာ မဟုတ်ပါ',
+                    'အလွန်အကျွံ စဉ်းစားခြင်းသည် ပြဿနာဖြေရှင်းခြင်း မဟုတ်ပါ',
+                    'အနားယူခြင်းသည် ပျင်းရိခြင်း မဟုတ်ပါ'
+                ],
+                summaries: [
+                    'တစ်ခါတစ်ရံ ဘဝက အလွန်လေးလံတယ်လို့ ခံစားရတာက သင့်ဦးနှောက်က ပြဿနာအများကြီးကို တစ်ပြိုင်နက် ဖြေရှင်းဖို့ ကြိုးစားနေလို့ပါ။',
+                    'လူအများစုက ဘဝမှာ နောက်ကျနေပြီလို့ ထင်ကြတယ်။ ဒါပေမယ့် ဘဝက ပြိုင်ပွဲ မဟုတ်ပါ။',
+                    'ပြဿနာတစ်ခုကို ထပ်ခါထပ်ခါ စဉ်းစားခြင်းက အမြဲတမ်း ဖြေရှင်းပေးတာ မဟုတ်ပါ။',
+                    'အနားယူခြင်းသည် သင့်ဦးနှောက်နှင့် စိတ်ခံစားမှုအတွက် အရေးကြီးပါတယ်။'
+                ],
+                fulls: [
+                    '<p>စိတ်ပူစရာ အများကြီးကို တစ်ပြိုင်နက် သယ်ဆောင်ရင် ဦးနှောက်က အလွန်အကျွံ ဝန်ပိသွားပါတယ်။</p><p class="mt-2"><strong>စမ်းကြည့်ပါ:</strong> စိတ်ထဲရှိသမျှကို ရေးချပါ။ ပြီးတော့ ဒီနေ့ လုပ်နိုင်တဲ့ တစ်ခုတည်းကို ရွေးပါ။</p>',
+                    '<p>လူမှုမီဒီယာက ကျွန်တော်တို့ရဲ့ အခန်း ၁ ကို သူတစ်ပါးရဲ့ အခန်း ၂၀ နဲ့ နှိုင်းယှဉ်စေတယ်။</p><p class="mt-2">သင့်လမ်းကြောင်းက မှန်ကန်ပါတယ်။ သင့်အရှိန်က လုံလောက်ပါတယ်။</p>',
+                    '<p>အလွန်အကျွံ စဉ်းစားခြင်းက အလုပ်ဖြစ်နေသယောင် ထင်ရတဲ့ အထင်အမြင်ကို ဖန်တီးပေးပါတယ်။</p><p class="mt-2"><strong>နည်းလမ်း:</strong> မိနစ် ၁၀ အချိန်သတ်မှတ်ပြီး စဉ်းစားပါ။ အချိန်ကုန်ရင် အကောင်းဆုံး အဖြေကို ရေးချပါ။</p>',
+                    '<p>ကျွန်တော်တို့ အလုပ်ရှုပ်နေတာကို ဂုဏ်ယူတဲ့ ယဉ်ကျေးမှုမှာ နေကြတယ်။ ဒါပေမယ့် မနားဘဲ လုပ်နေတာက မောပန်းမှုကို ဖြစ်စေပါတယ်။</p><p class="mt-2">ခွင့်ပြုပါ - ခဏ ရပ်နားဖို့။ သင် ထိုက်တန်ပါတယ်။</p>'
+                ]
+            
   }
 };
 

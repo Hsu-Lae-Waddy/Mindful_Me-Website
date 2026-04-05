@@ -504,3 +504,25 @@ physical page
     color: white;
     
 }
+/* Reading Articles*/
+.boxFortips{
+    display: flex;
+    gap: 2px;
+    justify-self: center;
+    padding: 20px 50px;
+    margin: 20px 40px;
+    border-radius: 50px;
+}
+.boxFortips img{
+    width: 200px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 2px;
+}
+.boxFortips p{
+    padding: 10px;
+}
+.boxFortips div{
+    background-color: #395822;
+     padding: 10px;
+}
