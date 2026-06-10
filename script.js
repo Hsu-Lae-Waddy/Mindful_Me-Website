@@ -153,6 +153,7 @@ const translations = {
         // Footer
         footer: "You can practice mindfulness in small moments — walking, eating, or listening to music.",
         checklist_title: "📋 Mental Health Checklist",
+        checklist:"Mental Health Checklist",
     checklist_sub: "Simple daily habits to check in with yourself.",
 
     check_1: "Have I eaten regular meals?",
@@ -341,6 +342,7 @@ med_s6_d: "မျက်လုံးကို ဖြည်းဖြည်းခ�
 // Footer
 footer: "လမ်းလျှောက်နေစဉ်၊ အစာစားနေစဉ် သို့မဟုတ် သီချင်းနားထောင်နေစဉ်ကဲ့သို့ နေ့စဉ်အချိန်လေးများတွင်လည်း Mindfulness ကို လေ့ကျင့်နိုင်ပါတယ်။",
  checklist_title: "📋 စိတ်ကျန်းမာရေး စစ်ဆေးရန် စာရင်း",
+ checklist: "စိတ်ကျန်းမာရေး စစ်ဆေးကြည့်ရန်",
     checklist_sub: "နေ့စဉ် ကိုယ့်ကိုယ်ကို ပြန်လည် သတိထားကြည့်နိုင်ရန် ရိုးရှင်းသော အလေ့အကျင့်များ။",
 
     check_1: "ပုံမှန် အစားအသောက် စားဖြစ်ခဲ့ပါသလား?",
