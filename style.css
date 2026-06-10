@@ -505,17 +505,41 @@ physical page
     
 }
 /* Reading Articles*/
+.Checklists{
+    width: 500px;
+    justify-self: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: #6d9054;
+    border: 2px outset #132619 ;
+    border-radius: 20px;
+}
 .Checklists img{
     width: 100px;
     height: 80px;
 }
-.ArticlesSection{
-    display: flex;
-}
-.ArticlesSection div{
-    padding: 20px;
-    margin: 10px;
+
+.ArticlesSection .Articles{
     background-color: #97d9d9;
     border:3px outset blueviolet;
     border-radius: 20px 50px;
+    
+}
+
+
+.card {
+    padding: 20px;
+    margin: 10px;
+    background-color: #97d9d9;
+    border: 3px outset blueviolet;
+    border-radius: 20px 50px;
+    width: 300px;
+}
+
+.toggle {
+    cursor: pointer;
+}
+
+.content {
+    display: none;
 }

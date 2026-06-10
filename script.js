@@ -80,59 +80,94 @@ const translations = {
     footerMusic:"🎧  Music can gently support your mental wellbeing.",
     Mindfulsub:"A Step-by-Step Guide to Mental Wellness",
     Mindful1:"When to Practice Mindfulness?",
-    Mindful11:"🌿 What is Mindfulness?",
-    Mindful12:"Mindfulness means using awareness and meditation to understand and",
-    Mindful122:" manage your thoughts, emotions, and stress instead of being controlled by them. ",
-    Mindful2:"Practice mindfulness whenever you feel overwhelmed, anxious, or simply want to be present.",
-    Mindfulstress:"When you feel overwhelmed",
-    MFstress1:"Stress from study, work, or life",
-    MFstress2:"Too many thoughts at once",
-    MFanxious:"When you feel anxious",
-    MFanxious1:"Worrying about the future",
-    MFanxious2:"Racing thoughts",
-    MFdepression:"When you feel low or unmotivated",
-    MFdepression1:"Sadness or emptiness",
-    MFdepression2:"Lack of energy",
-    MFfootersmall:"“Mindfulness can be practiced anytime — it reduces stress and calms the mind.”",
-    overwhelmedtitle:"The RAIN technique",
-    Rainmeaning:"-RAIN is an acronym for a powerful mindfulness practice in which you recognize your experience, allow it to be as it is, investigate it with curiosity, and nurture it with self-compassion.",
-    RainStep1:"🧘 Step 1: Pause",
-    RainStep2:"🔴 Step 2: Recognize (R)",
-    RainStep3:"🟠 Step 3: Allow (A)",
-    RainStep4:"🟡 Step 4: Investigate (I)",
-    RainStep5:"🟢 Step 5: Nurture (N)",
-    RainFinalStep:"🌿 Final Step: Breathe Again",
-    MeditationWhat:"What is Meditation?",
-    Meditationmean:"Meditation is a simple practice where you train your mind to focus and stay calm.",
-    helpsyou:"It helps you: ",
-    Medi1:"Reduce stress",
-    Medi2:"Improve focus",
-    Medi3:"Control emotions",
-    Medi4:"Feel more peaceful",
-    pageSubtitle: 'Gentle reads for your emotional well-being',
-                footerText: "💚 Remember: You're not alone. Help is always available.",
-                readMore: 'Read More',
-                readLess: 'Read Less',
-                titles: [
-                    'Why You Feel Overwhelmed',
-                    'You Are Not Behind in Life',
-                    'Overthinking Is Not Problem Solving',
-                    'Rest Is Not Laziness'
-                ],
-                summaries: [
-                    'Sometimes life feels too heavy because your brain is trying to solve too many problems at once. Instead of solving everything, try solving just one small thing.',
-                    'Many people think they are late in life. But life is not a race. Everyone moves at a different speed and different path.',
-                    'Thinking about a problem again and again does not always solve it. Sometimes your brain just needs rest, not more thinking.',
-                    'Rest is important for your brain and emotions. Resting does not mean you are lazy. It means you are human.'
-                ],
-                fulls: [
-                    '<p>When we carry multiple worries at once, our brain enters a state of cognitive overload. This isn\'t a sign of weakness — it\'s simply how the brain works when it has too many tabs open.</p><p class="mt-2"><strong>Try this:</strong> Write down everything on your mind. Then circle just ONE thing you can act on today. Let the rest wait.</p><p class="mt-2">Remember: you don\'t have to solve your entire life today. Just take the next small step.</p>',
-                    '<p>Social media often makes us compare our Chapter 1 with someone else\'s Chapter 20. But comparison steals the joy of your own unique journey.</p><p class="mt-2"><strong>Consider this:</strong> Some people graduate at 25 and get a job at 27. Others graduate at 27 and get a job immediately. Everyone has their own timeline.</p><p class="mt-2">Your path is valid. Your pace is enough. Trust the process of your own story.</p>',
-                    '<p>Overthinking creates an illusion of productivity. You feel like you\'re "working on the problem," but you\'re actually just circling around it.</p><p class="mt-2"><strong>A helpful technique:</strong> Set a 10-minute timer to think about the problem. When the timer ends, write down your best answer — even if it\'s imperfect — and move on.</p><p class="mt-2">Sometimes the best thing you can do for a problem is to stop thinking about it for a while.</p>',
-                    '<p>We live in a culture that glorifies being busy. But constant doing without resting leads to burnout, not success.</p><p class="mt-2"><strong>Remember:</strong> Even nature rests. Trees lose their leaves in winter to grow stronger in spring. Your rest period is preparing you for what comes next.</p><p class="mt-2">Give yourself permission to pause. You deserve it — not because you earned it, but because you need it.</p>'
-                ]
+     sub: "A Step-by-Step Guide to Mental Wellness",
+        
+        // Intro Section
+        h_what: "🌿 What is Mindfulness?",
+        p_what: "Mindfulness means paying attention to the present moment with intention and without judgment. It helps us recognize our thoughts and feelings so we can understand ourselves better.",
+        h_when: "🕒 When to Practice?",
+        p_when: "Practice whenever you feel overwhelmed, anxious, or simply want to be present.",
+        
+        // Cards
+        c1_title: "When Overwhelmed",
+        c1_1: "Stress from study or work",
+        c1_2: "Too many thoughts at once",
+        c2_title: "When Anxious",
+        c2_1: "Worrying about the future",
+        c2_2: "Racing thoughts",
+        c3_title: "When Feeling Low",
+        c3_1: "Sadness or emptiness",
+        c3_2: "Lack of energy",
+        
+        // RAIN Technique
+        rain_title: "The RAIN Technique",
+        rain_sub: "(Recognize, Allow, Investigate, Nurture)",
+        rain_intro: "RAIN helps you deal with difficult emotions mindfully.",
+        r_title: "Recognize",
+        r_desc: "What is going on inside right now? Name the emotion (e.g., 'I feel anxious').",
+        a_title: "Allow",
+        a_desc: "Let the feeling be there. Don't push it away. Accept it exists.",
+        i_title: "Investigate",
+        i_desc: "Ask yourself: Where do I feel this in my body? What thoughts are coming?",
+        n_title: "Nurture",
+        n_desc: "Be kind to yourself. Say 'It's okay. I am here for you.' Put hand on heart.",
+        
+        // RAIN Steps
+        rain_step_title: "🌧️ Step-by-Step Practice",
+        rs1_title: "🧘 Step 1: Pause",
+        rs1_desc: "Stop what you are doing. Take a slow breath in... and out.",
+        rs2_title: "🔴 Step 2: Recognize",
+        rs2_desc: "Ask: 'What am I feeling right now?' (Stress, Anxiety, Sadness). Just name it.",
+        rs3_title: "🟠 Step 3: Allow",
+        rs3_desc: "Tell yourself: 'It's okay to feel this.' Let it exist without fighting it.",
+        rs4_title: "🟡 Step 4: Investigate",
+        rs4_desc: "Where do I feel this in my body? (Chest, Stomach). Be curious, not judgmental.",
+        rs5_title: "🟢 Step 5: Nurture",
+        rs5_desc: "Put your hand on your heart. Say 'I am okay.' Treat yourself like a friend.",
+        
+        // Meditation
+        med_title: "🧘 Meditation Guide",
+        med_sub: "Simple practice to train your mind.",
+        med_what: "What is it?",
+        med_what_p: "Meditation is training your mind to focus and stay calm. It is not about stopping thoughts completely, but about noticing them without getting caught up in them.",
+        med_benefits: "It helps you:",
+        med_b1: "Reduce stress",
+        med_b2: "Improve focus",
+        med_b3: "Control emotions",
+        
+        // Meditation Steps
+        med_steps_title: "🌿 Step-by-Step",
+        med_s1: "Find a quiet place.",
+        med_s1_d: "Sit comfortably on a chair or floor.",
+        med_s2: "Sit straight.",
+        med_s2_d: "Keep your back straight but relaxed.",
+        med_s3: "Close eyes.",
+        med_s3_d: "Gently close or look down softly.",
+        med_s4: "Focus on breath.",
+        med_s4_d: "Breathe in slowly... breathe out slowly.",
+        med_s5: "Handle wandering mind.",
+        med_s5_d: "When thoughts come, gently say 'Thinking...' and return to breath.",
+        med_s6: "Finish gently.",
+        med_s6_d: "Open your eyes slowly. Notice how you feel.",
+        
+        // Footer
+        footer: "You can practice mindfulness in small moments — walking, eating, or listening to music.",
+        checklist_title: "📋 Mental Health Checklist",
+    checklist_sub: "Simple daily habits to check in with yourself.",
 
-    
+    check_1: "Have I eaten regular meals?",
+    check_2: "Am I getting enough sleep?",
+    check_3: "Did I drink plenty of water?",
+    check_4: "Have I spent time outside?",
+    check_5: "Did I take a break from screens?",
+    check_6: "Have I connected with others?",
+    check_7: "Did I do something kind?",
+    check_8:"Have I been kind to myself today?",
+    check_9:"Did I do something I enjoy today?",
+    FooterCheck:"💛 Take care of yourself one small step at a time."
+
+     
+  
 
   },
   my: {
@@ -214,60 +249,112 @@ const translations = {
     focusMusic: "အာရုံစိုက်နိုင်စွမ်းကို တိုးတက်စေပြီး အာရုံပျက်စေသော အရာများကို လျော့ချပေးပါတယ်။",
     relaxMusic: "ငြိမ်သက်ပြီး စိတ်အေးချမ်းသော ပတ်ဝန်းကျင်ကို ဖန်တီးပေးပါတယ်။",
     footerMusic:"🎧 ဂီတဟာ စိတ်ပိုင်းဆိုင်ရာ ကျန်းမာရေးကို ညင်သာစွာ အထောက်အကူပြုနိုင်ပါတယ်။",
-    Mindfulsub:"စိတ်ပိုင်းဆိုင်ရာ ကျန်းမာရေးအတွက် အဆင့်ဆင့်လမ်းညွှန်ချက်",
-    Mindful1:" Mindfulness ကို ဘယ်အချိန်မှာ လေ့ကျင့်သင့်လဲ",
-    Mindful11: "🌿 Mindfulness ဆိုတာဘာလဲ?",
-    Mindful12:"Mindfulness ဆိုသည်မှာ သင့်အတွေးများ၊ စိတ်ခံစားမှုများနှင့် စိတ်ဖိစီးမှုများကို ထိန်းချုပ်မည့်အစား",
-    Mindful122:"နားလည်ပြီး စီမံခန့်ခွဲရန်အတွက် အသိစိတ်နှင့် တရားထိုင်ခြင်းကို အသုံးပြုခြင်း ဖြစ်သည်။",
-    Mindful2:"စိတ်ဖိစီးနေချိန်၊ စိုးရိမ်နေချိန် သို့မဟုတ် လက်ရှိအချိန်ကို ပိုမိုအာရုံစိုက်လိုတဲ့အခါတိုင်း mindfulness ကို လေ့ကျင့်နိုင်ပါတယ်။",
-    Mindfulstress:"စိတ်ဖိစီးနေတဲ့အခါ",
-    MFstress1:"စာ၊ အလုပ် သို့မဟုတ် နေထိုင်မှုကြောင့် စိတ်ဖိစီးမှုများရှိလာခြင်း",
-    MFstress2:"အတွေးတွေ အရမ်းများလွန်းတယ်",
-    MFanxious:"စိုးရိမ်ပူပန်နေတဲ့အခါ",
-    MFanxious1:"အနာဂတ်ကို စိုးရိမ်နေခြင်း",
-    MFanxious2:"အတွေးတွေ မြန်လွန်းနေခြင်း",
-    MFdepression:"စိတ်ဓာတ်ကျနေချိန် ဒါမှမဟုတ် စိတ်အားထက်သန်မှု ကင်းမဲ့နေချိန်",
-    MFdepression1:"ဝမ်းနည်းခြင်း သို့မဟုတ် ဗလာနတ္ထိဖြစ်ခြင်း",
-    MFdepression2:"အားအင် မရှိခြင်း",
-    MFfootersmall:"“Mindfulness ကို အချိန်မရွေး လေ့ကျင့်နိုင်ပါတယ် — စိတ်ဖိစီးမှုကို လျှော့ချပြီး စိတ်ကို တည်ငြိမ်စေပါသည်။”",
-    overwhelmedtitle:"RAIN နည်းလမ်း",
-    Rainmeaning:"-RAIN ဆိုတာ ကိုယ့်ရဲ့အတွေ့အကြုံကို သိရှိနားလည်ပြီး အရှိအတိုင်းဖြစ်အောင် ခွင့်ပြုလိုက်၊ စူးစမ်းလိုစိတ်နဲ့ စူးစမ်းလေ့လာ၊ ကိုယ့်ကိုယ်ကိုယ် ကရုဏာနဲ့ ပြုစုပျိုးထောင်တဲ့ အစွမ်းထက်တဲ့ သတိပဋ္ဌာန်လေ့ကျင့်ခန်းတစ်ခုရဲ့ အတိုကောက်စကားလုံး ဖြစ်ပါတယ်။",
-    RainStep1:"🧘 အဆင့် ၁: ခေတ္တရပ်ပါ",
-    RainStep2:"🔴 အဆင့် ၂: မှတ်မိပါ (R)",
-    RainStep3:"🟠 အဆင့် ၃: ခွင့်ပြုပါ (A)",
-    RainStep4:"🟡 အဆင့် ၄: စုံစမ်းစစ်ဆေးပါ (I)",
-    RainStep5:"🟢 အဆင့် ၅: ပြုစုပျိုးထောင်ခြင်း (N)",
-    RainFinalStep:"🌿 နောက်ဆုံးအဆင့်- ပြန်လည်အသက်ရှူပါ",
-    MeditationWhat:"Meditation ဆိုတာဘာလဲ?",
-    Meditationmean:"Meditation ဆိုတာ စိတ်ကို အာရုံစိုက်ပြီး တည်ငြိမ်အောင် လေ့ကျင့်တဲ့ အလေ့အကျင့်တစ်ခု ဖြစ်ပါတယ်။",
-    helpsyou:"သင့်အား ကူညီပေးသည်: ",
-     Medi1:"Stress လျော့စေတယ်၊ ",
-    Medi2:"အာရုံစူးစိုက်မှု တိုးစေတယ်၊ ",
-    Medi3:"စိတ်ခံစားချက်ကို ထိန်းနိုင်စေတယ်၊ ",
-    Medi4:"စိတ်ကို ပိုပြီး ငြိမ်သက်စေပါတယ်။",
-    pageSubtitle: 'စိတ်ခံစားမှု ကျန်းမာရေးအတွက် ဖတ်စရာများ',
-                footerText: '💚 မှတ်ထားပါ: သင်တစ်ယောက်တည်း မဟုတ်ပါ။ အကူအညီ အမြဲရနိုင်ပါတယ်။',
-                readMore: 'ဆက်ဖတ်ရန်',
-                readLess: 'ပိတ်ရန်',
-                titles: [
-                    'ဘာကြောင့် စိတ်ဖိစီးမှုများတာလဲ',
-                    'ဘဝမှာ နောက်ကျနေတာ မဟုတ်ပါ',
-                    'အလွန်အကျွံ စဉ်းစားခြင်းသည် ပြဿနာဖြေရှင်းခြင်း မဟုတ်ပါ',
-                    'အနားယူခြင်းသည် ပျင်းရိခြင်း မဟုတ်ပါ'
-                ],
-                summaries: [
-                    'တစ်ခါတစ်ရံ ဘဝက အလွန်လေးလံတယ်လို့ ခံစားရတာက သင့်ဦးနှောက်က ပြဿနာအများကြီးကို တစ်ပြိုင်နက် ဖြေရှင်းဖို့ ကြိုးစားနေလို့ပါ။',
-                    'လူအများစုက ဘဝမှာ နောက်ကျနေပြီလို့ ထင်ကြတယ်။ ဒါပေမယ့် ဘဝက ပြိုင်ပွဲ မဟုတ်ပါ။',
-                    'ပြဿနာတစ်ခုကို ထပ်ခါထပ်ခါ စဉ်းစားခြင်းက အမြဲတမ်း ဖြေရှင်းပေးတာ မဟုတ်ပါ။',
-                    'အနားယူခြင်းသည် သင့်ဦးနှောက်နှင့် စိတ်ခံစားမှုအတွက် အရေးကြီးပါတယ်။'
-                ],
-                fulls: [
-                    '<p>စိတ်ပူစရာ အများကြီးကို တစ်ပြိုင်နက် သယ်ဆောင်ရင် ဦးနှောက်က အလွန်အကျွံ ဝန်ပိသွားပါတယ်။</p><p class="mt-2"><strong>စမ်းကြည့်ပါ:</strong> စိတ်ထဲရှိသမျှကို ရေးချပါ။ ပြီးတော့ ဒီနေ့ လုပ်နိုင်တဲ့ တစ်ခုတည်းကို ရွေးပါ။</p>',
-                    '<p>လူမှုမီဒီယာက ကျွန်တော်တို့ရဲ့ အခန်း ၁ ကို သူတစ်ပါးရဲ့ အခန်း ၂၀ နဲ့ နှိုင်းယှဉ်စေတယ်။</p><p class="mt-2">သင့်လမ်းကြောင်းက မှန်ကန်ပါတယ်။ သင့်အရှိန်က လုံလောက်ပါတယ်။</p>',
-                    '<p>အလွန်အကျွံ စဉ်းစားခြင်းက အလုပ်ဖြစ်နေသယောင် ထင်ရတဲ့ အထင်အမြင်ကို ဖန်တီးပေးပါတယ်။</p><p class="mt-2"><strong>နည်းလမ်း:</strong> မိနစ် ၁၀ အချိန်သတ်မှတ်ပြီး စဉ်းစားပါ။ အချိန်ကုန်ရင် အကောင်းဆုံး အဖြေကို ရေးချပါ။</p>',
-                    '<p>ကျွန်တော်တို့ အလုပ်ရှုပ်နေတာကို ဂုဏ်ယူတဲ့ ယဉ်ကျေးမှုမှာ နေကြတယ်။ ဒါပေမယ့် မနားဘဲ လုပ်နေတာက မောပန်းမှုကို ဖြစ်စေပါတယ်။</p><p class="mt-2">ခွင့်ပြုပါ - ခဏ ရပ်နားဖို့။ သင် ထိုက်တန်ပါတယ်။</p>'
-                ]
-            
+    sub: "စိတ်ကျန်းမာရေး ကောင်းမွန်စေရန် အဆင့်ဆင့် လေ့လာနိုင်သော လမ်းညွှန်",
+// Intro Section
+h_what: "🌿 Mindfulness ဆိုတာ ဘာလဲ?",
+p_what: "Mindfulness ဆိုတာ လက်ရှိအချိန်ကို သတိရှိစွာ အာရုံစိုက်နေခြင်း ဖြစ်ပါတယ်။ ကိုယ့်ရဲ့ အတွေးတွေ၊ စိတ်ခံစားချက်တွေကို ပိုမိုနားလည်လာစေဖို့ ကူညီပေးပါတယ်။",
+
+h_when: "🕒 ဘယ်အချိန်မှာ လေ့ကျင့်သင့်လဲ?",
+p_when: "စိတ်ဖိစီးနေချိန်၊ စိုးရိမ်ပူပန်နေချိန် သို့မဟုတ် လက်ရှိအချိန်ကို ပိုမိုအာရုံစိုက်လိုတဲ့အခါတိုင်း လေ့ကျင့်နိုင်ပါတယ်။",
+
+// Cards
+c1_title: "စိတ်ဖိစီးနေသောအခါ",
+c1_1: "စာသင်ခြင်း၊ အလုပ် သို့မဟုတ် နေ့စဉ်ဘဝကြောင့် စိတ်ဖိစီးမှုများလာခြင်း",
+c1_2: "အတွေးများစွာ တပြိုင်နက် ဖြစ်ပေါ်နေခြင်း",
+
+c2_title: "စိုးရိမ်ပူပန်နေသောအခါ",
+c2_1: "အနာဂတ်အတွက် စိုးရိမ်နေခြင်း",
+c2_2: "အတွေးများ ဆက်တိုက် ပြေးလွှားနေခြင်း",
+
+c3_title: "စိတ်ဓာတ်ကျနေသောအခါ",
+c3_1: "ဝမ်းနည်းမှု သို့မဟုတ် လွတ်ဟာနေသလို ခံစားရခြင်း",
+c3_2: "အားအင် နည်းပါးနေခြင်း",
+
+// RAIN Technique
+rain_title: "RAIN နည်းလမ်း",
+rain_sub: "(Recognize, Allow, Investigate, Nurture)",
+rain_intro: "RAIN သည် ခက်ခဲသော စိတ်ခံစားချက်များကို နားလည်ပြီး နူးညံ့စွာ ကိုင်တွယ်နိုင်ရန် ကူညီပေးသော နည်းလမ်းတစ်ခု ဖြစ်ပါတယ်။",
+
+r_title: "သတိပြုသိရှိပါ",
+r_desc: "လက်ရှိမှာ ဘာတွေ ဖြစ်နေလဲ သတိပြုကြည့်ပါ။ ဥပမာ - 'အခု ကျွန်ုပ် စိုးရိမ်နေတယ်'။",
+
+a_title: "လက်ခံပါ",
+a_desc: "အဲဒီ စိတ်ခံစားချက်ကို တွန်းလှန်မနေဘဲ လက်ခံပေးပါ။",
+
+i_title: "နူးညံ့စွာ စူးစမ်းပါ",
+i_desc: "ဒီခံစားချက်ကို ကိုယ်ခန္ဓာရဲ့ ဘယ်နေရာမှာ ခံစားနေရလဲ၊ ဘာတွေ စဉ်းစားနေလဲ စူးစမ်းကြည့်ပါ။",
+
+n_title: "ကိုယ့်ကိုယ်ကို ဂရုစိုက်ပါ",
+n_desc: "ကိုယ့်ကိုယ်ကို နူးညံ့စွာ ဆက်ဆံပါ။ 'အဆင်ပြေသွားမှာပါ' လို့ ကိုယ့်ကိုယ်ကို ပြောပေးပါ။",
+
+// RAIN Steps
+rain_step_title: "🌧️ RAIN လေ့ကျင့်နည်း",
+rs1_title: "🧘 အဆင့် ၁ - ခဏနားပါ",
+rs1_desc: "လုပ်နေတဲ့အရာကို ခဏရပ်ပြီး အသက်ကို ဖြည်းဖြည်းချင်း ရှူသွင်း၊ ရှူထုတ်ပါ။",
+
+rs2_title: "🔴 အဆင့် ၂ - သတိပြုသိရှိပါ",
+rs2_desc: "အခု ဘာတွေ ခံစားနေရလဲ ကိုယ့်ကိုယ်ကို မေးကြည့်ပါ။ စိတ်ဖိစီးမှုလား၊ စိုးရိမ်မှုလား၊ ဝမ်းနည်းမှုလား?",
+
+rs3_title: "🟠 အဆင့် ၃ - လက်ခံပါ",
+rs3_desc: "ဒီလို ခံစားရတာ အဆင်ပြေတယ်လို့ ကိုယ့်ကိုယ်ကို ပြောပါ။",
+
+rs4_title: "🟡 အဆင့် ၄ - စူးစမ်းပါ",
+rs4_desc: "ဒီခံစားချက်ကို ကိုယ်ခန္ဓာရဲ့ ဘယ်နေရာမှာ ခံစားနေရလဲ သတိထားကြည့်ပါ။",
+
+rs5_title: "🟢 အဆင့် ၅ - ကိုယ့်ကိုယ်ကို ဂရုစိုက်ပါ",
+rs5_desc: "လက်ကို ရင်ဘတ်ပေါ် တင်ပြီး 'ကျွန်ုပ် အဆင်ပြေပါတယ်' လို့ ကိုယ့်ကိုယ်ကို ပြောပါ။",
+
+// Meditation
+med_title: "🧘 Meditation လမ်းညွှန်",
+med_sub: "စိတ်ကို တည်ငြိမ်စေဖို့ ရိုးရှင်းသော လေ့ကျင့်နည်း",
+
+med_what: "Meditation ဆိုတာ ဘာလဲ?",
+med_what_p: "Meditation သည် စိတ်ကို အာရုံစိုက်နိုင်စေရန်နှင့် တည်ငြိမ်စေရန် လေ့ကျင့်သော နည်းလမ်းတစ်ခု ဖြစ်ပါတယ်။",
+
+med_benefits: "Meditation က ကူညီပေးနိုင်တာတွေက",
+
+med_b1: "စိတ်ဖိစီးမှု လျှော့ချပေးခြင်း",
+med_b2: "အာရုံစိုက်နိုင်စွမ်း တိုးတက်စေခြင်း",
+med_b3: "စိတ်ခံစားချက်များကို ထိန်းညှိပေးခြင်း",
+
+// Meditation Steps
+med_steps_title: "🌿 အဆင့်ဆင့် လေ့ကျင့်နည်း",
+
+med_s1: "ငြိမ်သက်သော နေရာတစ်ခု ရွေးပါ",
+med_s1_d: "ထိုင်ခုံ သို့မဟုတ် ကြမ်းပြင်ပေါ်တွင် သက်တောင့်သက်သာ ထိုင်ပါ။",
+
+med_s2: "ကိုယ်ဟန်ကို မှန်မှန် ထားပါ",
+med_s2_d: "ကျောကို မတ်မတ်ထားပြီး ပြေလျော့နေပါစေ။",
+
+med_s3: "မျက်လုံးမှိတ်ပါ",
+med_s3_d: "မျက်လုံးကို ညင်သာစွာ မှိတ်ထားနိုင်ပါတယ်။",
+
+med_s4: "အသက်ရှူခြင်းကို အာရုံစိုက်ပါ",
+med_s4_d: "အသက်ကို ဖြည်းဖြည်းချင်း ရှူသွင်း၊ ရှူထုတ်ပါ။",
+
+med_s5: "အတွေးများ ဝင်လာပါက",
+med_s5_d: "အတွေးများ ဝင်လာခြင်းသည် ပုံမှန်ပါ။ သတိထားပြီး အသက်ရှူခြင်းဆီ ပြန်လာပါ။",
+
+med_s6: "ဖြည်းဖြည်းချင်း အဆုံးသတ်ပါ",
+med_s6_d: "မျက်လုံးကို ဖြည်းဖြည်းချင်း ဖွင့်ပြီး ကိုယ့်ရဲ့ ခံစားချက်ကို သတိထားကြည့်ပါ။",
+
+// Footer
+footer: "လမ်းလျှောက်နေစဉ်၊ အစာစားနေစဉ် သို့မဟုတ် သီချင်းနားထောင်နေစဉ်ကဲ့သို့ နေ့စဉ်အချိန်လေးများတွင်လည်း Mindfulness ကို လေ့ကျင့်နိုင်ပါတယ်။",
+ checklist_title: "📋 စိတ်ကျန်းမာရေး စစ်ဆေးရန် စာရင်း",
+    checklist_sub: "နေ့စဉ် ကိုယ့်ကိုယ်ကို ပြန်လည် သတိထားကြည့်နိုင်ရန် ရိုးရှင်းသော အလေ့အကျင့်များ။",
+
+    check_1: "ပုံမှန် အစားအသောက် စားဖြစ်ခဲ့ပါသလား?",
+    check_2: "အိပ်ချိန် လုံလောက်စွာ ရရှိနေပါသလား?",
+    check_3: "ရေ လုံလောက်စွာ သောက်ဖြစ်ခဲ့ပါသလား?",
+    check_4: "အပြင်ထွက်ပြီး အချိန်ပေးဖြစ်ခဲ့ပါသလား?",
+    check_5: "ဖုန်း၊ ကွန်ပျူတာ မျက်နှာပြင်များမှ ခဏနားဖြစ်ခဲ့ပါသလား?",
+    check_6: "မိသားစုဝင်များ သို့မဟုတ် မိတ်ဆွေများနှင့် ဆက်သွယ်ပြောဆိုဖြစ်ခဲ့ပါသလား?",
+    check_7: "တစ်စုံတစ်ယောက်အတွက် ကြင်နာမှုရှိသော အရာတစ်ခုခု လုပ်ပေးဖြစ်ခဲ့ပါသလား?",
+check_8:"ဒီနေ့ ကိုယ့်ကိုယ်ကို နူးညံ့စွာ ဆက်ဆံဖြစ်ခဲ့ပါသလား?",
+    check_9:"ဒီနေ့ မိမိနှစ်သက်တဲ့ အရာတစ်ခုခု လုပ်ဖြစ်ခဲ့ပါသလား?",
+    FooterCheck:"💛 ကိုယ့်ကိုယ်ကို ဂရုစိုက်ဖို့ အဆင့်သေးသေးလေးတွေကနေ စတင်လိုက်ပါ။",
+
+
   }
 };
 
@@ -312,6 +399,22 @@ const groundingCloseBtn = document.querySelector("#groundingModal .close");
 const relaxationCloseBtn = document.querySelector("#relaxationModal .close");
 const resetQCloseBtn = document.querySelector("#resetQModal .close");
 const EmergencyCloseBtn =document.querySelector("#EmergencyModal .close");
+
+const toggles = document.querySelectorAll(".toggle");
+
+    toggles.forEach(toggle => {
+        toggle.addEventListener("click", () => {
+            const content = toggle.nextElementSibling;
+
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                toggle.innerHTML = toggle.innerHTML.replace("⌃", "⌄");
+            } else {
+                content.style.display = "block";
+                toggle.innerHTML = toggle.innerHTML.replace("⌄", "⌃");
+            }
+        });
+    });
 
 // Open modals
 breathingCard.addEventListener("click", () => {
@@ -383,7 +486,7 @@ const circle = document.getElementById("circle");
 const text = document.getElementById("breathText");
 const guide = document.getElementById("guideText");
 
-guide.innerText = "Inhale 4s • Exhale 4s";
+guide.innerText = "Inhale(ရှူသွင်းပါ) 4s • Exhale(ရှူထုတ်ပါ) 4s";
 
 function cycle(){
 
@@ -437,4 +540,23 @@ circle.style.height = "80px";
 cycle();
 interval = setInterval(cycle,12000);
 
+}
+if (window.innerWidth < 768) {
+    document.body.innerHTML = `
+        <div style="
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            text-align:center;
+            padding:20px;
+            font-family:sans-serif;
+        ">
+            <div>
+                <h2>📱 Screen Too Small</h2>
+                <p>Please use a Desktop, Laptop, or Tablet.</p>
+                <p>ဤဝဘ်ဆိုဒ်ကို အသုံးပြုရန် Desktop၊ Laptop သို့မဟုတ် Tablet ကို အသုံးပြုပါ။</p>
+            </div>
+        </div>
+    `;
 }

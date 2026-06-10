@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindFul - Mental Wellness</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="stylesheet" href="style.css" />
+    <!-- FontAwesome Icons -->
+    <script src="https://kit.fontawesome.com/17d5dc0279.js" crossorigin="anonymous"></script>
+    
+    <style>
+        /* Custom Styles */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        html { scroll-behavior: smooth; }
+        
+        /* Smooth fade transition for language change */
+        .fade-transition { transition: opacity 0.3s ease-in-out; }
+    </style>
+</head>
+<body class="bg-[#afdadb] text-gray-800">
+    <div class="backbtn">
+<a href="emotionalOutlets.html"><i class="fa-solid fa-arrow-left fa-2x"></i></a>
+    </div>
+     
+
+
+
+    <!-- Main Content Container -->
+    <div class="max-w-4xl mx-auto px-4 py-8 pb-24">
+
+        <!-- Header -->
+        <header class="text-center py-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#5a7d65] mb-3">MindFul</h1>
+            <p class="text-xl text-gray-500" data-key="sub">A Step-by-Step Guide to Mental Wellness</p>
+        </header>
+<div class="mmbtn"> 
+    <button id="langToggle" class="bg-white p-4 m-2 rounded-full text-sm">
+        မြန်မာ
+    </button></div>
+        <!-- Intro Section -->
+        <section class="bg-white rounded-2xl shadow-sm p-6 md:p-10 mb-8 border-t-4 border-[#5a7d65]">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4" data-key="h_what">
+                    🌿 What is Mindfulness?
+                </h2>
+                <p class="text-gray-600 text-lg leading-relaxed" data-key="p_what">
+                    Mindfulness means paying attention to the present moment with intention and without judgment. It helps us recognize our thoughts and feelings so we can understand ourselves better.
+                </p>
+            </div>
+
+            <div class="text-center mb-6 border-t pt-6">
+                <h2 class="text-2xl md:text-3xl font-semibold text-gray-800 mb-4" data-key="h_when">
+                    🕒 When to Practice?
+                </h2>
+                <p class="text-gray-600 text-lg" data-key="p_when">
+                    Practice whenever you feel overwhelmed, anxious, or simply want to be present.
+                </p>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-6">
+                <!-- Card 1 -->
+                <div class="bg-[#4ac7b0] p-5 rounded-xl text-white shadow-md hover:-translate-y-1 transition duration-300">
+                    <h3 class="text-xl font-bold mb-3" data-key="c1_title">When Overwhelmed</h3>
+                    <ul class="list-disc list-inside opacity-90 space-y-1 text-sm">
+                        <li data-key="c1_1">Stress from study or work</li>
+                        <li data-key="c1_2">Too many thoughts at once</li>
+                    </ul>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-[#bc65eb] p-5 rounded-xl text-white shadow-md hover:-translate-y-1 transition duration-300">
+                    <h3 class="text-xl font-bold mb-3" data-key="c2_title">When Anxious</h3>
+                    <ul class="list-disc list-inside opacity-90 space-y-1 text-sm">
+                        <li data-key="c2_1">Worrying about the future</li>
+                        <li data-key="c2_2">Racing thoughts</li>
+                    </ul>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-[#de66b4] p-5 rounded-xl text-white shadow-md hover:-translate-y-1 transition duration-300">
+                    <h3 class="text-xl font-bold mb-3" data-key="c3_title">When Feeling Low</h3>
+                    <ul class="list-disc list-inside opacity-90 space-y-1 text-sm">
+                        <li data-key="c3_1">Sadness or emptiness</li>
+                        <li data-key="c3_2">Lack of energy</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- RAIN Technique Section -->
+        <section class="bg-white rounded-2xl shadow-sm p-6 md:p-10 mb-8 border-l-4 border-[#7028bd]">
+            <div class="text-center mb-8">
+                <h1 class="text-2xl md:text-4xl font-bold text-gray-800 mb-2" data-key="rain_title">The RAIN Technique</h1>
+                <p class="text-gray-500" data-key="rain_sub">(Recognize, Allow, Investigate, Nurture)</p>
+            </div>
+
+            <div class="bg-gray-50 p-5 rounded-lg mb-6">
+                <p class="text-gray-700 font-medium mb-2" data-key="rain_intro">RAIN helps you deal with difficult emotions mindfully.</p>
+                
+                <div class="space-y-4 mt-4">
+                    <!-- R -->
+                    <div class="flex items-start gap-3">
+                        <span class="bg-[#7028bd] text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">R</span>
+                        <div>
+                            <h3 class="font-bold text-gray-800" data-key="r_title">Recognize</h3>
+                            <p class="text-gray-600 text-sm" data-key="r_desc">What is going on inside right now? Name the emotion (e.g., "I feel anxious").</p>
+                        </div>
+                    </div>
+                    <!-- A -->
+                    <div class="flex items-start gap-3">
+                        <span class="bg-[#7e8f0e] text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">A</span>
+                        <div>
+                            <h3 class="font-bold text-gray-800" data-key="a_title">Allow</h3>
+                            <p class="text-gray-600 text-sm" data-key="a_desc">Let the feeling be there. Don't push it away. Accept it exists.</p>
+                        </div>
+                    </div>
+                    <!-- I -->
+                    <div class="flex items-start gap-3">
+                        <span class="bg-[#9e1033] text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">I</span>
+                        <div>
+                            <h3 class="font-bold text-gray-800" data-key="i_title">Investigate</h3>
+                            <p class="text-gray-600 text-sm" data-key="i_desc">Ask yourself: Where do I feel this in my body? What thoughts are coming?</p>
+                        </div>
+                    </div>
+                    <!-- N -->
+                    <div class="flex items-start gap-3">
+                        <span class="bg-[#cedb0f] text-black w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">N</span>
+                        <div>
+                            <h3 class="font-bold text-gray-800" data-key="n_title">Nurture</h3>
+                            <p class="text-gray-600 text-sm" data-key="n_desc">Be kind to yourself. Say "It's okay. I am here for you."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step by Step -->
+            <div class="bg-[#9ed9a1] p-6 rounded-xl">
+                <h2 class="text-xl font-bold text-center mb-6 text-[#34b1e3]" data-key="rain_step_title">🌧️ Step-by-Step Practice</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="font-bold text-lg text-gray-800" data-key="rs1_title">🧘 Step 1: Pause</h3>
+                        <p class="text-gray-600 text-sm" data-key="rs1_desc">Stop what you are doing. Take a slow breath in... and out.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-gray-800" data-key="rs2_title">🔴 Step 2: Recognize</h3>
+                        <p class="text-gray-600 text-sm" data-key="rs2_desc">Ask: "What am I feeling right now?" (Stress, Anxiety, Sadness). Name it.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-gray-800" data-key="rs3_title">🟠 Step 3: Allow</h3>
+                        <p class="text-gray-600 text-sm" data-key="rs3_desc">Tell yourself: "It's okay to feel this." Let it be there.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-gray-800" data-key="rs4_title">🟡 Step 4: Investigate</h3>
+                        <p class="text-gray-600 text-sm" data-key="rs4_desc">Where do I feel this in my body? (Chest, Stomach). Be curious.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-gray-800" data-key="rs5_title">🟢 Step 5: Nurture</h3>
+                        <p class="text-gray-600 text-sm" data-key="rs5_desc">Put your hand on your heart. Say "I am okay." Treat yourself like a friend.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meditation Section -->
+        <section class="bg-white rounded-2xl shadow-sm p-6 md:p-10 mb-8 border-l-4 border-[#4ac7b0]">
+            <div class="text-center mb-8">
+                <h1 class="text-2xl md:text-4xl font-bold text-gray-800 mb-2" data-key="med_title">🧘 Meditation Guide</h1>
+                <p class="text-gray-600" data-key="med_sub">Simple practice to train your mind.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h2 class="text-xl font-semibold text-gray-700 mb-3" data-key="med_what">What is it?</h2>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4" data-key="med_what_p">
+                        Meditation is training your mind to focus and stay calm. It is not about stopping thoughts completely, but about noticing them without getting caught up in them.
+                    </p>
+                    <h3 class="font-semibold text-gray-700 mb-2" data-key="med_benefits">It helps you:</h3>
+                    <ul class="list-disc list-inside text-gray-600 text-sm space-y-1">
+                        <li data-key="med_b1">Reduce stress</li>
+                        <li data-key="med_b2">Improve focus</li>
+                        <li data-key="med_b3">Control emotions</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#9ed9a1] p-5 rounded-xl">
+                    <h2 class="text-lg font-bold text-gray-800 mb-4" data-key="med_steps_title">🌿 Step-by-Step</h2>
+                    <ol class="list-decimal list-inside text-gray-700 space-y-3 text-sm">
+                        <li><span class="font-bold" data-key="med_s1">Find a quiet place.</span> <span class="text-gray-500 text-xs block ml-5" data-key="med_s1_d">Sit comfortably on a chair or floor.</span></li>
+                        <li><span class="font-bold" data-key="med_s2">Sit straight.</span> <span class="text-gray-500 text-xs block ml-5" data-key="med_s2_d">Keep back straight but relaxed.</span></li>
+                        <li><span class="font-bold" data-key="med_s3">Close eyes.</span> <span class="text-gray-500 text-xs block ml-5" data-key="med_s3_d">Gently close or look down softly.</span></li>
+                        <li><span class="font-bold" data-key="med_s4">Breathe.</span> <span class="text-gray-500 text-xs block ml-5" data-key="med_s4_d">Focus on breath coming in and out.</span></li>
+                        <li><span class="font-bold" data-key="med_s5">Notice wandering.</span> <span class="text-gray-500 text-xs block ml-5" data-key="med_s5_d">When mind wanders, gently bring back to breath.</span></li>
+                        <li><span class="font-bold" data-key="med_s6">Finish.</span> <span class="text-gray-500 text-xs block ml-5" data-key="med_s6_d">Open eyes slowly. Notice how you feel.</span></li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+       
+
+    </div>
+ <!-- Footer Note -->
+        <footer class="text-center text-black text-sm pb-10">
+            <p data-key="footer">You can practice mindfulness in small moments — walking, eating, or listening to music.</p>
+        </footer>
+    </body>
+<script src="script.js"></script>
+</html>
