@@ -1,242 +1,287 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MindFul</title>
-    <link rel="stylesheet" href="style.css" />
-     <script src="https://cdn.tailwindcss.com"></script>
-     <script src="https://kit.fontawesome.com/17d5dc0279.js" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reading Articles</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://kit.fontawesome.com/17d5dc0279.js" crossorigin="anonymous"></script>
+
+<style>
+body{
+    background:#b3dbc1;
+}
+
+.article-card{
+    background:rgb(226, 238, 116);
+    border-radius:20px;
+    padding:25px;
+    margin:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.reference{
+     background:rgb(156, 162, 106);
+    padding:10px;
+    border-radius:10px;
+    margin-top:15px;
+    font-size:.9rem;
+}
+
+.backbtn{
+    padding:20px;
+}
+
+.mmbtn{
+    top:20px;
+    padding-right: 20px;
+    justify-self: end;
+
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:gray;
+}
+ul li{
+  list-style-type: square;
+  list-style: inside;
+}
+</style>
 
 </head>
 <body>
-     <div class="backbtn">
-<a href="emotionalOutlets.html"><i class="fa-solid fa-arrow-left fa-2x"></i></a>
-    </div>
-    <section class="HomeSection">
-    <h1 class="text-2xl mb-4">Mindful </h1>
-    <p class="transition-colors text-[#5a7d65]" data-key="Mindfulsub" >A Step-by-Step Guide to Mental Wellness</p>
-    </section>
-     <div class="mmbtn"> 
-    <button id="langToggle" class="bg-white px-4 py-2 rounded-full text-sm">
+
+<div class="backbtn">
+    <a href="index.html">
+        <i class="fa-solid fa-arrow-left fa-2x"></i>
+    </a>
+</div>
+
+<div class="mmbtn">
+    <button id="langToggle"
+        class="bg-white px-4 py-2 rounded-full shadow">
         မြန်မာ
-    </button></div>
+    </button>
+</div>
 
-<section class="bg-[#34b1e3] rounded-xl HomeSection">
-  <!-- Section Header -->
-  <div class="text-center mb-12">
-    <h2 class="text-2xl md:text-4xl font-semibold text-black mb-4" data-key="Mindful11">
-      🌿 What is Mindfulness?
-    </h2>
-    <p class="text-gray-600 text-lg md:text-xl" data-key="Mindful12"></p>
-    <p class="text-gray-600 text-lg md:text-xl" data-key="Mindful122"></p>
-  </div>
-  <div class="text-center mb-12">
-    <h2 class="text-2xl md:text-4xl font-semibold text-black mb-4" data-key="Mindful1">
-      When to Practice Mindfulness?
-    </h2>
-    <p class="text-gray-600 text-lg md:text-xl" data-key="Mindful2">
-      Practice mindfulness whenever you feel overwhelmed, anxious, or simply want to be present.
+<section class="text-center py-8">
+    <h1 class="text-4xl font-bold text-green-700"
+        data-key="title">
+        📚 Reading Articles
+    </h1>
+
+    <p class="text-gray-600 mt-3"
+        data-key="subtitle">
+        Learn simple ideas for a healthier and calmer mind.
     </p>
-  </div>
-
-  <div class="parentforboxes">
-   <div class="childbox bg-[#4ac7b0] p-5">
-        <h2 class="text-xl text-bold" data-key="Mindfulstress">When you feel overwhelmed</h2>
-        <ul class="text-gray-600"><li data-key="MFstress1">Stress from study, work, or life</li>
-            <li data-key="MFstress2">Too many thoughts at once</li></ul>
-    </div>
-    <div class="childbox bg-[#bc65eb] p-5">
-        <h2 class="text-xl text-bold" data-key="MFanxious">When you feel anxious</h2>
-        <ul class="text-gray-600"><li data-key="MFanxious1">Worrying about the future </li>
-            <li data-key="MFanxious2">Racing thoughts</li></ul>
-
-    </div>
-    <div class="childbox bg-[#de66b4] p-5 ">
-        <h2 class="text-xl text-bold" data-key="MFdepression">When you feel low or unmotivated</h2>
-        <ul class="text-gray-600"><li data-key="MFdepression1">Sadness or emptiness</li>
-            <li data-key="MFdepression2">Lack of energy</li></ul>
-
-    </div>
-
-  </div>
-    
-
-    
-
-
-  
-
-  <!-- Small Note -->
-  <p class="text-center text-gray-500 mt-10 text-sm" data-key="MFfootersmall">
-    You can also practice mindfulness in small everyday moments — walking, eating, or listening to music.
-  </p>
 </section>
 
-    
-<div class="boxoverwhelmed boxEven" id="boxoverwhelmedId">
-<h1 class="text-2xl md:text-4xl font-semibold text-black mb-4" data-key="overwhelmedtitle">The RAIN technique(Recognize, Allow, Investigate, Nurture)</h1>
-<p class="text-gray-700 p-4 mx-4 text-xl" data-key="Rainmeaning"></p>
-<div class="insideboxoverwhelmed">
-  <p><span class="text-[#7028bd] p-2 rounded-full m-4 bg-white text-center text-bold">R </span><i class="fa-solid fa-arrow-right-long"></i> Recognize what is going on.</p>
-    <p class="text-gray-500 text-sm px-20">(လက်ရှိ ဖြစ်နေတဲ့ အရာကို သတိပြုသိရှိပါ)</p>
-  <p><span class="text-[#7e8f0e] p-2 rounded-full m-4 bg-white text-center text-bold">A</span><i class="fa-solid fa-arrow-right-long"></i> Allow the experience to be there, as it is.</p>
-     <p class="text-gray-500 text-sm px-20">(ဖြစ်နေတဲ့ အခြေအနေကို ပြောင်းလဲဖို့ မကြိုးစားဘဲ အဲဒီလိုပဲ လက်ခံထားပါ)</p>
-<p><span class="text-[#9e1033] p-2 rounded-full m-4 bg-white text-center text-bold">I </span><i class="fa-solid fa-arrow-right-long"></i> Investigate with kindness</p>
-  <p class="text-black px-20"> (how your body feels, what you are thinking). </p>
-<p class="text-gray-500 text-sm px-20">(ကိုယ့်ကိုယ်ကို စူးစမ်းလေ့လာပါ (ကိုယ်ခန္ဓာ ဘယ်လိုခံစားနေလဲ၊ ဘာတွေ စဉ်းစားနေလဲ))</p>
-  <p><span class="text-[#cedb0f] p-2 rounded-full m-4 bg-white text-center text-bold">N </span><i class="fa-solid fa-arrow-right-long"></i> Natural awareness</p>
-   <p class="text-black px-20">(letting go of identifying with the emotion).</p>
-   <p class="text-gray-500 text-sm px-20">(သဘာဝအသိစိတ် -စိတ်ခံစားချက်ကို သတိထားမိပေမယ့် အဲဒါက ကိုယ်မဟုတ်ဘူးဆိုတာ နားလည်ပြီး လွှတ်ချပါ)</p>
-</div>
- <div class="Step-by-Stepbox">
-  <h2 class="Step-by-StepboxTitle">🌧️ RAIN Mindfulness Practice (Step by Step)</h2>
-  <div><h2 data-key="RainStep1">🧘 Step 1: Pause</h2>
-<ul>
-  <li>Stop what you’re doing for a moment.</li>
-  <li>Take a slow breath in… and out.</li>
-</ul>
-</div>
- 
-<div>
-  <h2 data-key="RainStep2">🔴 Step 2: Recognize (R)</h2>
+<!-- ARTICLE 1 -->
 
-<h3>Ask yourself:</h3>
-<h3>👉 “What am I feeling right now?”</h3>
-<ul>
-<li>Stress?</li>
-<li>Anxiety?</li>
-<li>Sadness?</li>
-</ul>
-<h3>✔️ Just name it</h3>
-<ul>
-<li>“I feel anxious.”</li>
-<li>“I feel overwhelmed.”</li>
-</ul>
-</div>
-<div>
- <h2 data-key="RainStep3">🟠 Step 3: Allow (A)</h2> 
-<h3>Tell yourself:</h3>
-<h3>👉 “It’s okay to feel this.”</h3>
-<ul>
-  <li>Don’t push it away</li>
-  <li>Don’t try to fix it immediately</li>
-</ul>
-<p>✔️ Let it be there</p>
-</div>
-<div>
-  <h2 data-key="RainStep4">🟡 Step 4: Investigate (I)</h2>
+<div class="article-card">
 
-<h3>Gently explore:</h3>
-<ul>
-  <li>Where do I feel this in my body?</li>
-  <li>What thoughts are coming?</li>
-  <li>Why might I feel this way?</li>
-</ul>
-<p>✔️ Be curious, not judgmental</p>
-</div>
-<div>
-<h2 data-key="RainStep5">🟢 Step 5: Nurture (N)</h2>  
-<h3>Be kind to yourself:</h3><ul>
-  <li>“I’m okay.”</li>
-  <li>“This will pass.”</li>
-  <li>Put your hand on your heart 🤍</li>
-</ul>
-<p>✔️ Treat yourself like a friend</p>
-</div>
-<div>
-  <h2 data-key="RainFinalStep">🌿 Final Step: Breathe Again</h2>
-  <ul>
-    <li>Take one more slow breath.</li>
-    <li>Has anything changed, even a little?</li>
-  </ul>
-</div>
-</div>
+<h2 class="text-2xl font-bold text-blue-600"
+    data-key="a1_title">
+    🌱 The 90-10 Principle
+</h2>
+
+<p class="mt-4 text-gray-700"
+   data-key="a1_content">
+    10% of life is what happens to us.
+    90% is how we respond to it.
+</p>
+<p class="mt-4 text-gray-700"
+   data-key="a1_content2">We cannot control everything that happens, but we can choose how we react. A calm response often leads to better outcomes than reacting with anger or frustration.</p>
+
+<div class="reference">
+<b data-key="ref">Reference:</b>
+Stephen Covey's teachings on personal responsibility.
 </div>
 
-
-<div class="boxoverwhelmed boxOdd" id="boxoverwhelmedId">
-<h1 class="text-2xl md:text-4xl font-semibold text-black mb-4">Meditation</h1>
-<div class="insideboxoverwhelmed">
-
-<h2  class=" font-semibold text-black mb-4" data-key="MeditationWhat">What is Meditation?</h2>
-<p data-key="Meditationmean" class="text-gray-800">Meditation is a simple practice where you train your mind to focus and stay calm.</p>
-<h2 data-key="helpsyou" class="text-gray-800">It helps you:</h2>
-<ul>
-  <li data-key="Medi1" class="text-gray-800">Reduce stress</li>
-<li data-key="Medi2" class="text-gray-800">Improve focus</li>
-<li data-key="Medi3" class="text-gray-800">Control emotions</li>
-<li data-key="Medi4" class="text-gray-800">Feel more peaceful</li>
-</ul>
-</div>
- <div class="Step-by-Stepbox">
-  <h2 class="Step-by-StepboxTitle">🧘 Meditation Practice (Step by Step)</h2>
-<div>
- <h2>🤫 Step 1. Find a Quiet Place</h2> 
-<ul>
-  <li>Sit somewhere comfortable</li>
-<li>No need for a special room</li>
-<li>Just avoid distractions</li>
-</ul>
-</div>
-<div>
- <h2>🧘 Step 2. Sit Comfortably</h2> 
-<ul>
-  <li>Sit on a chair or floor</li>
-<li>Keep your back straight (not stiff)</li>
-<li>Relax your shoulders</li>
-</ul>
-</div>
- <div>
- <h2>😌 Step 3. Close Your Eyes</h2> 
-<ul>
-  <li>You can close your eyes<br>
-Or look down softly</li>
-</ul>
-</div>
-<div>
- <h2>😮‍💨 Step 4. Focus on Your Breath</h2> 
-<ul>
-  <li>Breathe in slowly</li>
-<li>Breathe out slowly</li>
-<li>Notice the feeling of breathing</li>
-</ul>
-<p>👉 Example: “In… out… in… out…”</p>
 </div>
 
-<div>
- <h2>🤔 Step 5. Notice When Your Mind Wanders</h2> 
+<!-- ARTICLE 2 -->
+
+<div class="article-card">
+
+<h2 class="text-2xl font-bold text-pink-600"
+    data-key="a2_title">
+    💛 How to Love Yourself
+</h2>
+
+<p class="mt-4 text-gray-700"
+   data-key="a2_content">
+    Self-love means treating yourself with kindness,
+    respect and understanding.
+</p>
+<p class="mt-4 text-gray-700"
+   data-key="a2_content2">It does not mean being perfect. Instead, it means accepting yourself, recognizing your strengths, and being gentle with yourself when mistakes happen.</p>
+<p class="mt-4 text-gray-700"
+   data-key="a2_content3">Simple ways to practice self-love:</p>
 <ul>
-  <li>Thoughts will come (this is normal!)</li>
-<li>Don’t get frustrated</li>
-</ul>
-<p>👉 Just gently say: “Thinking…” and come back to breathing</p>
+  
+<li class="mt-4 text-gray-700" data-key="a2_content3li1">Speak kindly to yourself.</li>
+<li class="mt-4 text-gray-700" data-key="a2_content3li2">Take care of your physical and mental health.</li>
+<li class="mt-4 text-gray-700" data-key="a2_content3li3">Celebrate small achievements.</li>
+<li class="mt-4 text-gray-700" data-key="a2_content3li4">Set healthy boundaries.</li></ul>
+<div class="reference">
+<b data-key="ref">Reference:</b>
+Kristin Neff's Self-Compassion Research.
 </div>
 
-<div>
- <h2>🔴 Step 6. Bring Your Attention Back</h2> 
-<ul>
-  <li>Each time your mind wanders</li>
-<li>Bring it back to your breath</li>
-</ul>
-<p>👉 This is the most important step</p>
 </div>
-<div>
-  <h2>🌿 Finish Gently</h2>
-  <ul>
-    <li>Open your eyes slowly</li>
-<li>Notice how you feel</li>
-  </ul>
+
+<!-- ARTICLE 3 -->
+
+<div class="article-card">
+
+<h2 class="text-2xl font-bold text-purple-600"
+    data-key="a3_title">
+    🕊️ What Is Inner Peace?
+</h2>
+
+<p class="mt-4 text-gray-700"
+   data-key="a3_content">
+    Inner peace is staying calm and balanced,
+    even during difficult times.
+</p>
+<p class="mt-4 text-gray-700"
+   data-key="a3_content2">It does not mean that problems disappear. Instead, it means you can face challenges without being overwhelmed by them.</p>
+<p class="mt-4 text-gray-700"
+   data-key="a3_content3">Ways to develop inner peace:</p>
+   <ul>
+  <li class="mt-4 text-gray-700" data-key="a3_content3li1">Practice mindfulness.</li>  
+<li class="mt-4 text-gray-700" data-key="a3_content3li2">Spend time in nature.</li>  
+<li class="mt-4 text-gray-700" data-key="a3_content3li3">Take slow, deep breaths.</li>  
+<li class="mt-4 text-gray-700" data-key="a3_content3li4">Focus on what you can control.</li>  
+<li class="mt-4 text-gray-700" data-key="a3_content3li5">Let go of unnecessary worries.</li>  
+   </ul>
+<div class="reference">
+<b data-key="ref">Reference:</b>
+American Psychological Association (APA).
 </div>
-<div>
-<p>Start Small : </p>
-  <p>Begin with 3–5 minutes</p>
-<p>Slowly increase to 10–15 minutes</p>
+
 </div>
-</div>
-</div>
-</div>
+
+<footer data-key="footer">
+🌿 Read slowly, reflect deeply, and be kind to yourself.
+</footer>
+
+<script>
+
+const translations = {
+
+en:{
+
+title:"📚 Reading Articles",
+
+subtitle:"Learn simple ideas for a healthier and calmer mind.",
+
+a1_title:"🌱 The 90-10 Principle",
+
+a1_content:
+"10% of life is what happens to us. 90% is how we respond to it. We cannot control everything, but we can choose our response.",
+a1_content2:"We cannot control everything that happens, but we can choose how we react. A calm response often leads to better outcomes than reacting with anger or frustration.",
+
+a2_title:"💛 How to Love Yourself",
+
+a2_content:
+"Self-love means treating yourself with kindness, respect and understanding. Accept yourself and celebrate small achievements.",
+a2_content2:"It does not mean being perfect. Instead, it means accepting yourself, recognizing your strengths, and being gentle with yourself when mistakes happen.",
+a2_content3:"Simple ways to practice self-love: ",
+a2_content3li1:"Speak kindly to yourself.",
+a2_content3li2:"Take care of your physical and mental health.",
+a2_content3li3:"Celebrate small achievements.",
+a2_content3li4:"Set healthy boundaries.",
+a3_title:"🕊️ What Is Inner Peace?",
+
+a3_content:
+"Inner peace is staying calm and balanced even during difficult times. It comes from mindfulness, acceptance and self-awareness.",
+a3_content2:"It does not mean that problems disappear. Instead, it means you can face challenges without being overwhelmed by them.",
+a3_content3:"Ways to develop inner peace:",
+a3_content3li1:"Practice mindfulness.",
+a3_content3li2:"Spend time in nature.",
+a3_content3li3:"Take slow, deep breaths.",
+a3_content3li4:"Focus on what you can control.",
+a3_content3li5:"Let go of unnecessary worries.",
+ref:"Reference:",
+
+footer:
+"🌿 Read slowly, reflect deeply, and be kind to yourself."
+},
+
+mm:{
+
+title:"📚 ဖတ်ရှုလေ့လာရန် ဆောင်းပါးများ",
+
+subtitle:"စိတ်ကျန်းမာရေး ပိုမိုကောင်းမွန်စေရန် ရိုးရှင်းသော အတွေးအခေါ်များကို လေ့လာပါ။",
+
+a1_title:"🌱 90-10 Principle",
+
+a1_content:
+"ဘဝမှာ ဖြစ်ပျက်သမျှရဲ့ ၁၀% ကိုသာ ကျွန်ုပ်တို့ မထိန်းချုပ်နိုင်ပါ။ ကျန် ၉၀% ကတော့ အဲဒီအရာတွေကို ဘယ်လို တုံ့ပြန်မလဲ ဆိုတာပဲ ဖြစ်ပါတယ်။",
+a1_content2:"ကျွန်ုပ်တို့သည်ဖြစ်ရပ်အားလုံးကို မထိန်းချုပ်နိုင်သော်လည်း ဘယ်လိုတုံ့ပြန်မလဲကို ရွေးချယ်နိုင်ပါသည်။ စိတ်တည်ငြိမ်စွာ တုံ့ပြန်ခြင်းက ပိုမိုကောင်းမွန်သော ရလဒ်များကို ဖြစ်စေပါသည်။",
+a2_title:"💛 ကိုယ့်ကိုယ်ကို ချစ်ခြင်း",
+
+a2_content:
+"ကိုယ့်ကိုယ်ကို ချစ်ခြင်းဆိုတာ မိမိကိုယ်ကို ကြင်နာစွာ၊ လေးစားစွာ နှင့် နားလည်မှုရှိစွာ ဆက်ဆံခြင်း ဖြစ်ပါတယ်။",
+a2_content2:"ပြီးပြည့်စုံရန် မလိုပါ။ မိမိကိုယ်ကို လက်ခံခြင်း၊ ကိုယ့်အားသာချက်များကို အသိအမှတ်ပြုခြင်း နှင့် အမှားများ ဖြစ်ပေါ်သောအခါ ကိုယ့်ကိုယ်ကို နူးညံ့စွာ ဆက်ဆံခြင်းတို့ကို ဆိုလိုပါသည်။",
+a2_content3:"ကိုယ့်ကိုယ်ကို ချစ်ရန် နည်းလမ်းများ",
+a2_content3li1:"ကိုယ့်ကိုယ်ကို ကောင်းမွန်သော စကားများ ပြောပါ။",
+a2_content3li2:"စိတ်နှင့် ခန္ဓာကိုယ် ကျန်းမာရေးကို ဂရုစိုက်ပါ။",
+a2_content3li3:"အောင်မြင်မှု အသေးစားများကို ဂုဏ်ပြုပါ။",
+a2_content3li4:"သင့်ရဲ့ကိုယ်ရေးကိုယ်တာကန့်သတ်ချက်များ သတ်မှတ်ပါ။",
+a3_title:"🕊️ အတွင်းစိတ် ငြိမ်းချမ်းမှု",
+
+a3_content:
+"အတွင်းစိတ် ငြိမ်းချမ်းမှုဆိုတာ အခက်အခဲများရှိနေသော်လည်း စိတ်တည်ငြိမ်ပြီး ဟန်ချက်ညီစွာ နေနိုင်ခြင်း ဖြစ်ပါတယ်။",
+a3_content2:"ပြဿနာများ မရှိတော့ခြင်းကို မဆိုလိုပါ။ အခက်အခဲများကို စိတ်တည်ငြိမ်စွာ ရင်ဆိုင်နိုင်ခြင်းကို ဆိုလိုပါသည်။",
+a3_content3:"အတွင်းစိတ် ငြိမ်းချမ်းမှု ရရှိစေရန်",
+a3_content3li1:"Mindfulness ကို လေ့ကျင့်ပါ။",
+a3_content3li2:"သဘာဝနှင့် အချိန်ဖြုန်းပါ။",
+a3_content3li3:"ဖြည်းဖြည်းချင်းအသက်ရှူသွင်းလေ့ကျင့်ပါ။",
+a3_content3li4:"မိမိလုပ်နိုင်သော အရာများကို အာရုံစိုက်ပါ။",
+a3_content3li5:"မလိုအပ်သော စိုးရိမ်မှုများကို လျှော့ချပါ။",
+ref:"ကိုးကားချက်:",
+
+footer:
+"🌿 ဖြည်းဖြည်းချင်း ဖတ်ပါ၊ စဉ်းစားဆင်ခြင်ပါ၊ ကိုယ့်ကိုယ်ကို ကြင်နာပါ။"
+}
+
+};
+
+let currentLang="en";
+
+document.getElementById("langToggle")
+.addEventListener("click",()=>{
+
+currentLang=currentLang==="en"?"mm":"en";
+
+document.querySelectorAll("[data-key]")
+.forEach(element=>{
+
+const key=element.dataset.key;
+
+if(translations[currentLang][key]){
+element.textContent=
+translations[currentLang][key];
+}
+
+});
+
+document.getElementById("langToggle")
+.textContent=
+currentLang==="en"
+?"မြန်မာ"
+:"English";
+
+});
+
+</script>
+
 </body>
-<script src="script.js">
- </script>
 </html>

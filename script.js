@@ -543,22 +543,3 @@ cycle();
 interval = setInterval(cycle,12000);
 
 }
-if (window.innerWidth < 768) {
-    document.body.innerHTML = `
-        <div style="
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-            text-align:center;
-            padding:20px;
-            font-family:sans-serif;
-        ">
-            <div>
-                <h2>📱 Screen Too Small</h2>
-                <p>Please use a Desktop, Laptop, or Tablet.</p>
-                <p>ဤဝဘ်ဆိုဒ်ကို အသုံးပြုရန် Desktop၊ Laptop သို့မဟုတ် Tablet ကို အသုံးပြုပါ။</p>
-            </div>
-        </div>
-    `;
-}
