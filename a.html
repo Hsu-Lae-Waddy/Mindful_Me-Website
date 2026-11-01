@@ -1,0 +1,1806 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Reading Articles | Mindful Me</title>
+
+<style>
+:root {
+    --green: #052719;
+    --dark-green: #0c2704;
+    --purple: #359823;
+    --blueviolet: rgb(16, 100, 51);
+    --light-purple: #43844b;
+    --light-green: #43bb2e;
+    --background: #faf9fc;
+    --text: #070013;
+    --muted: #000000;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+button, input {
+    font-family: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* Navigation */
+
+.navbar {
+   background:rgb(166, 170, 167);
+    padding: 17px 0;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    color: var(--green);
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.back-link {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.language-btn {
+    background: var(--green);
+    border: none;
+    color: var(--white);
+    padding: 9px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Hero */
+
+.hero {
+  background:rgb(166, 170, 167);
+    padding: 65px 20px;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.hero-label {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    color: #000000;
+    font-size: 39px;
+    margin: 12px 0;
+}
+
+.hero p {
+    color: #030105;
+    font-size: 16px;
+    max-width: 580px;
+    margin: auto;
+}
+
+/* Main content */
+
+main {
+    padding: 45px 0;
+}
+
+.section-heading {
+    margin-bottom: 22px;
+}
+
+.section-heading h2 {
+    font-size: 25px;
+    color: #000000;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* Featured article */
+
+.featured {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: rgb(161, 217, 162);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    box-shadow: 0 5px 25px rgba(60, 40, 80, 0.06);
+}
+
+.featured-image {
+    min-height: 300px;
+    background: linear-gradient(135deg, #c8f5df, #d9c8ef);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 95px;
+}
+
+.featured-content {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.category-tag {
+    display: inline-block;
+    width: fit-content;
+    background: var(--light-green);
+    color: var(--dark-green);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.featured-content h2 {
+    color: #000000;
+    font-size: 26px;
+    line-height: 1.35;
+    margin: 15px 0;
+}
+
+.featured-content p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.read-time {
+    color: #000000;
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+.primary-btn {
+    width: fit-content;
+    background: var(--light-purple);
+    color: rgb(1, 4, 0);
+    padding: 11px 23px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.primary-btn:hover {
+    background: #1c681a;
+    transform: translateY(-2px);
+}
+
+/* Search */
+
+.search-area {
+    margin-bottom: 30px;
+}
+
+.search-box {
+    width: 100%;
+    padding: 15px 18px;
+    border: 1px solid #15370f;
+    border-radius: 12px;
+    background: rgb(184, 227, 173);
+    outline: none;
+    font-size: 14px;
+}
+
+.search-box:focus {
+    border-color: var(--blueviolet);
+}
+
+/* Category filters */
+
+.category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    background: white;
+    border: 1px solid #1a5335;
+    color: #010001;
+    padding: 9px 17px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--light-green);
+    border-color: var(--dark-green);
+    color: white;
+}
+
+/* Article grid */
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.article-card {
+    background: white;
+    border-radius: 17px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(60, 40, 80, 0.04);
+    transition: 0.25s;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(60, 40, 80, 0.09);
+}
+
+.article-image {
+    height: 155px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+}
+
+.image-green { background: #e2f9ed; }
+.image-purple { background: #eee5f8; }
+.image-blue { background: #e5effc; }
+.image-pink { background: #faeaf2; }
+.image-yellow { background: #fff5dc; }
+
+.article-content {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.article-content h3 {
+    color: #000000;
+    font-size: 18px;
+    margin: 12px 0 8px;
+    line-height: 1.4;
+}
+
+.article-content p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+.article-meta {
+    color: #1e1b20;
+    font-size: 11px;
+    margin-bottom: 15px;
+}
+
+.read-link {
+    background: transparent;
+    border: none;
+    color: var(--blueviolet);
+    font-weight: bold;
+    font-size: 13px;
+    text-align: left;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.read-link:hover {
+    color: var(--dark-green);
+}
+
+.no-results {
+    display: none;
+    text-align: center;
+    padding: 40px 15px;
+    color: var(--muted);
+}
+
+/* Article reader */
+
+.article-reader {
+    display: none;
+    background: rgb(180, 196, 175);
+    padding: 35px;
+    border-radius: 18px;
+    margin-top: 35px;
+    box-shadow: 0 4px 20px rgba(60, 40, 80, 0.06);
+}
+
+.article-reader.open {
+    display: block;
+}
+
+.reader-back {
+    background: var(--light-purple);
+    color: var(--muted);
+    border: none;
+    border-radius: 20px;
+    padding: 9px 16px;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+.reader-category {
+    color: var(--dark-green);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.article-reader h2 {
+    color: #130c1b;
+    font-size: 29px;
+    margin: 12px 0;
+}
+
+.reader-time {
+    color: var(--muted);
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+.reader-body {
+    max-width: 750px;
+    color: #000000;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.reader-body h3 {
+    color: var(--text);
+    margin: 25px 0 8px;
+}
+
+.reader-body p {
+    margin-bottom: 15px;
+}
+
+.reader-body ul {
+    padding-left: 22px;
+    margin-bottom: 18px;
+}
+
+.reader-body li {
+    margin-bottom: 8px;
+}
+
+/* Footer */
+
+footer {
+    background: #75c15e;
+    text-align: center;
+    padding: 28px 15px;
+    color: #0b0511;
+    font-size: 13px;
+    margin-top: 35px;
+}
+
+/* Responsive */
+
+@media (max-width: 850px) {
+    .article-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 45px 15px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .featured {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-image {
+        min-height: 180px;
+    }
+
+    .featured-content {
+        padding: 25px;
+    }
+
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-content {
+        flex-wrap: wrap;
+    }
+
+    .article-reader {
+        padding: 22px;
+    }
+
+    .article-reader h2 {
+        font-size: 23px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="container nav-content">
+
+        <a href="index.html" class="logo">Mindful Me 🌿</a>
+
+        <div class="nav-right">
+            <a href="index.html" class="back-link"
+               data-en="← Home" data-my="← ပင်မစာမျက်နှာ">
+                ← Home
+            </a>
+
+            <button class="language-btn" id="languageToggle">
+                မြန်မာ
+            </button>
+        </div>
+
+    </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero">
+    <div class="container">
+
+        <p class="hero-label"
+           data-en="LEARN • REFLECT • GROW"
+           data-my="လေ့လာပါ • ဆင်ခြင်ပါ • တိုးတက်ပါ">
+            LEARN • REFLECT • GROW
+        </p>
+
+        <h1 data-en="📚 Reading Articles"
+            data-my="📚 ဖတ်ရှုလေ့လာရန် ဆောင်းပါးများ">
+            📚 Reading Articles
+        </h1>
+
+        <p data-en="Learn simple ideas for a healthier and calmer mind."
+           data-my="ပိုမိုကျန်းမာပြီး စိတ်အေးချမ်းစေဖို့ ရိုးရှင်းတဲ့ အကြောင်းအရာလေးတွေကို လေ့လာလိုက်ပါ။">
+            Learn simple ideas for a healthier and calmer mind.
+        </p>
+
+    </div>
+</header>
+
+<main class="container">
+
+    <!-- Featured Article -->
+    <div class="section-heading">
+        <h2 data-en="A little inspiration for you"
+            data-my="သင့်အတွက် အတွေးအမြင်လေးတစ်ခု">
+            A little inspiration for you
+        </h2>
+
+        <p data-en="Start with a small step towards understanding yourself."
+           data-my="ကိုယ့်ကိုယ်ကို နားလည်ဖို့ ခြေလှမ်းသေးသေးလေးကနေ စတင်လိုက်ပါ။">
+            Start with a small step towards understanding yourself.
+        </p>
+    </div>
+
+    <section class="featured">
+
+        <div class="featured-image">🌱</div>
+
+        <div class="featured-content">
+
+            <span class="category-tag"
+                  data-en="SELF-GROWTH"
+                  data-my="ကိုယ်တိုင်တိုးတက်မှု">
+                SELF-GROWTH
+            </span>
+
+            <h2 data-en="You Don't Have to Have Everything Figured Out"
+                data-my="အရာအားလုံးကို အခုချက်ချင်း နားလည်ထားဖို့ မလိုပါဘူး။">
+                You Don't Have to Have Everything Figured Out
+            </h2>
+
+            <p data-en="Life is a journey of learning. It's okay to take your time, make mistakes, and grow at your own pace."
+               data-my="ဘဝဆိုတာ သင်ယူမှုခရီးတစ်ခုပါ။ အချိန်ယူတာ၊ အမှားလုပ်မိတာနဲ့ ကိုယ့်အရှိန်အဟုန်အတိုင်း တိုးတက်တာတွေဟာလည်း အဆင်ပြေပါတယ်။">
+                Life is a journey of learning. It's okay to take your time, make mistakes, and grow at your own pace.
+            </p>
+
+            <span class="read-time"
+                  data-en="⏱ 4 min read"
+                  data-my="⏱ ၄ မိနစ်ခန့် ဖတ်ရန်">
+                ⏱ 4 min read
+            </span>
+
+            <button class="primary-btn" data-article="growth"
+                    data-en="Read Article →" 
+                    data-my="ဆောင်းပါးဖတ်ရန် →">
+                Read Article →
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Articles -->
+    <section>
+
+        <div class="section-heading">
+            <h2 data-en="Explore Articles ✨"
+                data-my="ဆောင်းပါးများ လေ့လာရန် ✨">
+                Explore Articles ✨
+            </h2>
+
+            <p data-en="Find something that speaks to you."
+               data-my="သင့်စိတ်နဲ့ ကိုက်ညီတဲ့ အကြောင်းအရာလေးတွေကို ရှာဖွေလိုက်ပါ။">
+                Find something that speaks to you.
+            </p>
+        </div>
+
+        <!-- Search -->
+        <div class="search-area">
+            <input
+                type="search"
+                id="articleSearch"
+                class="search-box"
+                placeholder="🔍 Search articles..."
+                data-placeholder-en="🔍 Search articles..."
+                data-placeholder-my="🔍 ဆောင်းပါးများ ရှာဖွေရန်..."
+            >
+        </div>
+
+        <!-- Filters -->
+        <div class="category-filters">
+
+            <button class="filter-btn active" data-category="all"
+                    data-en="All Articles" data-my="အားလုံး">
+                All Articles
+            </button>
+
+            <button class="filter-btn" data-category="stress"
+                    data-en="Stress & Anxiety" data-my="စိတ်ဖိစီးမှု">
+                Stress & Anxiety
+            </button>
+
+            <button class="filter-btn" data-category="selfcare"
+                    data-en="Self-Care" data-my="ကိုယ့်ကိုယ်ကို ဂရုစိုက်မှု">
+                Self-Care
+            </button>
+
+            <button class="filter-btn" data-category="growth"
+                    data-en="Self-Growth" data-my="ကိုယ်တိုင်တိုးတက်မှု">
+                Self-Growth
+            </button>
+
+            <button class="filter-btn" data-category="emotions"
+                    data-en="Emotions" data-my="ခံစားချက်များ">
+                Emotions
+            </button>
+            <button class="filter-btn" data-category="inner-peace"
+        data-en="Inner Peace" data-my="စိတ်အေးချမ်းမှု">
+    Inner Peace
+</button>
+
+<button class="filter-btn" data-category="life-purpose"
+        data-en="Life & Purpose" data-my="ဘဝနှင့် ရည်ရွယ်ချက်">
+    Life & Purpose
+</button>
+
+        </div>
+
+        <!-- Article cards -->
+        <div class="article-grid" id="articleGrid">
+
+            <article class="article-card" data-category="stress"
+                     data-search="stress anxiety overwhelmed calm breathing">
+                <div class="article-image image-green">🌿</div>
+
+                <div class="article-content">
+
+                    <span class="category-tag"
+                          data-en="STRESS & ANXIETY"
+                          data-my="စိတ်ဖိစီးမှု">
+                        STRESS & ANXIETY
+                    </span>
+
+                    <h3 data-en="Understanding Stress and How to Manage It"
+                        data-my="စိတ်ဖိစီးမှုကို နားလည်ပြီး ဘယ်လိုဖြေရှင်းမလဲ။">
+                        Understanding Stress and How to Manage It
+                    </h3>
+
+                    <p data-en="Learn what stress is and discover small ways to manage overwhelming feelings."
+                       data-my="စိတ်ဖိစီးမှုဆိုတာ ဘာလဲ၊ စိတ်ပင်ပန်းမှုတွေကို ဘယ်လိုလျှော့ချနိုင်မလဲဆိုတာ လေ့လာပါ။">
+                        Learn what stress is and discover small ways to manage overwhelming feelings.
+                    </p>
+
+                    <span class="article-meta"
+                          data-en="⏱ 5 min read"
+                          data-my="⏱ ၅ မိနစ်ခန့်">
+                        ⏱ 5 min read
+                    </span>
+
+                    <button class="read-link" data-article="stress"
+                            data-en="Read More →" data-my="ဆက်လက်ဖတ်ရှုရန် →">
+                        Read More →
+                    </button>
+
+                </div>
+            </article>
+
+            <article class="article-card" data-category="selfcare"
+                     data-search="self care healthy habits daily routine">
+                <div class="article-image image-purple">🪻</div>
+
+                <div class="article-content">
+
+                    <span class="category-tag"
+                          data-en="SELF-CARE" data-my="ကိုယ့်ကိုယ်ကို ဂရုစိုက်မှု">
+                        SELF-CARE
+                    </span>
+
+                    <h3 data-en="Self-Care Is More Than Just a Treat"
+                        data-my="ကိုယ့်ကိုယ်ကို ဂရုစိုက်ခြင်းဆိုတာ">
+                        Self-Care Is More Than Just a Treat
+                    </h3>
+
+                    <p data-en="Discover simple daily habits that support your physical and emotional well-being."
+                       data-my="ကိုယ်ခန္ဓာနဲ့ စိတ်ပိုင်းဆိုင်ရာ ကျန်းမာရေးကို အထောက်အကူပြုတဲ့ နေ့စဉ်အလေ့အကျင့်လေးတွေကို လေ့လာပါ။">
+                        Discover simple daily habits that support your physical and emotional well-being.
+                    </p>
+
+                    <span class="article-meta"
+                          data-en="⏱ 4 min read" data-my="⏱ ၄ မိနစ်ခန့်">
+                        ⏱ 4 min read
+                    </span>
+
+                    <button class="read-link" data-article="selfcare"
+                            data-en="Read More →" data-my="ဆက်လက်ဖတ်ရှုရန် →">
+                        Read More →
+                    </button>
+
+                </div>
+            </article>
+
+            <article class="article-card" data-category="growth"
+                     data-search="self growth confidence comparison personal development">
+                <div class="article-image image-blue">🌻</div>
+
+                <div class="article-content">
+
+                    <span class="category-tag"
+                          data-en="SELF-GROWTH" data-my="ကိုယ်တိုင်တိုးတက်မှု">
+                        SELF-GROWTH
+                    </span>
+
+                    <h3 data-en="Stop Comparing Your Journey to Others"
+                        data-my="ကိုယ့်ခရီးလမ်းကို သူများနဲ့ မနှိုင်းယှဉ်ပါနဲ့။">
+                        Stop Comparing Your Journey to Others
+                    </h3>
+
+                    <p data-en="Everyone grows at a different pace. Learn to appreciate your own progress."
+                       data-my="လူတိုင်းဟာ ကိုယ့်အရှိန်အဟုန်နဲ့ ကိုယ်တိုးတက်ကြပါတယ်။ ကိုယ့်တိုးတက်မှုကို တန်ဖိုးထားတတ်ဖို့ လေ့လာပါ။">
+                        Everyone grows at a different pace. Learn to appreciate your own progress.
+                    </p>
+
+                    <span class="article-meta"
+                          data-en="⏱ 3 min read" data-my="⏱ ၃ မိနစ်ခန့်">
+                        ⏱ 3 min read
+                    </span>
+
+                    <button class="read-link" data-article="comparison"
+                            data-en="Read More →" data-my="ဆက်လက်ဖတ်ရှုရန် →">
+                        Read More →
+                    </button>
+
+                </div>
+            </article>
+
+            <article class="article-card" data-category="emotions"
+                     data-search="emotions feelings sadness loneliness emotional awareness">
+                <div class="article-image image-pink">💜</div>
+
+                <div class="article-content">
+
+                    <span class="category-tag"
+                          data-en="EMOTIONS" data-my="ခံစားချက်များ">
+                        EMOTIONS
+                    </span>
+
+                    <h3 data-en="It's Okay Not to Be Okay"
+                        data-my="အဆင်မပြေတဲ့နေ့တွေ ရှိတာလည်း ပုံမှန်ပါပဲ။">
+                        It's Okay Not to Be Okay
+                    </h3>
+
+                    <p data-en="Understand why all emotions matter and why you don't need to hide your feelings."
+                       data-my="ခံစားချက်တိုင်းဟာ အရေးကြီးကြောင်းနဲ့ ကိုယ့်ခံစားချက်တွေကို ဖုံးကွယ်ထားဖို့ မလိုကြောင်း နားလည်ပါ။">
+                        Understand why all emotions matter and why you don't need to hide your feelings.
+                    </p>
+
+                    <span class="article-meta"
+                          data-en="⏱ 4 min read" data-my="⏱ ၄ မိနစ်ခန့်">
+                        ⏱ 4 min read
+                    </span>
+
+                    <button class="read-link" data-article="emotions"
+                            data-en="Read More →" data-my="ဆက်လက်ဖတ်ရှုရန် →">
+                        Read More →
+                    </button>
+
+                </div>
+            </article>
+
+            <article class="article-card" data-category="stress"
+                     data-search="sleep rest tired burnout relaxation">
+                <div class="article-image image-yellow">🌙</div>
+
+                <div class="article-content">
+
+                    <span class="category-tag"
+                          data-en="STRESS & ANXIETY" data-my="စိတ်ဖိစီးမှု">
+                        STRESS & ANXIETY
+                    </span>
+
+                    <h3 data-en="Why Rest Is Productive Too"
+                        data-my="အနားယူခြင်းဟာလည်း အကျိုးရှိပါတယ်။">
+                        Why Rest Is Productive Too
+                    </h3>
+
+                    <p data-en="Rest is not laziness. Discover why your mind and body need breaks."
+                       data-my="အနားယူခြင်းဟာ ပျင်းရိခြင်း မဟုတ်ပါဘူး။ စိတ်နဲ့ ကိုယ်ခန္ဓာအတွက် ဘာကြောင့် အနားယူဖို့ လိုအပ်သလဲဆိုတာ လေ့လာပါ။">
+                        Rest is not laziness. Discover why your mind and body need breaks.
+                    </p>
+
+                    <span class="article-meta"
+                          data-en="⏱ 3 min read" data-my="⏱ ၃ မိနစ်ခန့်">
+                        ⏱ 3 min read
+                    </span>
+
+                    <button class="read-link" data-article="rest"
+                            data-en="Read More →" data-my="ဆက်လက်ဖတ်ရှုရန် →">
+                        Read More →
+                    </button>
+
+                </div>
+            </article>
+
+            <article class="article-card" data-category="selfcare"
+                     data-search="journaling writing thoughts feelings mental clarity">
+                <div class="article-image image-green">📖</div>
+
+                <div class="article-content">
+
+                    <span class="category-tag"
+                          data-en="SELF-CARE" data-my="ကိုယ့်ကိုယ်ကို ဂရုစိုက်မှု">
+                        SELF-CARE
+                    </span>
+
+                    <h3 data-en="How Journaling Can Help You Understand Yourself"
+                        data-my="စာရေးမှတ်တမ်းတင်ခြင်းက ကိုယ့်ကိုယ်ကို နားလည်စေပါတယ်။">
+                        How Journaling Can Help You Understand Yourself
+                    </h3>
+
+                    <p data-en="A few minutes of writing can help you explore your thoughts and feelings."
+                       data-my="မိနစ်အနည်းငယ် စာရေးခြင်းက သင့်အတွေးတွေနဲ့ ခံစားချက်တွေကို နားလည်စေဖို့ ကူညီနိုင်ပါတယ်။">
+                        A few minutes of writing can help you explore your thoughts and feelings.
+                    </p>
+
+                    <span class="article-meta"
+                          data-en="⏱ 5 min read" data-my="⏱ ၅ မိနစ်ခန့်">
+                        ⏱ 5 min read
+                    </span>
+
+                    <button class="read-link" data-article="journaling"
+                            data-en="Read More →" data-my="ဆက်လက်ဖတ်ရှုရန် →">
+                        Read More →
+                    </button>
+
+                </div>
+            </article>
+            <!-- Finding Peace Within Yourself -->
+<article class="article-card" data-category="inner-peace"
+         data-search="inner peace calm mind happiness self acceptance">
+    <div class="article-image image-yellow">🕊️</div>
+
+    <div class="article-content">
+
+        <span class="category-tag"
+              data-en="INNER PEACE" data-my="စိတ်အေးချမ်းမှု">
+            INNER PEACE
+        </span>
+
+        <h3 data-en="Finding Peace Within Yourself"
+            data-my="ကိုယ့်အတွင်းစိတ်မှာ အေးချမ်းမှုကို ရှာဖွေခြင်း">
+            Finding Peace Within Yourself
+        </h3>
+
+        <p data-en="You don't need a perfect life to feel peaceful. Learn how to create calmness within yourself."
+           data-my="စိတ်အေးချမ်းဖို့ ပြီးပြည့်စုံတဲ့ဘဝတစ်ခုကို ပိုင်ဆိုင်ထားဖို့ မလိုပါဘူး။ ကိုယ့်အတွင်းစိတ်မှာ အေးချမ်းမှုကို ဘယ်လိုဖန်တီးနိုင်မလဲဆိုတာ လေ့လာကြည့်ပါ။">
+            You don't need a perfect life to feel peaceful. Learn how to create calmness within yourself.
+        </p>
+
+        <span class="article-meta"
+              data-en="⏱ 4 min read" data-my="⏱ ၄ မိနစ်ခန့်">
+            ⏱ 4 min read
+        </span>
+
+        <button class="read-link" data-article="mindpeace"
+                data-en="Read More →" data-my="ဆက်လက်ဖတ်ရှုရန် →">
+            Read More →
+        </button>
+
+    </div>
+</article>
+
+
+<!-- Learning to Let Go -->
+<article class="article-card" data-category="inner-peace"
+         data-search="letting go past mistakes worry acceptance healing">
+    <div class="article-image image-yellow">🍃</div>
+
+    <div class="article-content">
+
+        <span class="category-tag"
+              data-en="INNER PEACE" data-my="စိတ်အေးချမ်းမှု">
+            INNER PEACE
+        </span>
+
+        <h3 data-en="Learning to Let Go"
+            data-my="လက်လွှတ်တတ်ဖို့ သင်ယူခြင်း">
+            Learning to Let Go
+        </h3>
+
+        <p data-en="Not everything is meant to stay in your life. Sometimes, letting go is the first step toward peace."
+           data-my="အရာအားလုံးဟာ ကိုယ့်ဘဝထဲမှာ အမြဲရှိနေဖို့ မဟုတ်ပါဘူး။ တစ်ခါတလေ လက်လွှတ်တတ်ခြင်းက စိတ်အေးချမ်းမှုဆီသို့ ပထမဆုံးခြေလှမ်း ဖြစ်ပါတယ်။">
+            Not everything is meant to stay in your life. Sometimes, letting go is the first step toward peace.
+        </p>
+
+        <span class="article-meta"
+              data-en="⏱ 4 min read" data-my="⏱ ၄ မိနစ်ခန့်">
+            ⏱ 4 min read
+        </span>
+
+        <button class="read-link" data-article="lettinggo"
+                data-en="Read More →" data-my="ဆက်လက်ဖတ်ရှုရန် →">
+            Read More →
+        </button>
+
+    </div>
+</article>
+<!-- A Simple and Meaningful Life -->
+<article class="article-card" data-category="life-purpose"
+         data-search="simple meaningful life purpose priorities gratitude">
+    <div class="article-image image-yellow">🌱</div>
+
+    <div class="article-content">
+
+        <span class="category-tag"
+              data-en="LIFE & PURPOSE" data-my="ဘဝနှင့် ရည်ရွယ်ချက်">
+            LIFE & PURPOSE
+        </span>
+
+        <h3 data-en="How to Live a Simple and Meaningful Life"
+            data-my="ရိုးရှင်းပြီး အဓိပ္ပာယ်ရှိတဲ့ ဘဝတစ်ခုကို ဘယ်လိုနေထိုင်မလဲ">
+            How to Live a Simple and Meaningful Life
+        </h3>
+
+        <p data-en="A meaningful life isn't about having everything. It's about appreciating what matters most."
+           data-my="အဓိပ္ပာယ်ရှိတဲ့ဘဝဆိုတာ အရာအားလုံးကို ပိုင်ဆိုင်ထားခြင်း မဟုတ်ပါဘူး။ ကိုယ့်အတွက် အရေးကြီးဆုံးအရာတွေကို တန်ဖိုးထားတတ်ခြင်းပါ။">
+            A meaningful life isn't about having everything. It's about appreciating what matters most.
+        </p>
+
+        <span class="article-meta"
+              data-en="⏱ 5 min read" data-my="⏱ ၅ မိနစ်ခန့်">
+            ⏱ 5 min read
+        </span>
+
+        <button class="read-link" data-article="simplelife"
+                data-en="Read More →" data-my="ဆက်လက်ဖတ်ရှုရန် →">
+            Read More →
+        </button>
+
+    </div>
+</article>
+
+
+<!-- Life Is Not a Competition -->
+<article class="article-card" data-category="life-purpose"
+         data-search="life comparison competition own journey timeline success">
+    <div class="article-image image-yellow">🌻</div>
+
+    <div class="article-content">
+
+        <span class="category-tag"
+              data-en="LIFE & PURPOSE" data-my="ဘဝနှင့် ရည်ရွယ်ချက်">
+            LIFE & PURPOSE
+        </span>
+
+        <h3 data-en="Life Doesn't Have to Be a Competition"
+            data-my="ဘဝဆိုတာ ပြိုင်ပွဲတစ်ခု ဖြစ်နေစရာမလိုပါဘူး">
+            Life Doesn't Have to Be a Competition
+        </h3>
+
+        <p data-en="Everyone has a different journey. Stop comparing your timeline with someone else's."
+           data-my="လူတိုင်းမှာ ကိုယ်ပိုင်ဘဝခရီးလမ်း ရှိကြပါတယ်။ ကိုယ့်ရဲ့အချိန်ဇယားကို တခြားသူတွေနဲ့ နှိုင်းယှဉ်နေခြင်းကို ရပ်လိုက်ပါ။">
+            Everyone has a different journey. Stop comparing your timeline with someone else's.
+        </p>
+
+        <span class="article-meta"
+              data-en="⏱ 4 min read" data-my="⏱ ၄ မိနစ်ခန့်">
+            ⏱ 4 min read
+        </span>
+
+        <button class="read-link" data-article="lifecompetition"
+                data-en="Read More →" data-my="ဆက်လက်ဖတ်ရှုရန် →">
+            Read More →
+        </button>
+
+    </div>
+</article>
+
+        </div>
+
+        <p class="no-results" id="noResults"
+           data-en="No articles found. Try another keyword or category."
+           data-my="ဆောင်းပါးမတွေ့ပါ။ အခြားစကားလုံး သို့မဟုတ် အမျိုးအစားကို ရွေးကြည့်ပါ။">
+            No articles found. Try another keyword or category.
+        </p>
+
+    </section>
+
+    <!-- Article Reader -->
+    <section class="article-reader" id="articleReader">
+
+        <button class="reader-back" id="closeArticle"
+                data-en="← Back to Articles" data-my="← ဆောင်းပါးများသို့ ပြန်သွားရန်">
+            ← Back to Articles
+        </button>
+
+        <p class="reader-category" id="readerCategory"></p>
+
+        <h2 id="readerTitle"></h2>
+
+        <p class="reader-time" id="readerTime"></p>
+
+        <div class="reader-body" id="readerBody"></div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>Mindful Me 🌿</p>
+    <p data-en="Take a breath. Take your time. Be kind to yourself."
+       data-my="အသက်ရှူပါ။ အချိန်ယူပါ။ ကိုယ့်ကိုယ်ကို ကြင်နာပါ။">
+        Take a breath. Take your time. Be kind to yourself.
+    </p>
+</footer>
+
+<script>
+
+// ===================================
+// ARTICLE CONTENT
+// ===================================
+
+const articles = {
+
+    growth: {
+        category: {
+            en: "SELF-GROWTH",
+            my: "ကိုယ်တိုင်တိုးတက်မှု"
+        },
+        time: {
+            en: "4 min read",
+            my: "၄ မိနစ်ခန့်"
+        },
+        title: {
+            en: "You Don't Have to Have Everything Figured Out",
+            my: "အရာအားလုံးကို အခုချက်ချင်း နားလည်ထားဖို့ မလိုပါဘူး။"
+        },
+        body: {
+            en: `
+                <p>Sometimes we feel pressured to have a perfect plan for our lives. We may wonder whether we are doing enough, choosing the right path, or moving quickly enough.</p>
+
+                <p>But life is not a race. You are allowed to learn as you go, change your mind, and discover new things about yourself.</p>
+
+                <h3>🌱 Give yourself permission to grow</h3>
+
+                <p>You do not need to know every answer today. Small experiences can teach you valuable lessons over time.</p>
+
+                <h3>✨ Focus on one small step</h3>
+
+                <ul>
+                    <li>Choose one realistic goal for today.</li>
+                    <li>Celebrate small improvements.</li>
+                    <li>Allow yourself to make mistakes.</li>
+                    <li>Take breaks when you need them.</li>
+                </ul>
+
+                <p>Your journey does not need to look like anyone else's. Give yourself time and patience.</p>
+
+                <h3>💚 Remember</h3>
+                <p>You are allowed to be a work in progress.</p>
+            `,
+            my: `
+                <p>တစ်ခါတလေမှာ ဘဝအတွက် ပြီးပြည့်စုံတဲ့ အစီအစဉ်တစ်ခု ရှိထားရမယ်လို့ ကိုယ့်ကိုယ်ကို ဖိအားပေးမိတတ်ပါတယ်။ ကိုယ်လုပ်နေတာ လုံလောက်ရဲ့လား၊ လမ်းကြောင်းမှန်ကို ရွေးထားရဲ့လား၊ တိုးတက်မှုနှေးနေသလားဆိုပြီး တွေးမိတတ်ပါတယ်။</p>
+
+                <p>ဒါပေမဲ့ ဘဝဆိုတာ ပြိုင်ပွဲတစ်ခု မဟုတ်ပါဘူး။ လမ်းလျှောက်ရင်း သင်ယူခွင့်၊ စိတ်ကူးပြောင်းလဲခွင့်နဲ့ ကိုယ့်အကြောင်း အသစ်တွေ ရှာဖွေခွင့် ရှိပါတယ်။</p>
+
+                <h3>🌱 ကိုယ့်ကိုယ်ကို တိုးတက်ခွင့်ပေးပါ</h3>
+
+                <p>ဒီနေ့မှာ အဖြေအားလုံး သိထားဖို့ မလိုပါဘူး။ အတွေ့အကြုံသေးသေးလေးတွေကလည်း အချိန်ကြာလာတာနဲ့အမျှ သင်ခန်းစာကောင်းတွေ ပေးနိုင်ပါတယ်။</p>
+
+                <h3>✨ ခြေလှမ်းသေးသေးလေးတစ်ခုကို အာရုံစိုက်ပါ</h3>
+
+                <ul>
+                    <li>ဒီနေ့အတွက် လက်တွေ့ကျတဲ့ ရည်မှန်းချက်တစ်ခု ရွေးပါ။</li>
+                    <li>တိုးတက်မှုသေးသေးလေးတွေကို အသိအမှတ်ပြုပါ။</li>
+                    <li>အမှားလုပ်မိတာကို လက်ခံပါ။</li>
+                    <li>လိုအပ်တဲ့အခါ အနားယူပါ။</li>
+                </ul>
+
+                <p>သင့်ဘဝခရီးလမ်းဟာ သူများနဲ့ တူနေဖို့ မလိုပါဘူး။ ကိုယ့်ကိုယ်ကို အချိန်နဲ့ စိတ်ရှည်မှု ပေးပါ။</p>
+
+                <h3>💚 သတိရပါ</h3>
+                <p>သင်ဟာ အမြဲတမ်း သင်ယူတိုးတက်နေသူတစ်ယောက် ဖြစ်ခွင့်ရှိပါတယ်။</p>
+            `
+        }
+    },
+
+    stress: {
+        category: { en: "STRESS & ANXIETY", my: "စိတ်ဖိစီးမှု" },
+        time: { en: "5 min read", my: "၅ မိနစ်ခန့်" },
+        title: {
+            en: "Understanding Stress and How to Manage It",
+            my: "စိတ်ဖိစီးမှုကို နားလည်ပြီး ဘယ်လိုဖြေရှင်းမလဲ။"
+        },
+        body: {
+            en: `
+                <p>Stress is a natural response to challenging situations. It can happen when we have too much work, face uncertainty, or experience changes in life.</p>
+
+                <h3>🌿 What can stress feel like?</h3>
+                <ul>
+                    <li>Feeling overwhelmed or worried.</li>
+                    <li>Difficulty concentrating.</li>
+                    <li>Feeling tired or restless.</li>
+                    <li>Changes in sleep or appetite.</li>
+                </ul>
+
+                <h3>💚 Small ways to manage stress</h3>
+                <ul>
+                    <li>Break a big task into smaller steps.</li>
+                    <li>Take a short break from work.</li>
+                    <li>Talk to someone you trust.</li>
+                    <li>Try slow, comfortable breathing.</li>
+                    <li>Make time for rest and activities you enjoy.</li>
+                </ul>
+
+                <p>You do not have to manage everything alone. If stress feels overwhelming or continues to affect your daily life, consider speaking with a qualified health professional.</p>
+
+                <h3>Remember</h3>
+                <p>Taking one small step is still progress.</p>
+            `,
+            my: `
+                <p>စိတ်ဖိစီးမှုဆိုတာ ခက်ခဲတဲ့ အခြေအနေတွေကို ကြုံတွေ့တဲ့အခါ ခန္ဓာကိုယ်နဲ့ စိတ်က သဘာဝအတိုင်း တုံ့ပြန်မှုတစ်ခု ဖြစ်ပါတယ်။ အလုပ်များလွန်းတာ၊ မသေချာတဲ့အခြေအနေတွေ၊ ဘဝအပြောင်းအလဲတွေကြောင့် ဖြစ်နိုင်ပါတယ်။</p>
+
+                <h3>🌿 စိတ်ဖိစီးမှုရဲ့ လက္ခဏာတွေ</h3>
+                <ul>
+                    <li>စိတ်ပူပန်ပြီး မနိုင်မနင်းဖြစ်ခြင်း။</li>
+                    <li>အာရုံစူးစိုက်ရခက်ခဲခြင်း။</li>
+                    <li>ပင်ပန်းခြင်း သို့မဟုတ် မငြိမ်မသက်ဖြစ်ခြင်း။</li>
+                    <li>အိပ်စက်မှုနဲ့ စားချင်စိတ် ပြောင်းလဲခြင်း။</li>
+                </ul>
+
+                <h3>💚 စိတ်ဖိစီးမှုကို လျှော့ချဖို့ နည်းလမ်းလေးတွေ</h3>
+                <ul>
+                    <li>အလုပ်ကြီးတစ်ခုကို အဆင့်သေးသေးလေးတွေ ခွဲလုပ်ပါ။</li>
+                    <li>အလုပ်ကနေ ခဏနားပါ။</li>
+                    <li>ယုံကြည်ရသူတစ်ယောက်နဲ့ စကားပြောပါ။</li>
+                    <li>ဖြည်းဖြည်းနဲ့ သက်တောင့်သက်သာ အသက်ရှူပါ။</li>
+                    <li>အနားယူဖို့နဲ့ ကိုယ်နှစ်သက်တဲ့အရာတွေအတွက် အချိန်ပေးပါ။</li>
+                </ul>
+
+                <p>အရာအားလုံးကို တစ်ယောက်တည်း ဖြေရှင်းဖို့ မလိုပါဘူး။ စိတ်ဖိစီးမှုက ပြင်းထန်လာခြင်း သို့မဟုတ် နေ့စဉ်ဘဝကို ထိခိုက်လာခြင်းရှိရင် ကျန်းမာရေးပညာရှင်တစ်ဦးနဲ့ တိုင်ပင်စဉ်းစားပါ။</p>
+
+                <h3>သတိရပါ</h3>
+                <p>ခြေလှမ်းသေးသေးလေးတစ်ခုကလည်း တိုးတက်မှုပါပဲ။</p>
+            `
+        }
+    },
+
+    selfcare: {
+        category: { en: "SELF-CARE", my: "ကိုယ့်ကိုယ်ကို ဂရုစိုက်မှု" },
+        time: { en: "4 min read", my: "၄ မိနစ်ခန့်" },
+        title: {
+            en: "Self-Care Is More Than Just a Treat",
+            my: "ကိုယ့်ကိုယ်ကို ဂရုစိုက်ခြင်းဆိုတာ"
+        },
+        body: {
+            en: `
+                <p>Self-care is not only about buying something nice or taking a relaxing holiday. It also means looking after your everyday needs.</p>
+
+                <h3>🌱 Everyday self-care ideas</h3>
+                <ul>
+                    <li>Drink enough water.</li>
+                    <li>Eat regular, nourishing meals.</li>
+                    <li>Get enough sleep when possible.</li>
+                    <li>Move your body in a way that feels comfortable.</li>
+                    <li>Make time for people who support you.</li>
+                    <li>Give yourself permission to say no when needed.</li>
+                </ul>
+
+                <h3>💜 Self-care looks different for everyone</h3>
+                <p>Some days it might mean going for a walk. Other days it might mean resting, asking for help, or completing just one important task.</p>
+
+                <p>There is no perfect self-care routine. Find small habits that work with your life.</p>
+            `,
+            my: `
+                <p>ကိုယ့်ကိုယ်ကို ဂရုစိုက်ခြင်းဆိုတာ ပစ္စည်းလှလှလေး ဝယ်တာ ဒါမှမဟုတ် အပန်းဖြေခရီးသွားတာတင် မဟုတ်ပါဘူး။ နေ့စဉ်လိုအပ်ချက်တွေကို ဖြည့်ဆည်းပေးခြင်းလည်း ဖြစ်ပါတယ်။</p>
+
+                <h3>🌱 နေ့စဉ် ကိုယ့်ကိုယ်ကို ဂရုစိုက်နိုင်တဲ့ နည်းလမ်းများ</h3>
+                <ul>
+                    <li>ရေလုံလောက်စွာ သောက်ပါ။</li>
+                    <li>အာဟာရပြည့်ဝတဲ့ အစားအစာတွေကို ပုံမှန်စားပါ။</li>
+                    <li>ဖြစ်နိုင်သမျှ လုံလောက်စွာ အိပ်စက်ပါ။</li>
+                    <li>သက်တောင့်သက်သာရှိတဲ့ ကိုယ်လက်လှုပ်ရှားမှု ပြုလုပ်ပါ။</li>
+                    <li>ကိုယ့်ကို အားပေးသူတွေနဲ့ အချိန်ဖြုန်းပါ။</li>
+                    <li>လိုအပ်တဲ့အခါ ငြင်းဆိုခွင့်ကို ကိုယ့်ကိုယ်ကို ပေးပါ။</li>
+                </ul>
+
+                <h3>💜 လူတိုင်းအတွက် ကိုယ့်ကိုယ်ကို ဂရုစိုက်ပုံ မတူပါဘူး</h3>
+                <p>တချို့နေ့တွေမှာ လမ်းလျှောက်တာ ဖြစ်နိုင်ပါတယ်။ တခြားနေ့တွေမှာ အနားယူတာ၊ အကူအညီတောင်းတာ ဒါမှမဟုတ် အရေးကြီးတဲ့ အလုပ်တစ်ခုကိုပဲ ပြီးအောင်လုပ်တာ ဖြစ်နိုင်ပါတယ်။</p>
+
+                <p>ပြီးပြည့်စုံတဲ့ ကိုယ့်ကိုယ်ကို ဂရုစိုက်မှုအစီအစဉ်ဆိုတာ မရှိပါဘူး။ ကိုယ့်ဘဝနဲ့ ကိုက်ညီတဲ့ အလေ့အကျင့်လေးတွေကို ရှာဖွေပါ။</p>
+            `
+        }
+    },
+
+    comparison: {
+        category: { en: "SELF-GROWTH", my: "ကိုယ်တိုင်တိုးတက်မှု" },
+        time: { en: "3 min read", my: "၃ မိနစ်ခန့်" },
+        title: {
+            en: "Stop Comparing Your Journey to Others",
+            my: "ကိုယ့်လမ်းကို သူများနဲ့ မနှိုင်းယှဉ်ပါနဲ့။"
+        },
+        body: {
+            en: `
+                <p>It is easy to compare our lives with what we see other people sharing. We might notice their achievements and forget that we only see a small part of their story.</p>
+
+                <h3>🌱 Everyone has a different starting point</h3>
+                <p>People have different experiences, responsibilities, opportunities, and challenges. Your path does not have to match someone else's.</p>
+
+                <h3>✨ Try these small changes</h3>
+                <ul>
+                    <li>Notice your own progress.</li>
+                    <li>Limit social media when it makes you feel worse.</li>
+                    <li>Set goals based on your own needs.</li>
+                    <li>Celebrate something you learned this week.</li>
+                </ul>
+
+                <p>You can admire someone else's progress without using it as a reason to judge your own.</p>
+            `,
+            my: `
+                <p>သူများတွေ မျှဝေထားတဲ့ ဘဝအကြောင်းတွေကို ကြည့်ပြီး ကိုယ့်ဘဝနဲ့ နှိုင်းယှဉ်မိဖို့ လွယ်ပါတယ်။ သူတို့ရဲ့ အောင်မြင်မှုတွေကို မြင်ပြီး သူတို့ဘဝရဲ့ အစိတ်အပိုင်းသေးသေးလေးကိုပဲ မြင်နေရတယ်ဆိုတာ မေ့သွားတတ်ပါတယ်။</p>
+
+                <h3>🌱 လူတိုင်းမှာ စတင်ရာနေရာ မတူပါဘူး</h3>
+                <p>လူတိုင်းမှာ အတွေ့အကြုံ၊ တာဝန်ယူမှု၊ အခွင့်အလမ်းနဲ့ စိန်ခေါ်မှုတွေ မတူညီကြပါဘူး။ သင့်ခရီးလမ်းဟာ သူများနဲ့ တူနေဖို့ မလိုပါဘူး။</p>
+
+                <h3>✨ အပြောင်းအလဲသေးသေးလေးတွေ စမ်းကြည့်ပါ</h3>
+                <ul>
+                    <li>ကိုယ့်ရဲ့ တိုးတက်မှုကို သတိထားပါ။</li>
+                    <li>စိတ်မကောင်းဖြစ်စေတဲ့အခါ လူမှုကွန်ရက်အသုံးပြုမှုကို လျှော့ပါ။</li>
+                    <li>ကိုယ့်လိုအပ်ချက်အပေါ် အခြေခံပြီး ရည်မှန်းချက်ထားပါ။</li>
+                    <li>ဒီအပတ် သင်ယူခဲ့တာတစ်ခုကို ဂုဏ်ယူပါ။</li>
+                </ul>
+
+                <p>သူများရဲ့ တိုးတက်မှုကို လေးစားအားကျနိုင်ပါတယ်။ ဒါပေမဲ့ အဲဒါကို ကိုယ့်ကိုယ်ကို ဝေဖန်ဖို့ အကြောင်းပြချက်အဖြစ် မသုံးပါနဲ့။</p>
+            `
+        }
+    },
+
+    emotions: {
+        category: { en: "EMOTIONS", my: "ခံစားချက်များ" },
+        time: { en: "4 min read", my: "၄ မိနစ်ခန့်" },
+        title: {
+            en: "It's Okay Not to Be Okay",
+            my: "အဆင်မပြေတဲ့နေ့တွေ ရှိတာလည်း ပုံမှန်ပါပဲ။"
+        },
+        body: {
+            en: `
+                <p>We sometimes feel that we must always be positive. But people experience many different emotions, and not every day feels good.</p>
+
+                <h3>💜 All feelings deserve attention</h3>
+                <p>Sadness, frustration, worry, happiness, and excitement are all part of human experience. Having a difficult feeling does not mean you have failed.</p>
+
+                <h3>🌿 What can you do?</h3>
+                <ul>
+                    <li>Give yourself a moment to notice what you feel.</li>
+                    <li>Try naming the emotion without judging it.</li>
+                    <li>Write down what is on your mind.</li>
+                    <li>Talk to someone you trust if you need support.</li>
+                </ul>
+
+                <p>You do not need to pretend everything is fine. You deserve care on difficult days too.</p>
+            `,
+            my: `
+                <p>တစ်ခါတလေ အမြဲတမ်း အကောင်းမြင်စိတ်ရှိနေရမယ်လို့ ထင်မိတတ်ပါတယ်။ ဒါပေမဲ့ လူတိုင်းမှာ မတူညီတဲ့ ခံစားချက်တွေ ရှိကြပြီး နေ့တိုင်း ပျော်ရွှင်နေဖို့ မလိုပါဘူး။</p>
+
+                <h3>💜 ခံစားချက်တိုင်းကို အာရုံစိုက်ပေးသင့်ပါတယ်</h3>
+                <p>ဝမ်းနည်းခြင်း၊ စိတ်တိုခြင်း၊ စိုးရိမ်ခြင်း၊ ပျော်ရွှင်ခြင်းနဲ့ စိတ်လှုပ်ရှားခြင်းတို့ဟာ လူ့ဘဝရဲ့ အစိတ်အပိုင်းတွေပါ။ ခက်ခဲတဲ့ခံစားချက်တစ်ခု ရှိနေခြင်းဟာ သင်ရှုံးနိမ့်သွားတာ မဟုတ်ပါဘူး။</p>
+
+                <h3>🌿 ဘာလုပ်နိုင်မလဲ။</h3>
+                <ul>
+                    <li>ကိုယ့်ခံစားချက်ကို သတိထားဖို့ ခဏအချိန်ပေးပါ။</li>
+                    <li>အပြစ်မတင်ဘဲ ကိုယ့်ခံစားချက်ကို အမည်ပေးကြည့်ပါ။</li>
+                    <li>စိတ်ထဲရှိတာတွေကို စာရေးကြည့်ပါ။</li>
+                    <li>အကူအညီလိုအပ်ရင် ယုံကြည်ရသူတစ်ယောက်နဲ့ စကားပြောပါ။</li>
+                </ul>
+
+                <p>အရာအားလုံး အဆင်ပြေနေသလို ဟန်ဆောင်နေဖို့ မလိုပါဘူး။ ခက်ခဲတဲ့နေ့တွေမှာလည်း သင်ဟာ ဂရုစိုက်မှုနဲ့ ထိုက်တန်ပါတယ်။</p>
+            `
+        }
+    },
+
+    rest: {
+        category: { en: "STRESS & ANXIETY", my: "စိတ်ဖိစီးမှု" },
+        time: { en: "3 min read", my: "၃ မိနစ်ခန့်" },
+        title: {
+            en: "Why Rest Is Productive Too",
+            my: "အနားယူခြင်းဟာလည်း အကျိုးရှိပါတယ်။"
+        },
+        body: {
+            en: `
+                <p>Many people feel guilty when they take a break. They may think they should always be doing something useful.</p>
+
+                <p>But rest is part of looking after yourself. It gives you time to recover from everyday demands.</p>
+
+                <h3>🌙 Different ways to rest</h3>
+                <ul>
+                    <li>Take a short break between tasks.</li>
+                    <li>Spend a few quiet minutes away from screens.</li>
+                    <li>Listen to music you enjoy.</li>
+                    <li>Get enough sleep.</li>
+                    <li>Spend time doing something relaxing.</li>
+                </ul>
+
+                <p>Rest does not need to be earned. You are allowed to pause.</p>
+            `,
+            my: `
+                <p>လူအများစုဟာ အနားယူတဲ့အခါ အပြစ်ရှိသလို ခံစားမိတတ်ကြပါတယ်။ အမြဲတမ်း အသုံးဝင်တဲ့အရာတစ်ခုခု လုပ်နေသင့်တယ်လို့ တွေးမိတတ်ပါတယ်။</p>
+
+                <p>ဒါပေမဲ့ အနားယူခြင်းဟာ ကိုယ့်ကိုယ်ကို ဂရုစိုက်ခြင်းရဲ့ အစိတ်အပိုင်းတစ်ခုပါ။ နေ့စဉ်တာဝန်တွေကြောင့် ပင်ပန်းနေတဲ့အခါ ပြန်လည်အားဖြည့်ဖို့ အချိန်ပေးတာ ဖြစ်ပါတယ်။</p>
+
+                <h3>🌙 အနားယူနိုင်တဲ့ နည်းလမ်းများ</h3>
+                <ul>
+                    <li>အလုပ်တစ်ခုနဲ့တစ်ခုကြား ခဏနားပါ။</li>
+                    <li>ဖုန်းနဲ့ ကွန်ပျူတာကနေ ခဏဝေးဝေးနေပါ။</li>
+                    <li>ကိုယ်နှစ်သက်တဲ့ သီချင်းနားထောင်ပါ။</li>
+                    <li>လုံလောက်စွာ အိပ်စက်ပါ။</li>
+                    <li>စိတ်အေးချမ်းစေတဲ့ အရာတစ်ခု လုပ်ပါ။</li>
+                </ul>
+
+                <p>အနားယူဖို့ အရင်ဆုံး ကြိုးစားပြီးမှ ရယူရတာ မဟုတ်ပါဘူး။ ခဏရပ်နားခွင့် သင့်မှာ ရှိပါတယ်။</p>
+            `
+        }
+    },
+mindpeace: {
+    category: {
+        en: "INNER PEACE",
+        my: "စိတ်အေးချမ်းမှု"
+    },
+    time: {
+        en: "5 min read",
+        my: "၅ မိနစ်ခန့်"
+    },
+    title: {
+        en: "Finding Peace Within Yourself",
+        my: "ကိုယ့်အတွင်းစိတ်ထဲက ငြိမ်းချမ်းမှုကို ရှာဖွေခြင်း"
+    },
+    body: {
+        en: `
+            <p>We often look for peace in the outside world. We hope that when everything goes according to our plans, we will finally feel calm and happy.</p>
+
+            <p>But life does not always go as planned. There will be unexpected changes, difficult people, and uncertain moments.</p>
+
+            <h3>🌿 1. Accept What You Cannot Control</h3>
+            <p>You cannot control every situation or every person's actions. Focus on what you can influence: your choices, responses, and the way you care for yourself.</p>
+
+            <h3>💜 2. Stop Being Too Hard on Yourself</h3>
+            <p>You are human. You will make mistakes, have difficult days, and sometimes feel unsure. Treat yourself with the same kindness you would offer someone you love.</p>
+
+            <h3>🌱 3. Make Space for Quiet Moments</h3>
+            <p>Spend a little time away from noise, notifications, and pressure. Read a book, take a walk, listen to gentle music, or simply sit quietly.</p>
+
+            <h3>✨ 4. Learn to Let Things Be</h3>
+            <p>Not every problem needs an immediate answer. Sometimes you need time, rest, and a different perspective.</p>
+
+            <h3>Remember</h3>
+            <p>Inner peace does not mean having a perfect life. It means learning to care for yourself even when life is imperfect.</p>
+        `,
+        my: `
+            <p>ကျွန်ုပ်တို့ဟာ စိတ်အေးချမ်းမှုကို အပြင်လောကမှာ မကြာခဏ ရှာဖွေတတ်ကြပါတယ်။ အရာအားလုံး ကိုယ်စီစဉ်ထားသလို ဖြစ်လာတဲ့အခါမှ စိတ်အေးချမ်းပြီး ပျော်ရွှင်နိုင်မယ်လို့ မျှော်လင့်တတ်ကြပါတယ်။</p>
+
+            <p>ဒါပေမဲ့ ဘဝဟာ အမြဲတမ်း ကိုယ်မျှော်လင့်ထားသလို ဖြစ်မလာပါဘူး။ မမျှော်လင့်ထားတဲ့ အပြောင်းအလဲတွေ၊ ခက်ခဲတဲ့လူတွေနဲ့ မသေချာတဲ့အချိန်တွေ ရှိလာနိုင်ပါတယ်။</p>
+
+            <h3>🌿 ၁။ ကိုယ်မထိန်းချုပ်နိုင်တဲ့အရာတွေကို လက်ခံပါ</h3>
+            <p>အခြေအနေတိုင်းနဲ့ လူတိုင်းရဲ့ လုပ်ရပ်တွေကို ကိုယ်ထိန်းချုပ်လို့ မရပါဘူး။ ကိုယ်ရွေးချယ်နိုင်တဲ့အရာတွေ၊ တုံ့ပြန်ပုံတွေနဲ့ ကိုယ့်ကိုယ်ကို ဂရုစိုက်ပုံတွေကိုသာ အာရုံစိုက်ပါ။</p>
+
+            <h3>💜 ၂။ ကိုယ့်ကိုယ်ကို အရမ်းမဝေဖန်ပါနဲ့</h3>
+            <p>သင်ဟာ လူသားတစ်ယောက်ပါ။ အမှားလုပ်မိနိုင်တယ်၊ ခက်ခဲတဲ့နေ့တွေ ရှိနိုင်တယ်၊ တစ်ခါတလေ မသေချာမှုတွေ ခံစားရနိုင်ပါတယ်။ ကိုယ်ချစ်ရတဲ့သူတစ်ယောက်ကို ကြင်နာသလို ကိုယ့်ကိုယ်ကိုလည်း ကြင်နာပါ။</p>
+
+            <h3>🌱 ၃။ တိတ်ဆိတ်တဲ့အချိန်လေးတွေ ဖန်တီးပါ</h3>
+            <p>ဆူညံသံတွေ၊ အသိပေးချက်တွေ၊ ဖိအားတွေကနေ ခဏဝေးဝေးနေပါ။ စာဖတ်တာ၊ လမ်းလျှောက်တာ၊ သီချင်းနားထောင်တာ ဒါမှမဟုတ် တိတ်တိတ်ဆိတ်ဆိတ် ထိုင်နေတာမျိုး လုပ်ကြည့်ပါ။</p>
+
+            <h3>✨ ၄။ အရာရာကို ခဏလွှတ်ထားတတ်ဖို့ သင်ယူပါ</h3>
+            <p>ပြဿနာတိုင်းကို ချက်ချင်းအဖြေရှာဖို့ မလိုပါဘူး။ တစ်ခါတလေ အချိန်၊ အနားယူမှုနဲ့ အမြင်သစ်တစ်ခု လိုအပ်ပါတယ်။</p>
+
+            <h3>သတိရပါ</h3>
+            <p>စိတ်အေးချမ်းမှုဆိုတာ ပြီးပြည့်စုံတဲ့ဘဝတစ်ခု ရှိနေခြင်း မဟုတ်ပါဘူး။ ဘဝက မပြည့်စုံတဲ့အချိန်တွေမှာတောင် ကိုယ့်ကိုယ်ကို ဂရုစိုက်တတ်လာခြင်း ဖြစ်ပါတယ်။</p>
+        `
+    }
+},
+
+simplelife: {
+    category: {
+        en: "LIFE & PURPOSE",
+        my: "ဘဝနဲ့ ရည်ရွယ်ချက်"
+    },
+    time: {
+        en: "5 min read",
+        my: "၅ မိနစ်ခန့်"
+    },
+    title: {
+        en: "How to Live a Simple and Meaningful Life",
+        my: "ရိုးရှင်းပြီး အဓိပ္ပာယ်ရှိတဲ့ ဘဝတစ်ခုကို ဘယ်လိုနေထိုင်မလဲ။"
+    },
+    body: {
+        en: `
+            <p>A meaningful life does not have to be expensive, impressive, or perfect. Sometimes it is built from ordinary moments that we learn to appreciate.</p>
+
+            <h3>🌿 1. Appreciate What You Already Have</h3>
+            <p>Notice the people who care about you, the small opportunities you receive, and the everyday moments that make life worthwhile.</p>
+
+            <h3>💚 2. Focus on What Truly Matters</h3>
+            <p>Think about the people, values, and activities that are important to you. Give them more attention instead of trying to satisfy every expectation around you.</p>
+
+            <h3>🌱 3. Build Small, Healthy Habits</h3>
+            <ul>
+                <li>Make time for rest.</li>
+                <li>Look after your body.</li>
+                <li>Learn something new.</li>
+                <li>Spend time with people you trust.</li>
+                <li>Keep your surroundings comfortable.</li>
+            </ul>
+
+            <h3>✨ 4. Do Not Rush Through Life</h3>
+            <p>You do not have to achieve everything at once. Allow yourself to enjoy the present while working towards your future.</p>
+
+            <h3>Remember</h3>
+            <p>A good life is not only about how much you achieve. It is also about how you experience the days along the way.</p>
+        `,
+        my: `
+            <p>အဓိပ္ပာယ်ရှိတဲ့ဘဝတစ်ခု ဖြစ်ဖို့ ဈေးကြီးတာ၊ အထင်ကြီးစရာကောင်းတာ ဒါမှမဟုတ် ပြီးပြည့်စုံတာမျိုး ဖြစ်ဖို့ မလိုပါဘူး။ တစ်ခါတလေ တန်ဖိုးထားတတ်လာတဲ့ သာမန်နေ့စဉ်အချိန်လေးတွေကနေ ဘဝရဲ့ အဓိပ္ပာယ်ကို တည်ဆောက်နိုင်ပါတယ်။</p>
+
+            <h3>🌿 ၁။ ကိုယ့်မှာရှိပြီးသားအရာတွေကို တန်ဖိုးထားပါ</h3>
+            <p>ကိုယ့်ကို ဂရုစိုက်တဲ့သူတွေ၊ ရရှိထားတဲ့ အခွင့်အလမ်းသေးသေးလေးတွေနဲ့ ဘဝကို တန်ဖိုးရှိစေတဲ့ နေ့စဉ်အချိန်လေးတွေကို သတိထားကြည့်ပါ။</p>
+
+            <h3>💚 ၂။ တကယ်အရေးပါတဲ့အရာတွေကို အာရုံစိုက်ပါ</h3>
+            <p>ကိုယ့်အတွက် အရေးပါတဲ့လူတွေ၊ တန်ဖိုးထားတဲ့အရာတွေနဲ့ လုပ်ရတာနှစ်သက်တဲ့အရာတွေကို စဉ်းစားပါ။ လူတိုင်းရဲ့ မျှော်လင့်ချက်တွေကို ဖြည့်ဆည်းဖို့ ကြိုးစားနေမယ့်အစား အဲဒီအရာတွေကို အချိန်ပိုပေးပါ။</p>
+
+            <h3>🌱 ၃။ အလေ့အကျင့်ကောင်းလေးတွေ တည်ဆောက်ပါ</h3>
+            <ul>
+                <li>အနားယူဖို့ အချိန်ပေးပါ။</li>
+                <li>ကိုယ့်ခန္ဓာကိုယ်ကို ဂရုစိုက်ပါ။</li>
+                <li>အသစ်တစ်ခုခု သင်ယူပါ။</li>
+                <li>ယုံကြည်ရသူတွေနဲ့ အချိန်ဖြုန်းပါ။</li>
+                <li>ကိုယ့်ပတ်ဝန်းကျင်ကို သက်တောင့်သက်သာရှိအောင် ထားပါ။</li>
+            </ul>
+
+            <h3>✨ ၄။ ဘဝကို အလျင်စလို ဖြတ်သန်းဖို့ မလိုပါဘူး</h3>
+            <p>အရာအားလုံးကို တစ်ချိန်တည်းမှာ အောင်မြင်ဖို့ မလိုပါဘူး။ အနာဂတ်အတွက် ကြိုးစားနေစဉ်မှာပဲ လက်ရှိအချိန်လေးတွေကိုလည်း ပျော်ရွှင်ခွင့်ပေးပါ။</p>
+
+            <h3>သတိရပါ</h3>
+            <p>ဘဝကောင်းတစ်ခုဆိုတာ ဘယ်လောက်အောင်မြင်ခဲ့သလဲဆိုတာတင် မဟုတ်ပါဘူး။ အဲဒီခရီးလမ်းတစ်လျှောက် နေ့ရက်တွေကို ဘယ်လိုဖြတ်သန်းခဲ့သလဲဆိုတာလည်း အရေးကြီးပါတယ်။</p>
+        `
+    }
+},
+
+lettinggo: {
+    category: {
+        en: "INNER PEACE",
+        my: "စိတ်အေးချမ်းမှု"
+    },
+    time: {
+        en: "4 min read",
+        my: "၄ မိနစ်ခန့်"
+    },
+    title: {
+        en: "Learning to Let Go",
+        my: "လက်လွှတ်တတ်ဖို့ သင်ယူခြင်း"
+    },
+    body: {
+        en: `
+            <p>Sometimes we hold on to things that continue to hurt us: old mistakes, difficult memories, unrealistic expectations, or situations we cannot change.</p>
+
+            <p>Letting go does not mean pretending something never happened. It means recognising that carrying it forever may not help you move forward.</p>
+
+            <h3>💜 1. Accept Your Feelings</h3>
+            <p>You do not need to rush yourself into feeling better. Give yourself space to understand what happened and how it affected you.</p>
+
+            <h3>🌿 2. Understand What You Can Control</h3>
+            <p>You cannot change the past or force another person to behave differently. You can decide what boundaries you need and what steps you want to take next.</p>
+
+            <h3>🌱 3. Learn Without Punishing Yourself</h3>
+            <p>Past experiences can teach you something, but they do not have to become a reason to blame yourself forever.</p>
+
+            <h3>✨ 4. Take One Step Forward</h3>
+            <p>Focus on one small thing you can do today to care for yourself and your future.</p>
+
+            <h3>Remember</h3>
+            <p>Letting go is not always quick or easy. It can be a gradual process, and you deserve patience along the way.</p>
+        `,
+        my: `
+            <p>တစ်ခါတလေမှာ ကိုယ့်ကို ဆက်လက်နာကျင်စေတဲ့ အရာတွေကို ဆုပ်ကိုင်ထားမိတတ်ပါတယ်။ အတိတ်ကအမှားတွေ၊ ခက်ခဲတဲ့အမှတ်တရတွေ၊ လက်တွေ့မကျတဲ့ မျှော်လင့်ချက်တွေနဲ့ မပြောင်းလဲနိုင်တဲ့ အခြေအနေတွေ ဖြစ်နိုင်ပါတယ်။</p>
+
+            <p>လက်လွှတ်ခြင်းဆိုတာ ဘာမှမဖြစ်ခဲ့သလို ဟန်ဆောင်ခြင်း မဟုတ်ပါဘူး။ အဲဒီအရာတွေကို အမြဲတမ်း သယ်ဆောင်ထားခြင်းက ရှေ့ဆက်ဖို့ အထောက်အကူမဖြစ်နိုင်ကြောင်း နားလည်ခြင်း ဖြစ်ပါတယ်။</p>
+
+            <h3>💜 ၁။ ကိုယ့်ခံစားချက်တွေကို လက်ခံပါ</h3>
+            <p>ချက်ချင်း စိတ်ပြေလည်သွားဖို့ ကိုယ့်ကိုယ်ကို အတင်းမတိုက်တွန်းပါနဲ့။ ဖြစ်ပျက်ခဲ့တာနဲ့ ကိုယ့်အပေါ် ဘယ်လိုသက်ရောက်ခဲ့လဲဆိုတာ နားလည်ဖို့ အချိန်ပေးပါ။</p>
+
+            <h3>🌿 ၂။ ကိုယ်ထိန်းချုပ်နိုင်တာကို နားလည်ပါ</h3>
+            <p>အတိတ်ကို ပြန်မပြောင်းလဲနိုင်သလို တခြားသူတစ်ယောက်ကိုလည်း ကိုယ်လိုချင်သလို ပြုမူစေလို့ မရပါဘူး။ ကိုယ့်အတွက် ဘယ်လိုစည်းမျဉ်းတွေ လိုအပ်သလဲ၊ နောက်တစ်ဆင့် ဘာလုပ်ချင်သလဲဆိုတာကိုတော့ ရွေးချယ်နိုင်ပါတယ်။</p>
+
+            <h3>🌱 ၃။ ကိုယ့်ကိုယ်ကို အပြစ်မပေးဘဲ သင်ယူပါ</h3>
+            <p>အတိတ်အတွေ့အကြုံတွေက သင်ခန်းစာပေးနိုင်ပါတယ်။ ဒါပေမဲ့ ကိုယ့်ကိုယ်ကို အမြဲတမ်း အပြစ်တင်နေဖို့ အကြောင်းပြချက် မဖြစ်သင့်ပါဘူး။</p>
+
+            <h3>✨ ၄။ ရှေ့ကို ခြေလှမ်းတစ်လှမ်း လှမ်းပါ</h3>
+            <p>ဒီနေ့မှာ ကိုယ့်ကိုယ်ကိုနဲ့ ကိုယ့်အနာဂတ်ကို ဂရုစိုက်ဖို့ လုပ်နိုင်တဲ့ အရာသေးသေးလေးတစ်ခုကို အာရုံစိုက်ပါ။</p>
+
+            <h3>သတိရပါ</h3>
+            <p>လက်လွှတ်တတ်ဖို့ဆိုတာ အမြဲတမ်း မြန်ဆန်လွယ်ကူတာ မဟုတ်ပါဘူး။ တဖြည်းဖြည်း လုပ်ဆောင်ရတဲ့ လုပ်ငန်းစဉ်တစ်ခု ဖြစ်နိုင်ပါတယ်။ အဲဒီခရီးလမ်းတစ်လျှောက် ကိုယ့်ကိုယ်ကို စိတ်ရှည်ပေးပါ။</p>
+        `
+    }
+},
+
+lifecompetition: {
+    category: { en: "LIFE & PURPOSE", my: "ဘဝနှင့် ရည်ရွယ်ချက်" },
+    time: { en: "4 min read", my: "၄ မိနစ်ခန့်" },
+    title: {
+        en: "Life Doesn't Have to Be a Competition",
+        my: "ဘဝဆိုတာ ပြိုင်ပွဲတစ်ခု ဖြစ်နေစရာမလိုပါဘူး"
+    },
+    body: {
+        en: `
+            <p>It is easy to treat life like a race. We compare our achievements, our timelines, and our progress with other people.</p>
+
+            <h3>🌿 Your Timeline Is Your Own</h3>
+            <p>Everyone reaches different milestones at different times. Someone else's success does not mean you are behind.</p>
+
+            <h3>💚 Focus on Your Own Growth</h3>
+            <ul>
+                <li>Set goals that matter to you.</li>
+                <li>Celebrate your own progress.</li>
+                <li>Remember that rest is part of the journey.</li>
+                <li>Stop measuring your worth against others.</li>
+            </ul>
+
+            <h3>✨ A Different Definition of Success</h3>
+            <p>Success can mean peace, kindness, good health, or simply getting through a hard day.</p>
+
+            <h3>Remember</h3>
+            <p>You are not running someone else's race. Walk your own path at your own pace.</p>
+        `,
+        my: `
+            <p>ဘဝကို ပြိုင်ပွဲတစ်ခုလို သဘောထားမိတာ လွယ်ပါတယ်။ ကိုယ့်အောင်မြင်မှုတွေ၊ အချိန်ဇယားတွေ၊ တိုးတက်မှုတွေကို တခြားသူတွေနဲ့ နှိုင်းယှဉ်မိတတ်ပါတယ်။</p>
+
+            <h3>🌿 သင့်အချိန်ဇယားဟာ သင့်ကိုယ်ပိုင်ပါ</h3>
+            <p>လူတိုင်းဟာ မတူညီတဲ့အချိန်တွေမှာ မတူညီတဲ့ မှတ်တိုင်တွေကို ရောက်ကြပါတယ်။ တခြားသူတစ်ယောက်ရဲ့ အောင်မြင်မှုဟာ သင်နောက်ကျနေတယ်လို့ မဆိုလိုပါဘူး။</p>
+
+            <h3>💚 ကိုယ့်တိုးတက်မှုကိုသာ အာရုံစိုက်ပါ</h3>
+            <ul>
+                <li>ကိုယ့်အတွက် အရေးကြီးတဲ့ ရည်မှန်းချက်တွေ ချမှတ်ပါ။</li>
+                <li>ကိုယ့်တိုးတက်မှုကို ဂုဏ်ယူပါ။</li>
+                <li>အနားယူခြင်းဟာ ခရီးလမ်းရဲ့ အစိတ်အပိုင်းဖြစ်ကြောင်း သတိရပါ။</li>
+                <li>သူများနဲ့ နှိုင်းယှဉ်ပြီး ကိုယ့်တန်ဖိုးကို မတိုင်းတာပါနဲ့။</li>
+            </ul>
+
+            <h3>✨ အောင်မြင်မှုရဲ့ အဓိပ္ပာယ် ကွဲပြားနိုင်ပါတယ်</h3>
+            <p>အောင်မြင်မှုဆိုတာ စိတ်အေးချမ်းမှု၊ ကြင်နာမှု၊ ကျန်းမာရေး ဒါမှမဟုတ် ခက်ခဲတဲ့နေ့တစ်နေ့ကို ဖြတ်ကျော်နိုင်တာလည်း ဖြစ်နိုင်ပါတယ်။</p>
+
+            <h3>သတိရပါ</h3>
+            <p>သင်ဟာ သူတစ်ပါးရဲ့ ပြိုင်ပွဲကို ပြေးနေတာ မဟုတ်ပါဘူး။ ကိုယ့်လမ်းကို ကိုယ့်အရှိန်အဟုန်နဲ့ လျှောက်ပါ။</p>
+        `
+    }
+},
+    journaling: {
+        category: { en: "SELF-CARE", my: "ကိုယ့်ကိုယ်ကို ဂရုစိုက်မှု" },
+        time: { en: "5 min read", my: "၅ မိနစ်ခန့်" },
+        title: {
+            en: "How Journaling Can Help You Understand Yourself",
+            my: "စာရေးမှတ်တမ်းတင်ခြင်းက ကိုယ့်ကိုယ်ကို နားလည်စေပါတယ်။"
+        },
+        body: {
+            en: `
+                <p>Journaling means writing down your thoughts, experiences, or feelings. You do not need to be a good writer to start.</p>
+
+                <h3>📖 Why try journaling?</h3>
+                <ul>
+                    <li>It gives you space to express your thoughts.</li>
+                    <li>It can help you notice patterns in your feelings.</li>
+                    <li>It helps you reflect on your experiences.</li>
+                    <li>It can help you remember small moments that matter.</li>
+                </ul>
+
+                <h3>✍️ Simple journal prompts</h3>
+                <ul>
+                    <li>How am I feeling today?</li>
+                    <li>What made me smile today?</li>
+                    <li>What is one thing I need right now?</li>
+                    <li>What would I like to do differently tomorrow?</li>
+                </ul>
+
+                <p>Write honestly and at your own pace. Your journal does not need to be perfect.</p>
+            `,
+            my: `
+                <p>Journaling ဆိုတာ ကိုယ့်အတွေးတွေ၊ အတွေ့အကြုံတွေနဲ့ ခံစားချက်တွေကို စာရေးမှတ်တမ်းတင်ခြင်း ဖြစ်ပါတယ်။ စတင်ဖို့ စာရေးကောင်းနေဖို့ မလိုပါဘူး။</p>
+
+                <h3>📖 ဘာကြောင့် စာရေးမှတ်တမ်းတင်သင့်သလဲ။</h3>
+                <ul>
+                    <li>ကိုယ့်အတွေးတွေကို ဖော်ပြဖို့ နေရာရစေပါတယ်။</li>
+                    <li>ခံစားချက်တွေရဲ့ ပုံစံတွေကို သတိထားမိစေပါတယ်။</li>
+                    <li>ကိုယ့်အတွေ့အကြုံတွေကို ပြန်လည်ဆင်ခြင်နိုင်ပါတယ်။</li>
+                    <li>အရေးပါတဲ့ အချိန်လေးတွေကို မှတ်မိစေပါတယ်။</li>
+                </ul>
+
+                <h3>✍️ ရိုးရှင်းတဲ့ Journal မေးခွန်းလေးများ</h3>
+                <ul>
+                    <li>ဒီနေ့ ငါ ဘယ်လိုခံစားနေရလဲ။</li>
+                    <li>ဒီနေ့ ဘယ်အရာက ငါ့ကို ပြုံးစေခဲ့လဲ။</li>
+                    <li>အခုအချိန်မှာ ငါ ဘာလိုအပ်နေလဲ။</li>
+                    <li>မနက်ဖြန်မှာ ဘာတစ်ခုကို ပြောင်းလဲလုပ်ချင်လဲ။</li>
+                </ul>
+
+                <p>ကိုယ့်အရှိန်အဟုန်နဲ့ ရိုးသားစွာ ရေးပါ။ သင့်ရဲ့ မှတ်တမ်းစာအုပ်ဟာ ပြီးပြည့်စုံနေဖို့ မလိုပါဘူး။</p>
+            `
+        }
+    }
+
+};
+
+// ===================================
+// SEARCH AND CATEGORY FILTER
+// ===================================
+
+const searchInput = document.getElementById("articleSearch");
+const filterButtons = document.querySelectorAll(".filter-btn");
+const articleCards = document.querySelectorAll(".article-card");
+const noResults = document.getElementById("noResults");
+
+let activeCategory = "all";
+
+function filterArticles() {
+
+    const searchText = searchInput.value.toLowerCase().trim();
+
+    let visibleCount = 0;
+
+    articleCards.forEach(card => {
+
+        const category = card.dataset.category;
+        const searchData = (
+            card.dataset.search + " " +
+            card.innerText
+        ).toLowerCase();
+
+        const matchesCategory =
+            activeCategory === "all" ||
+            category === activeCategory;
+
+        const matchesSearch =
+            searchData.includes(searchText);
+
+        const visible = matchesCategory && matchesSearch;
+
+        card.style.display = visible ? "flex" : "none";
+
+        if (visible) visibleCount++;
+
+    });
+
+    noResults.style.display =
+        visibleCount === 0 ? "block" : "none";
+
+}
+
+searchInput.addEventListener("input", filterArticles);
+
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", function () {
+
+        activeCategory = this.dataset.category;
+
+        filterButtons.forEach(item => {
+            item.classList.remove("active");
+        });
+
+        this.classList.add("active");
+
+        filterArticles();
+
+    });
+
+});
+
+// ===================================
+// READ ARTICLE
+// ===================================
+
+const articleReader = document.getElementById("articleReader");
+
+function openArticle(articleId) {
+
+    const article = articles[articleId];
+
+    if (!article) return;
+
+    const language = currentLanguage;
+
+    document.getElementById("readerCategory").textContent =
+        article.category[language];
+
+    document.getElementById("readerTitle").textContent =
+        article.title[language];
+
+    document.getElementById("readerTime").textContent =
+        "⏱ " + article.time[language];
+
+    document.getElementById("readerBody").innerHTML =
+        article.body[language];
+
+    articleReader.classList.add("open");
+
+    articleReader.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+}
+
+document.querySelectorAll("[data-article]").forEach(button => {
+
+    button.addEventListener("click", function () {
+
+        openArticle(this.dataset.article);
+
+    });
+
+});
+
+document.getElementById("closeArticle").addEventListener(
+    "click",
+    function () {
+
+        articleReader.classList.remove("open");
+
+        articleReader.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }
+);
+
+// ===================================
+// LANGUAGE TOGGLE
+// ===================================
+
+let currentLanguage = "en";
+
+const languageToggle =
+    document.getElementById("languageToggle");
+
+function updateLanguage() {
+
+    document.documentElement.lang = currentLanguage;
+
+    document.querySelectorAll("[data-en]").forEach(element => {
+
+        element.textContent =
+            element.dataset[currentLanguage];
+
+    });
+
+    searchInput.placeholder =
+        searchInput.dataset[
+            currentLanguage === "en"
+                ? "placeholderEn"
+                : "placeholderMy"
+        ];
+
+    languageToggle.textContent =
+        currentLanguage === "en" ? "မြန်မာ" : "English";
+
+    filterArticles();
+
+    // Update an already-open article
+    if (articleReader.classList.contains("open")) {
+
+        const currentTitle =
+            document.getElementById("readerTitle").textContent;
+
+        const articleId = Object.keys(articles).find(id =>
+            articles[id].title[currentLanguage] === currentTitle ||
+            articles[id].title[currentLanguage === "en" ? "my" : "en"] === currentTitle
+        );
+
+        if (articleId) {
+            openArticle(articleId);
+        }
+
+    }
+
+}
+
+languageToggle.addEventListener("click", function () {
+
+    currentLanguage =
+        currentLanguage === "en" ? "my" : "en";
+
+    updateLanguage();
+
+});
+
+// ===================================
+// INITIALIZE
+// ===================================
+
+updateLanguage();
+
+</script>
+
+</body>
+</html>

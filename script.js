@@ -152,20 +152,7 @@ const translations = {
         
         // Footer
         footer: "You can practice mindfulness in small moments — walking, eating, or listening to music.",
-        checklist_title: "📋 Mental Health Checklist",
-        checklist:"Mental Health Checklist",
-    checklist_sub: "Simple daily habits to check in with yourself.",
-
-    check_1: "Have I eaten regular meals?",
-    check_2: "Am I getting enough sleep?",
-    check_3: "Did I drink plenty of water?",
-    check_4: "Have I spent time outside?",
-    check_5: "Did I take a break from screens?",
-    check_6: "Have I connected with others?",
-    check_7: "Did I do something kind?",
-    check_8:"Have I been kind to myself today?",
-    check_9:"Did I do something I enjoy today?",
-    FooterCheck:"💛 Take care of yourself one small step at a time.",
+        checklist_title: "📋 MoodTracker",
     //readingArticles
 title:"📚 Reading Articles",
 
@@ -376,21 +363,8 @@ med_s6_d: "မျက်လုံးကို ဖြည်းဖြည်းခ�
 
 // Footer
 footer: "လမ်းလျှောက်နေစဉ်၊ အစာစားနေစဉ် သို့မဟုတ် သီချင်းနားထောင်နေစဉ်ကဲ့သို့ နေ့စဉ်အချိန်လေးများတွင်လည်း Mindfulness ကို လေ့ကျင့်နိုင်ပါတယ်။",
- checklist_title: "📋 စိတ်ကျန်းမာရေး စစ်ဆေးရန် စာရင်း",
- checklist: "စိတ်ကျန်းမာရေး စစ်ဆေးကြည့်ရန်",
-    checklist_sub: "နေ့စဉ် ကိုယ့်ကိုယ်ကို ပြန်လည် သတိထားကြည့်နိုင်ရန် ရိုးရှင်းသော အလေ့အကျင့်များ။",
-
-    check_1: "ပုံမှန် အစားအသောက် စားဖြစ်ခဲ့ပါသလား?",
-    check_2: "အိပ်ချိန် လုံလောက်စွာ ရရှိနေပါသလား?",
-    check_3: "ရေ လုံလောက်စွာ သောက်ဖြစ်ခဲ့ပါသလား?",
-    check_4: "အပြင်ထွက်ပြီး အချိန်ပေးဖြစ်ခဲ့ပါသလား?",
-    check_5: "ဖုန်း၊ ကွန်ပျူတာ မျက်နှာပြင်များမှ ခဏနားဖြစ်ခဲ့ပါသလား?",
-    check_6: "မိသားစုဝင်များ သို့မဟုတ် မိတ်ဆွေများနှင့် ဆက်သွယ်ပြောဆိုဖြစ်ခဲ့ပါသလား?",
-    check_7: "တစ်စုံတစ်ယောက်အတွက် ကြင်နာမှုရှိသော အရာတစ်ခုခု လုပ်ပေးဖြစ်ခဲ့ပါသလား?",
-check_8:"ဒီနေ့ ကိုယ့်ကိုယ်ကို နူးညံ့စွာ ဆက်ဆံဖြစ်ခဲ့ပါသလား?",
-    check_9:"ဒီနေ့ မိမိနှစ်သက်တဲ့ အရာတစ်ခုခု လုပ်ဖြစ်ခဲ့ပါသလား?",
-    FooterCheck:"💛 ကိုယ့်ကိုယ်ကို ဂရုစိုက်ဖို့ အဆင့်သေးသေးလေးတွေကနေ စတင်လိုက်ပါ။",
-    //Reading Articles
+ checklist_title: "📋 စိတ်ခံစားချက် မှတ်တမ်း",
+   //Reading Articles
     title:"📚 ဖတ်ရှုလေ့လာရန် ဆောင်းပါးများ",
 
 subtitle:"စိတ်ကျန်းမာရေး ပိုမိုကောင်းမွန်စေရန် ရိုးရှင်းသော အတွေးအခေါ်များကို လေ့လာပါ။",

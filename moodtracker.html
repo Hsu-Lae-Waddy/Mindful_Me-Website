@@ -1,0 +1,1060 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Mood Tracker | Mindful Me</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background:#d0f5f5;
+            color: #0e0d11;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            gap: 12px;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: #171518;
+            font-size: 14px;
+        }
+
+        .language-button {
+            border: 1px solid #d9cde0;
+            background: white;
+            color: #171518;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        /* Welcome */
+        .welcome {
+            text-align: center;
+            padding: 35px 20px;
+            background: #319e36;
+            border-radius: 22px;
+            margin-bottom: 25px;
+        }
+
+        .welcome .eyebrow {
+            color: #09040d;
+            font-size: 12px;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .welcome h1 {
+            color: #0e0b0f;
+            font-size: 30px;
+            margin: 10px 0;
+        }
+
+        .welcome p {
+            color: #171518;
+            font-size: 14px;
+        }
+
+        /* General cards */
+        .card {
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 18px rgba(70, 50, 80, 0.04);
+        }
+
+        .section-title {
+            color:  #09040d;
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+
+        .section-description {
+            color: #136411;
+            font-size: 13px;
+            margin-bottom: 22px;
+        }
+
+        /* Mood options */
+        .mood-options {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+        }
+
+        .mood-option {
+            background: #faf8fb;
+            border: 2px solid transparent;
+            border-radius: 15px;
+            padding: 18px 8px;
+            cursor: pointer;
+            transition: 0.2s;
+            color: #050208;
+        }
+
+        .mood-option:hover {
+            background: #f2edf6;
+            transform: translateY(-3px);
+        }
+
+        .mood-option.selected {
+            border-color: #106f36;
+            background: #f0e9f5;
+        }
+
+        .mood-emoji {
+            display: block;
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .mood-label {
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* Reflection */
+        .reflection-label {
+            display: block;
+            color:  #09040d;
+            font-size: 14px;
+            margin: 22px 0 10px;
+            font-weight: bold;
+        }
+
+        #moodNote {
+            width: 100%;
+            min-height: 100px;
+            resize: vertical;
+            padding: 15px;
+            border: 1px solid #106f36;
+            border-radius: 12px;
+            outline: none;
+            font-family: inherit;
+            font-size: 14px;
+            color: #484252;
+        }
+
+        #moodNote:focus {
+            border-color: #106f36;
+        }
+
+        .save-button {
+            background:#106f36;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 28px;
+            cursor: pointer;
+            margin-top: 18px;
+            font-size: 14px;
+        }
+
+        .save-button:hover {
+            background: #106f36;
+        }
+
+        .delete-button {
+            background: transparent;
+            border: 1px solid #7c1919;
+            color: #560f0f;
+            border-radius: 25px;
+            padding: 11px 20px;
+            cursor: pointer;
+            margin-top: 18px;
+            margin-left: 8px;
+            font-size: 13px;
+        }
+
+        .delete-button:hover {
+            background: #fff3f3;
+        }
+
+        .save-message {
+            color:#106f36;
+            font-size: 12px;
+            margin-top: 12px;
+            min-height: 18px;
+        }
+
+        /* Calendar */
+        .calendar-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            gap: 10px;
+        }
+
+        .calendar-header h3 {
+            color:  #09040d;
+            font-size: 18px;
+        }
+
+        .month-button {
+            border: none;
+            background: #528d69;
+            color: #171518;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .month-button:hover {
+            background: #e5dbea;
+        }
+
+        .calendar-weekdays,
+        .calendar-days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 7px;
+            text-align: center;
+        }
+
+        .calendar-weekdays {
+            margin-bottom: 10px;
+        }
+
+        .calendar-weekdays div {
+            color: #378255;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 8px 0;
+        }
+
+        .calendar-day {
+            min-height: 75px;
+            border: 1px solid #68af84;
+            border-radius: 12px;
+            background: #fff;
+            cursor: pointer;
+            padding: 7px 2px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3px;
+            color: #62576c;
+        }
+
+        .calendar-day:hover:not(:disabled) {
+            background: #f5f0f7;
+        }
+
+        .calendar-day.selected {
+            border: 2px solid #106f36;
+            background: #f2edf6;
+        }
+
+        .calendar-day.today .day-number {
+            background: #106f36;
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .calendar-day:disabled {
+            cursor: default;
+            opacity: 0.35;
+        }
+
+        .day-number {
+            font-size: 13px;
+        }
+
+        .day-mood {
+            font-size: 20px;
+            min-height: 24px;
+        }
+
+        .calendar-hint {
+            color: #106f36;
+            font-size: 12px;
+            margin-top: 15px;
+        }
+
+        /* Selected date details */
+        .history-details {
+            margin-top: 20px;
+            background: #faf8fb;
+            border-radius: 13px;
+            padding: 18px;
+        }
+
+        .history-details h3 {
+            color:  #09040d;
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .history-details p {
+            font-size: 13px;
+            color: #0a391c;
+            white-space: pre-wrap;
+        }
+
+        .empty-history {
+            color:#08421f !important;
+            font-style: italic;
+        }
+
+        /* Privacy note */
+        .privacy-note {
+            text-align: center;
+            color: #498661;
+            font-size: 12px;
+            padding: 10px 15px 25px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+
+            .welcome h1 {
+                font-size: 24px;
+            }
+
+            .card {
+                padding: 18px;
+            }
+
+            .mood-options {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .calendar-weekdays,
+            .calendar-days {
+                gap: 4px;
+            }
+
+            .calendar-day {
+                min-height: 58px;
+                border-radius: 8px;
+            }
+
+            .day-mood {
+                font-size: 17px;
+            }
+
+            .calendar-weekdays div {
+                font-size: 10px;
+            }
+
+            .delete-button {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <div class="top-bar">
+        <a href="index.html" class="back-link" data-en="← Back to Home" data-my="← ပင်မစာမျက်နှာသို့">
+            ← Back to Home
+        </a>
+
+        <button class="language-button" id="languageToggle">
+            မြန်မာ
+        </button>
+    </div>
+
+    <!-- Welcome -->
+    <section class="welcome">
+        <p class="eyebrow" data-en="YOUR PERSONAL WELLNESS SPACE" data-my="သင့်ရဲ့ ကိုယ်ပိုင်စိတ်ကျန်းမာရေးနေရာ">
+            YOUR PERSONAL WELLNESS SPACE
+        </p>
+
+        <h1 data-en="How are you feeling today?" data-my="ဒီနေ့ ဘယ်လိုခံစားနေရလဲ။">
+            How are you feeling today?
+        </h1>
+
+        <p data-en="Every feeling deserves a little space." data-my="ခံစားချက်တိုင်းအတွက် နေရာလေးတစ်ခု ရှိသင့်ပါတယ်။">
+            Every feeling deserves a little space.
+        </p>
+    </section>
+
+    <!-- Daily Mood Tracker -->
+    <section class="card">
+
+        <h2 class="section-title" data-en="🌷 Today's Mood" data-my="🌷 ဒီနေ့ရဲ့ ခံစားချက်">
+            🌷 Today's Mood
+        </h2>
+
+        <p class="section-description" id="selectedDateText">
+            Choose the mood that best describes how you feel.
+        </p>
+
+        <div class="mood-options">
+
+            <button class="mood-option" data-mood="happy" type="button">
+                <span class="mood-emoji">😊</span>
+                <span class="mood-label" data-en="Happy" data-my="ပျော်ရွှင်">Happy</span>
+            </button>
+
+            <button class="mood-option" data-mood="okay" type="button">
+                <span class="mood-emoji">😐</span>
+                <span class="mood-label" data-en="Okay" data-my="ပုံမှန်">Okay</span>
+            </button>
+
+            <button class="mood-option" data-mood="sad" type="button">
+                <span class="mood-emoji">😔</span>
+                <span class="mood-label" data-en="Sad" data-my="ဝမ်းနည်း">Sad</span>
+            </button>
+
+            <button class="mood-option" data-mood="anxious" type="button">
+                <span class="mood-emoji">😰</span>
+                <span class="mood-label" data-en="Anxious" data-my="စိုးရိမ်">Anxious</span>
+            </button>
+
+            <button class="mood-option" data-mood="tired" type="button">
+                <span class="mood-emoji">😴</span>
+                <span class="mood-label" data-en="Tired" data-my="ပင်ပန်း">Tired</span>
+            </button>
+
+        </div>
+
+        <label class="reflection-label" for="moodNote"
+            data-en="Would you like to write something about your day?"
+            data-my="ဒီနေ့အကြောင်း တစ်ခုခု ရေးချင်ပါသလား။">
+            Would you like to write something about your day?
+        </label>
+
+        <textarea
+            id="moodNote"
+            placeholder="Write your thoughts here..."
+            data-placeholder-en="Write your thoughts here..."
+            data-placeholder-my="သင့်ရဲ့ အတွေးတွေကို ဒီမှာ ရေးနိုင်ပါတယ်..."
+        ></textarea>
+
+        <div>
+            <button class="save-button" id="saveMood"
+                data-en="Save My Mood" data-my="ခံစားချက်ကို သိမ်းမယ်">
+                Save My Mood
+            </button>
+
+            <button class="delete-button" id="deleteMood"
+                data-en="Delete Entry" data-my="မှတ်တမ်းဖျက်မယ်">
+                Delete Entry
+            </button>
+        </div>
+
+        <p class="save-message" id="saveMessage" aria-live="polite"></p>
+
+    </section>
+
+    <!-- Mood History Calendar -->
+    <section class="card">
+
+        <h2 class="section-title" data-en="📅 My Mood History" data-my="📅 ခံစားချက်မှတ်တမ်း">
+            📅 My Mood History
+        </h2>
+
+        <p class="section-description"
+            data-en="Look back at your feelings and give yourself time to reflect."
+            data-my="အရင်နေ့တွေက ခံစားချက်တွေကို ပြန်လည်ကြည့်ရှုပြီး ကိုယ့်ကိုယ်ကို အချိန်ပေးပါ။">
+            Look back at your feelings and give yourself time to reflect.
+        </p>
+
+        <div class="calendar-header">
+
+            <button class="month-button" id="previousMonth" aria-label="Previous month">
+                &#10094;
+            </button>
+
+            <h3 id="monthYear"></h3>
+
+            <button class="month-button" id="nextMonth" aria-label="Next month">
+                &#10095;
+            </button>
+
+        </div>
+
+        <div class="calendar-weekdays" id="weekdays"></div>
+
+        <div class="calendar-days" id="calendarDays"></div>
+
+        <p class="calendar-hint"
+            data-en="Select a date to view or edit your mood entry."
+            data-my="နေ့စွဲတစ်ခုကို ရွေးပြီး ခံစားချက်မှတ်တမ်းကို ကြည့်ရှု သို့မဟုတ် ပြင်ဆင်နိုင်ပါတယ်။">
+            Select a date to view or edit your mood entry.
+        </p>
+
+        <div class="history-details">
+
+            <h3 id="historyDate">Select a date</h3>
+
+            <p id="historyMood" class="empty-history">
+                No mood recorded for this date yet.
+            </p>
+
+            <p id="historyNote"></p>
+
+        </div>
+
+    </section>
+
+    <p class="privacy-note"
+        data-en="🔒 Your mood entries are saved in this browser on this device. They are not uploaded to a server."
+        data-my="🔒 သင့်ခံစားချက်မှတ်တမ်းများကို ဒီစက်ရဲ့ browser ထဲမှာသာ သိမ်းဆည်းထားပါတယ်။ Server ပေါ်သို့ ပို့ဆောင်ထားခြင်း မရှိပါ။">
+        🔒 Your mood entries are saved in this browser on this device. They are not uploaded to a server.
+    </p>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // -----------------------------
+    // BASIC SETTINGS
+    // -----------------------------
+
+    const STORAGE_KEY = "mindfulMeMoodHistory";
+
+    const moods = {
+        happy: {
+            emoji: "😊",
+            en: "Happy",
+            my: "ပျော်ရွှင်"
+        },
+        okay: {
+            emoji: "😐",
+            en: "Okay",
+            my: "ပုံမှန်"
+        },
+        sad: {
+            emoji: "😔",
+            en: "Sad",
+            my: "ဝမ်းနည်း"
+        },
+        anxious: {
+            emoji: "😰",
+            en: "Anxious",
+            my: "စိုးရိမ်"
+        },
+        tired: {
+            emoji: "😴",
+            en: "Tired",
+            my: "ပင်ပန်း"
+        }
+    };
+
+    const translations = {
+        en: {
+            chooseMood: "Choose the mood that best describes how you feel.",
+            selectedDate: "Selected date: ",
+            saved: "Your mood has been saved. 💜",
+            deleted: "Your entry has been deleted.",
+            selectMood: "Please choose a mood before saving.",
+            noEntry: "No mood recorded for this date yet.",
+            selectDate: "Select a date",
+            confirmDelete: "Delete this mood entry?",
+            noMood: "No mood selected",
+            note: "Your note: ",
+            days: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+            months: [
+                "January", "February", "March", "April",
+                "May", "June", "July", "August",
+                "September", "October", "November", "December"
+            ]
+        },
+        my: {
+            chooseMood: "သင့်ခံစားချက်နဲ့ အကိုက်ညီဆုံးကို ရွေးချယ်ပါ။",
+            selectedDate: "ရွေးထားသောနေ့စွဲ: ",
+            saved: "သင့်ခံစားချက်ကို သိမ်းဆည်းပြီးပါပြီ။ 💜",
+            deleted: "မှတ်တမ်းကို ဖျက်ပြီးပါပြီ။",
+            selectMood: "မသိမ်းခင် ခံစားချက်တစ်ခုကို ရွေးချယ်ပေးပါ။",
+            noEntry: "ဒီနေ့အတွက် ခံစားချက်မှတ်တမ်း မရှိသေးပါ။",
+            selectDate: "နေ့စွဲတစ်ခုကို ရွေးချယ်ပါ",
+            confirmDelete: "ဒီခံစားချက်မှတ်တမ်းကို ဖျက်မှာ သေချာပါသလား။",
+            noMood: "ခံစားချက် မရွေးချယ်ရသေးပါ",
+            note: "မှတ်ချက်: ",
+            days: ["တနင်္ဂနွေ", "တနင်္လာ", "အင်္ဂါ", "ဗုဒ္ဓဟူး", "ကြာသပတေး", "သောကြာ", "စနေ"],
+            months: [
+                "ဇန်နဝါရီ", "ဖေဖော်ဝါရီ", "မတ်", "ဧပြီ",
+                "မေ", "ဇွန်", "ဇူလိုင်", "ဩဂုတ်",
+                "စက်တင်ဘာ", "အောက်တိုဘာ", "နိုဝင်ဘာ", "ဒီဇင်ဘာ"
+            ]
+        }
+    };
+
+    let currentLanguage = "en";
+    let selectedMood = null;
+
+    const today = new Date();
+
+    let selectedDate = makeDateKey(today);
+
+    let displayedMonth = new Date(
+        today.getFullYear(),
+        today.getMonth(),
+        1
+    );
+
+    let moodHistory = {};
+
+    try {
+        moodHistory = JSON.parse(
+            localStorage.getItem(STORAGE_KEY) || "{}"
+        );
+
+        if (
+            !moodHistory ||
+            typeof moodHistory !== "object" ||
+            Array.isArray(moodHistory)
+        ) {
+            moodHistory = {};
+        }
+    } catch (error) {
+        moodHistory = {};
+    }
+
+    // -----------------------------
+    // ELEMENTS
+    // -----------------------------
+
+    const moodButtons = document.querySelectorAll(".mood-option");
+    const moodNote = document.getElementById("moodNote");
+    const saveButton = document.getElementById("saveMood");
+    const deleteButton = document.getElementById("deleteMood");
+    const saveMessage = document.getElementById("saveMessage");
+
+    const monthYear = document.getElementById("monthYear");
+    const calendarDays = document.getElementById("calendarDays");
+    const weekdays = document.getElementById("weekdays");
+
+    const historyDate = document.getElementById("historyDate");
+    const historyMood = document.getElementById("historyMood");
+    const historyNote = document.getElementById("historyNote");
+
+    // -----------------------------
+    // DATE FUNCTIONS
+    // -----------------------------
+
+    function makeDateKey(date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, "0");
+        const day = String(date.getDate()).padStart(2, "0");
+
+        return `${year}-${month}-${day}`;
+    }
+
+    function parseDateKey(key) {
+        const [year, month, day] = key.split("-").map(Number);
+        return new Date(year, month - 1, day);
+    }
+
+    function formatDate(date) {
+        return date.toLocaleDateString(
+            currentLanguage === "my" ? "my-MM" : "en-US",
+            {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric"
+            }
+        );
+    }
+
+    function isFutureDate(key) {
+        return key > makeDateKey(today);
+    }
+
+    // -----------------------------
+    // SAVE DATA
+    // -----------------------------
+
+    function saveToStorage() {
+        try {
+            localStorage.setItem(
+                STORAGE_KEY,
+                JSON.stringify(moodHistory)
+            );
+            return true;
+        } catch (error) {
+            saveMessage.textContent =
+                "Unable to save. Your browser storage may be full or unavailable.";
+            return false;
+        }
+    }
+
+    // -----------------------------
+    // MOOD SELECTION
+    // -----------------------------
+
+    moodButtons.forEach(button => {
+
+        button.addEventListener("click", function () {
+
+            selectedMood = this.dataset.mood;
+
+            moodButtons.forEach(item => {
+                item.classList.remove("selected");
+            });
+
+            this.classList.add("selected");
+
+            saveMessage.textContent = "";
+        });
+
+    });
+
+    // -----------------------------
+    // LOAD SELECTED DATE
+    // -----------------------------
+
+    function loadSelectedDate() {
+
+        const entry = moodHistory[selectedDate];
+
+        selectedMood = entry ? entry.mood : null;
+
+        moodButtons.forEach(button => {
+
+            button.classList.toggle(
+                "selected",
+                button.dataset.mood === selectedMood
+            );
+
+            button.disabled = isFutureDate(selectedDate);
+
+        });
+
+        moodNote.value = entry ? (entry.note || "") : "";
+
+        document.getElementById("selectedDateText").textContent =
+            formatDate(parseDateKey(selectedDate)) +
+            " — " +
+            translations[currentLanguage].chooseMood;
+
+        saveMessage.textContent = "";
+
+        renderHistoryDetails();
+    }
+
+    // -----------------------------
+    // SAVE MOOD
+    // -----------------------------
+
+    saveButton.addEventListener("click", function () {
+
+        if (isFutureDate(selectedDate)) {
+            return;
+        }
+
+        if (!selectedMood) {
+            saveMessage.textContent =
+                translations[currentLanguage].selectMood;
+            return;
+        }
+
+        moodHistory[selectedDate] = {
+            mood: selectedMood,
+            note: moodNote.value.trim()
+        };
+
+        if (saveToStorage()) {
+            saveMessage.textContent =
+                translations[currentLanguage].saved;
+        }
+
+        renderCalendar();
+        renderHistoryDetails();
+
+    });
+
+    // -----------------------------
+    // DELETE MOOD
+    // -----------------------------
+
+    deleteButton.addEventListener("click", function () {
+
+        if (!moodHistory[selectedDate]) {
+            return;
+        }
+
+        if (
+            confirm(translations[currentLanguage].confirmDelete)
+        ) {
+
+            delete moodHistory[selectedDate];
+
+            saveToStorage();
+
+            selectedMood = null;
+            moodNote.value = "";
+
+            moodButtons.forEach(button => {
+                button.classList.remove("selected");
+            });
+
+            saveMessage.textContent =
+                translations[currentLanguage].deleted;
+
+            renderCalendar();
+            renderHistoryDetails();
+
+        }
+
+    });
+
+    // -----------------------------
+    // CALENDAR
+    // -----------------------------
+
+    function renderCalendar() {
+
+        const year = displayedMonth.getFullYear();
+        const month = displayedMonth.getMonth();
+
+        monthYear.textContent =
+            translations[currentLanguage].months[month] +
+            " " +
+            year;
+
+        weekdays.innerHTML = "";
+
+        translations[currentLanguage].days.forEach(day => {
+
+            const dayElement = document.createElement("div");
+            dayElement.textContent = day;
+
+            weekdays.appendChild(dayElement);
+
+        });
+
+        calendarDays.innerHTML = "";
+
+        const firstDay = new Date(year, month, 1).getDay();
+
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+        // Empty spaces before the first day
+        for (let i = 0; i < firstDay; i++) {
+
+            const empty = document.createElement("div");
+            calendarDays.appendChild(empty);
+
+        }
+
+        // Calendar dates
+        for (let day = 1; day <= daysInMonth; day++) {
+
+            const date = new Date(year, month, day);
+            const dateKey = makeDateKey(date);
+
+            const entry = moodHistory[dateKey];
+
+            const button = document.createElement("button");
+
+            button.type = "button";
+            button.className = "calendar-day";
+
+            if (dateKey === makeDateKey(today)) {
+                button.classList.add("today");
+            }
+
+            if (dateKey === selectedDate) {
+                button.classList.add("selected");
+            }
+
+            button.disabled = isFutureDate(dateKey);
+
+            const number = document.createElement("span");
+            number.className = "day-number";
+            number.textContent = day;
+
+            const emoji = document.createElement("span");
+            emoji.className = "day-mood";
+
+            if (entry && moods[entry.mood]) {
+                emoji.textContent = moods[entry.mood].emoji;
+                button.title = moods[entry.mood][currentLanguage];
+            } else {
+                emoji.textContent = "";
+            }
+
+            button.appendChild(number);
+            button.appendChild(emoji);
+
+            button.addEventListener("click", function () {
+
+                selectedDate = dateKey;
+
+                loadSelectedDate();
+                renderCalendar();
+
+            });
+
+            calendarDays.appendChild(button);
+
+        }
+
+    }
+
+    // -----------------------------
+    // HISTORY DETAILS
+    // -----------------------------
+
+    function renderHistoryDetails() {
+
+        const entry = moodHistory[selectedDate];
+
+        historyDate.textContent =
+            formatDate(parseDateKey(selectedDate));
+
+        historyNote.textContent = "";
+
+        if (!entry || !moods[entry.mood]) {
+
+            historyMood.textContent =
+                translations[currentLanguage].noEntry;
+
+            historyMood.classList.add("empty-history");
+
+            return;
+
+        }
+
+        historyMood.classList.remove("empty-history");
+
+        historyMood.textContent =
+            moods[entry.mood].emoji +
+            " " +
+            moods[entry.mood][currentLanguage];
+
+        if (entry.note) {
+            historyNote.textContent =
+                translations[currentLanguage].note +
+                entry.note;
+        }
+
+    }
+
+    // -----------------------------
+    // MONTH NAVIGATION
+    // -----------------------------
+
+    document.getElementById("previousMonth").addEventListener(
+        "click",
+        function () {
+
+            displayedMonth.setMonth(
+                displayedMonth.getMonth() - 1
+            );
+
+            renderCalendar();
+
+        }
+    );
+
+    document.getElementById("nextMonth").addEventListener(
+        "click",
+        function () {
+
+            const nextMonth = new Date(
+                displayedMonth.getFullYear(),
+                displayedMonth.getMonth() + 1,
+                1
+            );
+
+            const currentMonth = new Date(
+                today.getFullYear(),
+                today.getMonth(),
+                1
+            );
+
+            if (nextMonth <= currentMonth) {
+                displayedMonth = nextMonth;
+                renderCalendar();
+            }
+
+        }
+    );
+
+    // -----------------------------
+    // LANGUAGE TOGGLE
+    // -----------------------------
+
+    const languageToggle =
+        document.getElementById("languageToggle");
+
+    function updateLanguage() {
+
+        document.documentElement.lang = currentLanguage;
+
+        document.querySelectorAll("[data-en]").forEach(element => {
+
+            element.textContent =
+                element.dataset[currentLanguage];
+
+        });
+
+        moodNote.placeholder =
+            moodNote.dataset["placeholder" + (
+                currentLanguage === "en" ? "En" : "My"
+            )];
+
+        languageToggle.textContent =
+            currentLanguage === "en" ? "မြန်မာ" : "English";
+
+        loadSelectedDate();
+        renderCalendar();
+
+    }
+
+    languageToggle.addEventListener("click", function () {
+
+        currentLanguage =
+            currentLanguage === "en" ? "my" : "en";
+
+        updateLanguage();
+
+    });
+
+    // -----------------------------
+    // INITIAL DISPLAY
+    // -----------------------------
+
+    updateLanguage();
+
+});
+</script>
+
+</body>
+</html>
