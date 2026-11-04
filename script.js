@@ -188,9 +188,71 @@ a3_content3li5:"Let go of unnecessary worries.",
 ref:"Reference:",
 
 footer:
-"🌿 Read slowly, reflect deeply, and be kind to yourself."
-     
-  
+"🌿 Read slowly, reflect deeply, and be kind to yourself.",
+
+sectionTitle: "What would you like to do?",
+        sectionDescription: "Every message has a place in this ocean.",
+
+        sendMessageTitle: "Send a Message",
+        sendMessageDescription:
+            "Share your feelings, wishes, dreams or thoughts anonymously.",
+
+        writeLetter: "Write a Letter",
+
+        discoverBottleTitle: "Discover a Bottle",
+        discoverBottleDescription:
+            "Pick a random bottle and read a message from another person.",
+
+        findBottle: "Find a Bottle",
+
+        dearOcean: "Dear Ocean, 💌",
+        writeSubtitle: "Take a moment. Write whatever is on your mind.",
+
+        categoryLabel: "Choose your message type",
+
+        categoryFeelings: "💚 Feelings",
+        categoryWishes: "🌟 Wishes",
+        categoryDreams: "🌈 Dreams",
+        categoryGratitude: "🌻 Gratitude",
+        categoryEncouragement: "💜 Encouragement",
+        categoryThoughts: "☁️ Thoughts",
+
+        messageLabel: "Your message",
+        messagePlaceholder: "Dear Ocean, today I feel...",
+
+        privacyNotice:
+            "🔒 Your message will be anonymous. New messages are reviewed before appearing publicly. Please do not include names, phone numbers, addresses or other personal information.",
+
+        send: "🫙 Release My Bottle",
+        cancel: "Cancel",
+
+        discoveryTitle: "A message is waiting for you 💌",
+        discoveryDescription:
+            "You never know whose words might brighten your day.",
+
+        randomButton: "🎁 Pick a Random Bottle",
+
+        collectionTitle: "Messages from the Ocean 🌊",
+        refresh: "↻ Refresh",
+
+        loading: "🌊 Loading messages...",
+        empty: "No bottles have arrived yet.",
+        emptyDescription:
+            "Be the first to send a little message into the ocean.",
+
+        noRandom: "There are no approved bottles to discover yet.",
+
+        success:
+            "🫙 Your bottle has been released! It will appear after review.",
+
+        error: "Something went wrong. Please try again.",
+
+        config: "Please add your Supabase URL and publishable key first.",
+
+        short: "Please write at least 10 characters.",
+        long: "Your message is too long.",
+
+        sending: "Sending...",
 
   },
   my: {
@@ -399,8 +461,76 @@ ref:"ကိုးကားချက်:",
 
 footer:
 "🌿 ဖြည်းဖြည်းချင်း ဖတ်ပါ၊ စဉ်းစားဆင်ခြင်ပါ၊ ကိုယ့်ကိုယ်ကို ကြင်နာပါ။",
+sectionTitle: "ဒီနေ့ ဘာလုပ်ချင်ပါသလဲ။",
+        sectionDescription:
+            "စာတိုင်းအတွက် ဒီပင်လယ်လေးထဲမှာ နေရာတစ်ခုရှိပါတယ်။",
 
+        sendMessageTitle: "စာတစ်စောင် ရေးသားမယ်",
+        sendMessageDescription:
+            "ကိုယ့်ရဲ့ ခံစားချက်၊ ဆုတောင်းချက်၊ အိပ်မက်နဲ့ အတွေးတွေကို အမည်မဖော်ဘဲ မျှဝေလိုက်ပါ။",
 
+        writeLetter: "စာရေးမယ်",
+
+        discoverBottleTitle: "ပုလင်းလေးတစ်လုံး ရှာမယ်",
+        discoverBottleDescription:
+            "ပုလင်းလေးတစ်လုံးကို ကောက်ယူပြီး အခြားသူတစ်ယောက်ရဲ့ စာကို ဖတ်ကြည့်ပါ။",
+
+        findBottle: "စာတစ်စောင် ဖတ်မယ်",
+
+        dearOcean: "ချစ်ရပါသော ပင်လယ်ကြီးရေ၊ 💌",
+        writeSubtitle:
+            "ခဏလောက် အချိန်ယူပြီး ရင်ထဲမှာရှိတာလေးတွေ ရေးသားလိုက်ပါ။",
+
+        categoryLabel: "စာအမျိုးအစားကို ရွေးချယ်ပါ",
+
+        categoryFeelings: "💚 ခံစားချက်များ",
+        categoryWishes: "🌟 ဆုတောင်းချက်များ",
+        categoryDreams: "🌈 အိပ်မက်များ",
+        categoryGratitude: "🌻 ကျေးဇူးတင်ခြင်း",
+        categoryEncouragement: "💜 အားပေးစကားများ",
+        categoryThoughts: "☁️ အတွေးများ",
+
+        messageLabel: "သင့်ရဲ့စာ",
+        messagePlaceholder:
+            "ချစ်ရပါသော ပင်လယ်ကြီးရေ၊ ဒီနေ့ ကျွန်တော်/ကျွန်မ ခံစားနေရတာက...",
+
+        privacyNotice:
+            "🔒 သင့်စာကို အမည်မဖော်ဘဲ မျှဝေပါမယ်။ အများမြင်နိုင်တဲ့နေရာမှာ မပေါ်ခင် စာတိုင်းကို စစ်ဆေးပါမယ်။ အမည်၊ ဖုန်းနံပါတ်၊ လိပ်စာနဲ့ ကိုယ်ရေးကိုယ်တာအချက်အလက်တွေ မထည့်ပါနဲ့။",
+
+        send: "🫙 ပုလင်းလေးကို လွှတ်လိုက်မယ်",
+        cancel: "မလုပ်တော့ပါ",
+
+        discoveryTitle: "သင့်အတွက် စာတစ်စောင် ရှိနေနိုင်ပါတယ် 💌",
+        discoveryDescription:
+            "ဘယ်သူ့ရဲ့ စကားလုံးလေးတွေက သင့်နေ့ရက်ကို ပိုမိုလင်းလက်စေမလဲဆိုတာ မသိနိုင်ပါဘူး။",
+
+        randomButton: "🎁 ပုလင်းလေးတစ်လုံး ကောက်ယူမယ်",
+
+        collectionTitle: "ပင်လယ်ထဲက စာလေးများ 🌊",
+        refresh: "↻ ပြန်ဖွင့်မယ်",
+
+        loading: "🌊 စာလေးများကို ဖွင့်နေပါတယ်...",
+        empty: "ပုလင်းလေးတွေ မရောက်ရှိသေးပါဘူး။",
+
+        emptyDescription:
+            "ပင်လယ်ထဲကို ပထမဆုံး စာလေးတစ်စောင် ပို့ပေးလိုက်ပါ။",
+
+        noRandom:
+            "ရှာဖွေဖတ်ရှုနိုင်တဲ့ အတည်ပြုပြီးသော ပုလင်းလေးများ မရှိသေးပါဘူး။",
+
+        success:
+            "🫙 သင့်ရဲ့ပုလင်းလေးကို လွှတ်လိုက်ပါပြီ။ စစ်ဆေးပြီးနောက် ပေါ်လာပါမယ်။",
+
+        error:
+            "တစ်ခုခု မှားယွင်းသွားပါတယ်။ ကျေးဇူးပြုပြီး ထပ်မံကြိုးစားပါ။",
+
+        config:
+            "ကျေးဇူးပြုပြီး Supabase URL နဲ့ Publishable Key ကို အရင်ထည့်ပါ။",
+
+        short: "အနည်းဆုံး စာလုံး ၁၀ လုံး ရေးပေးပါ။",
+        long: "သင့်စာက သတ်မှတ်ထားတဲ့ အရှည်ထက် ကျော်လွန်နေပါတယ်။",
+
+        sending: "ပို့နေပါတယ်...",
   }
 };
 

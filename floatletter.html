@@ -1,0 +1,1517 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Message in a Bottle | Mindful Me</title>
+
+    <meta name="description"
+          content="A peaceful place to share your wishes, thoughts and feelings.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+
+    <!-- Supabase JavaScript v2 -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+
+    <style>
+        :root {
+            --green: #5fe8b2;
+            --green-dark: #24a982;
+            --purple: #9370db;
+            --purple-dark: #7351b8;
+            --blue: #8bd9f4;
+            --deep-blue: #255b79;
+            --cream: #fffdf5;
+            --text: #344b59;
+            --muted: #8296a2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: var(--text);
+            background: #f5fbf9;
+            overflow-x: hidden;
+        }
+
+        button, textarea, select {
+            font: inherit;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 17px 7%;
+            background: white;
+            box-shadow: 0 3px 18px rgba(50, 100, 100, 0.06);
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--green-dark);
+        }
+
+        .logo span {
+            color: var(--purple);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        .language-btn {
+            border: 1px solid #dcebe6;
+            background: white;
+            padding: 8px 13px;
+            border-radius: 20px;
+            font-weight: 800;
+            color: var(--purple-dark);
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 490px;
+            padding: 65px 20px 0;
+            text-align: center;
+            background: linear-gradient(
+                180deg,
+                #e9f9f5 0%,
+                #d5f2f2 48%,
+                #a8e4ed 100%
+            );
+            position: relative;
+            overflow: hidden;
+        }
+
+        .eyebrow {
+            color: var(--green-dark);
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 6vw, 55px);
+            line-height: 1.15;
+            color: #285c70;
+            font-weight: 900;
+        }
+
+        .hero h1 span {
+            color: var(--purple);
+        }
+
+        .hero-description {
+            max-width: 550px;
+            margin: 17px auto;
+            color: #527b87;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* PIXEL OCEAN */
+
+        .ocean {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 170px;
+            overflow: hidden;
+            background: #64c8dc;
+            image-rendering: pixelated;
+        }
+
+        .wave {
+            position: absolute;
+            width: 200%;
+            height: 45px;
+            left: -20%;
+            background: #8be0e4;
+            border-radius: 45% 45% 0 0;
+            animation: waveMove 7s linear infinite;
+        }
+
+        .wave-one {
+            top: -18px;
+        }
+
+        .wave-two {
+            top: 12px;
+            left: -60%;
+            opacity: .55;
+            background: #3daecb;
+            animation-duration: 10s;
+        }
+
+        @keyframes waveMove {
+            from { transform: translateX(0); }
+            to { transform: translateX(25%); }
+        }
+
+        .pixel-cloud {
+            position: absolute;
+            width: 65px;
+            height: 15px;
+            background: white;
+            opacity: .8;
+            animation: cloudMove 22s linear infinite;
+        }
+
+        .pixel-cloud::before {
+            content: "";
+            position: absolute;
+            width: 25px;
+            height: 15px;
+            background: white;
+            top: -15px;
+            left: 12px;
+        }
+
+        .pixel-cloud::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 15px;
+            background: white;
+            top: -10px;
+            right: 5px;
+        }
+
+        .cloud-one {
+            top: 40px;
+            left: 10%;
+        }
+
+        .cloud-two {
+            top: 75px;
+            left: 75%;
+            animation-delay: -10s;
+        }
+
+        @keyframes cloudMove {
+            from { transform: translateX(-100px); }
+            to { transform: translateX(110vw); }
+        }
+
+        .pixel-sparkle {
+            position: absolute;
+            color: white;
+            font-size: 17px;
+            animation: sparkle 2s steps(2) infinite;
+        }
+
+        .sparkle-one { left: 22%; top: 35px; }
+        .sparkle-two { left: 80%; top: 15px; animation-delay: .8s; }
+        .sparkle-three { left: 60%; top: 80px; animation-delay: 1.2s; }
+
+        @keyframes sparkle {
+            50% { opacity: .2; transform: translateY(-5px); }
+        }
+
+        /* FLOATING BOTTLE */
+
+        .hero-bottle {
+            position: absolute;
+            z-index: 3;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 65px;
+            image-rendering: pixelated;
+            animation: bottleFloat 3s ease-in-out infinite;
+            filter: drop-shadow(5px 7px 0 rgba(30, 104, 130, .12));
+        }
+
+        @keyframes bottleFloat {
+            0%, 100% {
+                transform: translate(-50%, 0) rotate(-7deg);
+            }
+            50% {
+                transform: translate(-50%, -18px) rotate(8deg);
+            }
+        }
+
+        /* MAIN */
+
+        .main-container {
+            width: min(1100px, 92%);
+            margin: 55px auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 12px;
+            font-size: 28px;
+            font-weight: 900;
+            color: #365b68;
+        }
+
+        .section-description {
+            text-align: center;
+            color: var(--muted);
+            margin-bottom: 30px;
+        }
+
+        /* ACTION CARDS */
+
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            margin-bottom: 65px;
+        }
+
+        .action-card {
+            background: white;
+            border: 1px solid #e4f0ec;
+            border-radius: 22px;
+            padding: 30px 25px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(50, 100, 100, .05);
+            transition: .25s;
+        }
+
+        .action-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(80, 130, 120, .1);
+        }
+
+        .action-icon {
+            font-size: 45px;
+            margin-bottom: 12px;
+        }
+
+        .action-card h3 {
+            font-size: 21px;
+            margin-bottom: 8px;
+            color: #3c6472;
+        }
+
+        .action-card p {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+        .primary-btn {
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(100deg, #5fe8b2, #43cda9);
+            color: #174f49;
+            font-weight: 900;
+            padding: 12px 23px;
+            transition: .2s;
+        }
+
+        .primary-btn:hover {
+            transform: scale(1.04);
+        }
+
+        .secondary-btn {
+            border: none;
+            border-radius: 30px;
+            background: #eee8ff;
+            color: var(--purple-dark);
+            font-weight: 900;
+            padding: 12px 23px;
+            transition: .2s;
+        }
+
+        .secondary-btn:hover {
+            background: #e0d5ff;
+            transform: scale(1.04);
+        }
+
+        /* WRITE FORM */
+
+        .write-section {
+            background: white;
+            border-radius: 25px;
+            padding: 35px;
+            max-width: 750px;
+            margin: 0 auto 70px;
+            box-shadow: 0 10px 35px rgba(50, 100, 100, .06);
+            border: 1px solid #e5f0ed;
+            display: none;
+        }
+
+        .write-section.show {
+            display: block;
+            animation: appear .35s ease;
+        }
+
+        @keyframes appear {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .write-section h2 {
+            color: var(--purple-dark);
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .write-section .subtitle {
+            color: var(--muted);
+            margin-bottom: 23px;
+            font-size: 14px;
+        }
+
+        .field-label {
+            display: block;
+            font-weight: 800;
+            margin: 17px 0 8px;
+            color: #496675;
+        }
+
+        .write-section select,
+        .write-section textarea {
+            width: 100%;
+            border: 1px solid #dcebe6;
+            background: #fbfefd;
+            border-radius: 13px;
+            padding: 13px 15px;
+            color: var(--text);
+            outline: none;
+        }
+
+        .write-section textarea {
+            min-height: 160px;
+            resize: vertical;
+            line-height: 1.8;
+        }
+
+        .write-section textarea:focus,
+        .write-section select:focus {
+            border-color: var(--green-dark);
+            box-shadow: 0 0 0 3px rgba(95, 232, 178, .15);
+        }
+
+        .character-count {
+            text-align: right;
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 6px;
+        }
+
+        .notice {
+            background: #f3f0ff;
+            color: #725ca2;
+            border-radius: 12px;
+            padding: 13px;
+            font-size: 13px;
+            line-height: 1.7;
+            margin: 17px 0;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .cancel-btn {
+            border: 1px solid #e3e8e7;
+            background: white;
+            border-radius: 30px;
+            padding: 12px 20px;
+            color: #71838b;
+            font-weight: 800;
+        }
+
+        /* HONEYPOT */
+
+        .website-field {
+            position: absolute;
+            left: -9999px;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        /* BOTTLE COLLECTION */
+
+        .collection-section {
+            margin-top: 60px;
+        }
+
+        .collection-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 25px;
+        }
+
+        .collection-header h2 {
+            font-size: 27px;
+            color: #365b68;
+        }
+
+        .refresh-btn {
+            border: 1px solid #dcebe6;
+            color: var(--green-dark);
+            background: white;
+            padding: 9px 15px;
+            border-radius: 20px;
+            font-weight: 800;
+        }
+
+        .bottle-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .message-card {
+            background: white;
+            border: 1px solid #e5efec;
+            border-radius: 18px;
+            padding: 23px;
+            position: relative;
+            min-height: 220px;
+            box-shadow: 0 7px 22px rgba(50, 100, 100, .045);
+            animation: appear .4s ease;
+        }
+
+        .message-bottle {
+            font-size: 36px;
+            margin-bottom: 12px;
+            animation: miniFloat 3s ease-in-out infinite;
+            display: inline-block;
+        }
+
+        @keyframes miniFloat {
+            50% { transform: translateY(-5px) rotate(5deg); }
+        }
+
+        .message-category {
+            display: inline-block;
+            color: var(--purple-dark);
+            background: #f0ebff;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+        }
+
+        .message-text {
+            margin-top: 14px;
+            line-height: 1.8;
+            font-size: 15px;
+            color: #526a75;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+        }
+
+        .message-date {
+            margin-top: 17px;
+            color: #a0afb4;
+            font-size: 11px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 45px 20px;
+            background: white;
+            border-radius: 20px;
+            color: var(--muted);
+            grid-column: 1 / -1;
+        }
+
+        .empty-state .empty-icon {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        /* RANDOM DISCOVERY */
+
+        .discovery-area {
+            text-align: center;
+            margin: 60px auto;
+            background: linear-gradient(135deg, #f0ecff, #e6fbf3);
+            border-radius: 25px;
+            padding: 35px 20px;
+        }
+
+        .discovery-area h2 {
+            color: var(--purple-dark);
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .discovery-area p {
+            color: #788d96;
+            margin-bottom: 20px;
+        }
+
+        .random-result {
+            max-width: 550px;
+            margin: 25px auto 0;
+        }
+
+        .random-result .message-card {
+            text-align: left;
+        }
+
+        /* TOAST */
+
+        .toast {
+            position: fixed;
+            z-index: 100;
+            bottom: 25px;
+            left: 50%;
+            transform: translate(-50%, 20px);
+            background: #315d61;
+            color: white;
+            padding: 14px 22px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 800;
+            opacity: 0;
+            pointer-events: none;
+            transition: .3s;
+            width: max-content;
+            max-width: 90%;
+            text-align: center;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+
+        .loading {
+            text-align: center;
+            color: var(--muted);
+            padding: 30px;
+            grid-column: 1 / -1;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 35px 20px;
+            background: #eaf8f3;
+            color: #78918e;
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        footer strong {
+            color: var(--green-dark);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 750px) {
+            .bottle-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero {
+                min-height: 450px;
+                padding-top: 55px;
+            }
+
+            .action-grid {
+                gap: 12px;
+            }
+
+            .action-card {
+                padding: 22px 13px;
+            }
+
+            .write-section {
+                padding: 23px 18px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            nav {
+                padding: 14px 5%;
+            }
+
+            .nav-link {
+                display: none;
+            }
+
+            .bottle-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .action-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .collection-header h2 {
+                font-size: 23px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="logo">Mindful <span>Me.</span></div>
+
+    <div class="nav-right">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="Articles.html">Articles</a>
+
+        <button class="language-btn" id="languageBtn">
+            မြန်မာ
+        </button>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+<header class="hero">
+
+    <p class="eyebrow"
+       data-en="A LITTLE CORNER OF THE INTERNET"
+       data-my="အင်တာနက်ပေါ်က နွေးထွေးတဲ့ နေရာလေးတစ်ခု">
+       A LITTLE CORNER OF THE INTERNET
+    </p>
+
+    <h1 data-en="Message in a <span>Bottle</span>"
+        data-my="<span>ပုလင်းလေးထဲက</span> စာတစ်စောင်">
+        Message in a <span>Bottle</span>
+    </h1>
+
+    <p class="hero-description"
+       data-en="Write what your heart wants to say. Release it into the ocean. Somewhere, someone might understand."
+       data-my="ကိုယ့်ရင်ထဲက ပြောချင်တဲ့အရာတွေကို ရေးသားလိုက်ပါ။ ပင်လယ်ထဲကို လွှတ်လိုက်ပါ။ တစ်နေရာရာမှာ ကိုယ့်ခံစားချက်ကို နားလည်ပေးမယ့်သူ ရှိနေနိုင်ပါတယ်။">
+       Write what your heart wants to say. Release it into the ocean.
+       Somewhere, someone might understand.
+    </p>
+
+    <div class="ocean">
+        <div class="pixel-cloud cloud-one"></div>
+        <div class="pixel-cloud cloud-two"></div>
+
+        <span class="pixel-sparkle sparkle-one">✦</span>
+        <span class="pixel-sparkle sparkle-two">✧</span>
+        <span class="pixel-sparkle sparkle-three">✦</span>
+
+        <div class="wave wave-one"></div>
+        <div class="wave wave-two"></div>
+    </div>
+
+    <div class="hero-bottle">🍾</div>
+
+</header>
+
+
+<!-- MAIN -->
+<main class="main-container">
+
+    <h2 class="section-title"
+        data-en="What would you like to do?"
+        data-my="ဒီနေ့ ဘာလုပ်ချင်ပါသလဲ။">
+        What would you like to do?
+    </h2>
+
+    <p class="section-description"
+       data-en="Every message has a place in this ocean."
+       data-my="စာတိုင်းအတွက် ဒီပင်လယ်လေးထဲမှာ နေရာတစ်ခုရှိပါတယ်။">
+       Every message has a place in this ocean.
+    </p>
+
+
+    <!-- ACTION CARDS -->
+    <div class="action-grid">
+
+        <div class="action-card">
+            <div class="action-icon">✉️</div>
+
+            <h3 data-en="Send a Message"
+                data-my="စာတစ်စောင် ရေးသားမယ်">
+                Send a Message
+            </h3>
+
+            <p data-en="Share your feelings, wishes, dreams or thoughts anonymously."
+               data-my="ကိုယ့်ရဲ့ ခံစားချက်၊ ဆုတောင်းချက်၊ အိပ်မက်နဲ့ အတွေးတွေကို အမည်မဖော်ဘဲ မျှဝေလိုက်ပါ။">
+               Share your feelings, wishes, dreams or thoughts anonymously.
+            </p>
+
+            <button class="primary-btn" id="openFormBtn"
+                    data-en="Write a Letter"
+                    data-my="စာရေးမယ်">
+                Write a Letter
+            </button>
+        </div>
+
+
+        <div class="action-card">
+            <div class="action-icon">🌊</div>
+
+            <h3 data-en="Discover a Bottle"
+                data-my="ပုလင်းလေးတစ်လုံး ရှာမယ်">
+                Discover a Bottle
+            </h3>
+
+            <p data-en="Pick a random bottle and read a message from another person."
+               data-my="ပုလင်းလေးတစ်လုံးကို ကောက်ယူပြီး အခြားသူတစ်ယောက်ရဲ့ စာကို ဖတ်ကြည့်ပါ။">
+               Pick a random bottle and read a message from another person.
+            </p>
+
+            <button class="secondary-btn" id="discoverBtn"
+                    data-en="Find a Bottle"
+                    data-my="စာတစ်စောင် ဖတ်မယ်">
+                Find a Bottle
+            </button>
+        </div>
+
+    </div>
+
+
+    <!-- WRITE FORM -->
+    <section class="write-section" id="writeSection">
+
+        <h2 data-en="Dear Ocean, 💌"
+            data-my="ချစ်ရပါသော ပင်လယ်ကြီးရေ၊ 💌">
+            Dear Ocean, 💌
+        </h2>
+
+        <p class="subtitle"
+           data-en="Take a moment. Write whatever is on your mind."
+           data-my="ခဏလောက် အချိန်ယူပြီး ရင်ထဲမှာရှိတာလေးတွေ ရေးသားလိုက်ပါ။">
+           Take a moment. Write whatever is on your mind.
+        </p>
+
+
+        <form id="messageForm">
+
+            <!-- Hidden honeypot field -->
+            <div class="website-field" aria-hidden="true">
+                <label for="website">Website</label>
+                <input type="text" id="website"
+                       name="website" tabindex="-1"
+                       autocomplete="off">
+            </div>
+
+
+            <label class="field-label" for="category"
+                   data-en="Choose your message type"
+                   data-my="စာအမျိုးအစားကို ရွေးချယ်ပါ">
+                Choose your message type
+            </label>
+
+            <select id="category" required>
+                <option value="feelings">💚 Feelings / ခံစားချက်များ</option>
+                <option value="wishes">🌟 Wishes / ဆုတောင်းချက်များ</option>
+                <option value="dreams">🌈 Dreams / အိပ်မက်များ</option>
+                <option value="gratitude">🌻 Gratitude / ကျေးဇူးတင်ခြင်း</option>
+                <option value="encouragement">💜 Encouragement / အားပေးစကားများ</option>
+                <option value="thoughts">☁️ Thoughts / အတွေးများ</option>
+            </select>
+
+
+            <label class="field-label" for="message"
+                   data-en="Your message"
+                   data-my="သင့်ရဲ့စာ">
+                Your message
+            </label>
+
+            <textarea id="message"
+                      maxlength="1200"
+                      minlength="10"
+                      required
+                      placeholder="Dear Ocean, today I feel..."
+                      data-placeholder-en="Dear Ocean, today I feel..."
+                      data-placeholder-my="ချစ်ရပါသော ပင်လယ်ကြီးရေ၊ ဒီနေ့ ကျွန်တော်/ကျွန်မ ခံစားနေရတာက..."
+            ></textarea>
+
+            <div class="character-count">
+                <span id="charCount">0</span> / 1200
+            </div>
+
+
+            <div class="notice"
+                 data-en="🔒 Your message will be anonymous. New messages are reviewed before appearing publicly. Please do not include names, phone numbers, addresses or other personal information."
+                 data-my="🔒 သင့်စာကို အမည်မဖော်ဘဲ မျှဝေပါမယ်။ အများမြင်နိုင်တဲ့နေရာမှာ မပေါ်ခင် စာတိုင်းကို စစ်ဆေးပါမယ်။ အမည်၊ ဖုန်းနံပါတ်၊ လိပ်စာနဲ့ ကိုယ်ရေးကိုယ်တာအချက်အလက်တွေ မထည့်ပါနဲ့။">
+                🔒 Your message will be anonymous. New messages are reviewed
+                before appearing publicly. Please do not include personal information.
+            </div>
+
+
+            <div class="form-actions">
+
+                <button type="submit" class="primary-btn" id="submitBtn"
+                        data-en="🫙 Release My Bottle"
+                        data-my="🫙 ပုလင်းလေးကို လွှတ်လိုက်မယ်">
+                    🫙 Release My Bottle
+                </button>
+
+                <button type="button" class="cancel-btn" id="cancelBtn"
+                        data-en="Cancel"
+                        data-my="မလုပ်တော့ပါ">
+                    Cancel
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+
+    <!-- RANDOM DISCOVERY -->
+    <section class="discovery-area" id="discoveryArea">
+
+        <h2 data-en="A message is waiting for you 💌"
+            data-my="သင့်အတွက် စာတစ်စောင် ရှိနေနိုင်ပါတယ် 💌">
+            A message is waiting for you 💌
+        </h2>
+
+        <p data-en="You never know whose words might brighten your day."
+           data-my="ဘယ်သူ့ရဲ့ စကားလုံးလေးတွေက သင့်နေ့ရက်ကို ပိုမိုလင်းလက်စေမလဲဆိုတာ မသိနိုင်ပါဘူး။">
+           You never know whose words might brighten your day.
+        </p>
+
+        <button class="secondary-btn" id="randomBtn"
+                data-en="🎁 Pick a Random Bottle"
+                data-my="🎁 ပုလင်းလေးတစ်လုံး ကောက်ယူမယ်">
+            🎁 Pick a Random Bottle
+        </button>
+
+        <div class="random-result" id="randomResult"></div>
+
+    </section>
+
+
+    <!-- PUBLIC MESSAGES -->
+    <section class="collection-section" id="collection">
+
+        <div class="collection-header">
+
+            <h2 data-en="Messages from the Ocean 🌊"
+                data-my="ပင်လယ်ထဲက စာလေးများ 🌊">
+                Messages from the Ocean 🌊
+            </h2>
+
+            <button class="refresh-btn" id="refreshBtn"
+                    data-en="↻ Refresh"
+                    data-my="↻ ပြန်ဖွင့်မယ်">
+                ↻ Refresh
+            </button>
+
+        </div>
+
+        <div class="bottle-grid" id="bottleGrid">
+            <div class="loading">🌊 Loading messages...</div>
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer>
+    <p><strong>Mindful Me</strong> · Message in a Bottle</p>
+
+    <p data-en="A little kindness can travel a long way."
+       data-my="ကြင်နာမှုလေးတစ်ခုဟာ အဝေးကြီးအထိ ရောက်ရှိသွားနိုင်ပါတယ်။">
+       A little kindness can travel a long way.
+    </p>
+
+    <p data-en="This space is for sharing and connection, not professional or emergency support."
+       data-my="ဤနေရာသည် ခံစားချက်များ မျှဝေရန်အတွက်သာ ဖြစ်ပြီး အရေးပေါ် သို့မဟုတ် ကျွမ်းကျင်သူ၏ အကူအညီကို အစားထိုးရန် မဟုတ်ပါ။">
+       This space is for sharing and connection, not professional or emergency support.
+    </p>
+
+    <p>© 2026 Hsu Academic Boost / Mindful Me</p>
+</footer>
+
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+
+<script>
+    
+// 1. Supabase configuration
+const SUPABASE_URL =
+    "https://evrjosbphegxunhgbtmg.supabase.co";
+
+const SUPABASE_KEY =
+    "sb_publishable_C2nmYw6T-xQXrc8Y8GUF4w_PkgKBB9C";
+
+// 2. Check configuration
+const supabaseReady =
+    SUPABASE_URL.startsWith("https://") &&
+    SUPABASE_KEY.startsWith("sb_publishable_");
+
+// 3. Check SDK
+console.log("Supabase SDK:", window.supabase);
+console.log("Supabase URL:", SUPABASE_URL);
+console.log("Configuration ready:", supabaseReady);
+
+// 4. Initialize Supabase
+let db = null;
+
+if (supabaseReady && window.supabase) {
+    db = window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_KEY
+    );
+
+    console.log("Mindful Me Supabase initialized!");
+} else {
+    console.error("Supabase initialization failed.");
+}
+
+// 5. Test connection
+async function testSupabaseConnection() {
+    if (!db) return;
+
+    const { data, error } = await db
+        .from("bottle_messages")
+        .select("*")
+        .limit(1);
+
+    if (error) {
+        console.error("Database error:", error.message);
+    } else {
+        console.log("Database connected!", data);
+    }
+}
+
+testSupabaseConnection();
+
+/* =========================================
+   2. PAGE ELEMENTS
+========================================= */
+
+const messageForm = document.getElementById("messageForm");
+const messageInput = document.getElementById("message");
+const categoryInput = document.getElementById("category");
+
+const writeSection = document.getElementById("writeSection");
+const bottleGrid = document.getElementById("bottleGrid");
+const randomResult = document.getElementById("randomResult");
+
+const submitBtn = document.getElementById("submitBtn");
+const toast = document.getElementById("toast");
+
+let currentLanguage = "en";
+let approvedMessages = [];
+let toastTimer;
+
+
+/* =========================================
+   3. TRANSLATIONS
+========================================= */
+
+const translations = {
+    en: {
+        loading: "🌊 Loading messages...",
+        empty: "No bottles have arrived yet.",
+        emptyDescription: "Be the first to send a little message into the ocean.",
+        noRandom: "There are no approved bottles to discover yet.",
+        success: "🫙 Your bottle has been released! It will appear after review.",
+        error: "Something went wrong. Please try again.",
+        config: "Please add your Supabase URL and publishable key first.",
+        short: "Please write at least 10 characters.",
+        long: "Your message is too long.",
+        sending: "Sending...",
+        send: "🫙 Release My Bottle",
+        language: "မြန်မာ",
+        categories: {
+            feelings: "Feelings",
+            wishes: "Wishes",
+            dreams: "Dreams",
+            gratitude: "Gratitude",
+            encouragement: "Encouragement",
+            thoughts: "Thoughts"
+        }
+    },
+
+    my: {
+        loading: "🌊 စာလေးတွေကို ရှာဖွေနေပါတယ်...",
+        empty: "ပုလင်းလေးတွေ မရောက်လာသေးပါဘူး။",
+        emptyDescription: "ပင်လယ်ထဲကို ပထမဆုံးစာတစ်စောင် ပို့လိုက်ပါ။",
+        noRandom: "ဖတ်ရှုနိုင်တဲ့ စာလေးတွေ မရှိသေးပါဘူး။",
+        success: "🫙 သင့်ပုလင်းလေးကို ပို့လိုက်ပါပြီ။ စစ်ဆေးပြီးမှ ပေါ်လာပါမယ်။",
+        error: "အမှားတစ်ခု ဖြစ်သွားပါတယ်။ ထပ်ကြိုးစားကြည့်ပါ။",
+        config: "Supabase URL နဲ့ publishable key ကို အရင်ထည့်ပေးပါ။",
+        short: "အနည်းဆုံး စာလုံး ၁၀ လုံး ရေးပေးပါ။",
+        long: "စာသားက သတ်မှတ်ထားတဲ့ အရှည်ထက် ကျော်နေပါတယ်။",
+        sending: "ပို့နေပါတယ်...",
+        send: "🫙 ပုလင်းလေးကို လွှတ်လိုက်မယ်",
+        language: "English",
+        categories: {
+            feelings: "ခံစားချက်များ",
+            wishes: "ဆုတောင်းချက်များ",
+            dreams: "အိပ်မက်များ",
+            gratitude: "ကျေးဇူးတင်ခြင်း",
+            encouragement: "အားပေးစကားများ",
+            thoughts: "အတွေးများ"
+        }
+    }
+};
+
+
+/* =========================================
+   4. LANGUAGE SWITCH
+========================================= */
+
+function changeLanguage(lang) {
+
+    currentLanguage = lang;
+
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll("[data-en][data-my]").forEach(element => {
+
+        const value = element.dataset[lang];
+
+        if (value !== undefined) {
+            element.innerHTML = value;
+        }
+
+    });
+
+    document.getElementById("languageBtn").textContent =
+        translations[lang].language;
+
+    messageInput.placeholder =
+        messageInput.dataset["placeholder" + lang.toUpperCase()];
+
+    renderMessages(approvedMessages);
+}
+
+document.getElementById("languageBtn").addEventListener("click", () => {
+    changeLanguage(currentLanguage === "en" ? "my" : "en");
+});
+
+
+/* =========================================
+   5. TOAST NOTIFICATION
+========================================= */
+
+function showToast(message) {
+
+    toast.textContent = message;
+    toast.classList.add("show");
+
+    clearTimeout(toastTimer);
+
+    toastTimer = setTimeout(() => {
+        toast.classList.remove("show");
+    }, 3500);
+}
+
+
+/* =========================================
+   6. OPEN AND CLOSE FORM
+========================================= */
+
+document.getElementById("openFormBtn").addEventListener("click", () => {
+
+    writeSection.classList.add("show");
+
+    writeSection.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+    messageInput.focus();
+});
+
+
+document.getElementById("cancelBtn").addEventListener("click", () => {
+
+    writeSection.classList.remove("show");
+    messageForm.reset();
+
+    document.getElementById("charCount").textContent = "0";
+});
+
+
+/* =========================================
+   7. CHARACTER COUNTER
+========================================= */
+
+messageInput.addEventListener("input", () => {
+
+    document.getElementById("charCount").textContent =
+        messageInput.value.length;
+
+});
+
+
+/* =========================================
+   8. MESSAGE CATEGORIES
+========================================= */
+
+function getCategoryName(category) {
+
+    return translations[currentLanguage].categories[category] ||
+        category;
+}
+
+
+/* =========================================
+   9. ESCAPE HTML
+========================================= */
+
+function escapeHTML(value) {
+
+    return String(value).replace(/[&<>"']/g, char => {
+
+        const entities = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#039;"
+        };
+
+        return entities[char];
+    });
+}
+
+
+/* =========================================
+   10. CREATE MESSAGE CARD
+========================================= */
+
+function createMessageCard(item) {
+
+    const card = document.createElement("article");
+
+    card.className = "message-card";
+
+    const bottle = document.createElement("div");
+    bottle.className = "message-bottle";
+    bottle.textContent = "🍾";
+
+    const category = document.createElement("span");
+    category.className = "message-category";
+    category.textContent = getCategoryName(item.category);
+
+    const message = document.createElement("p");
+    message.className = "message-text";
+
+    // Use textContent to prevent submitted HTML from executing.
+    message.textContent = item.message;
+
+    const date = document.createElement("div");
+    date.className = "message-date";
+
+    date.textContent = new Date(item.created_at).toLocaleDateString(
+        currentLanguage === "my" ? "my-MM" : "en-GB",
+        {
+            year: "numeric",
+            month: "short",
+            day: "numeric"
+        }
+    );
+
+    card.append(bottle, category, message, date);
+
+    return card;
+}
+
+
+/* =========================================
+   11. LOAD APPROVED MESSAGES
+========================================= */
+
+async function loadMessages() {
+
+    if (!db) {
+
+        bottleGrid.innerHTML = `
+            <div class="empty-state">
+                <div class="empty-icon">⚙️</div>
+                <h3>Supabase is not configured</h3>
+                <p>Add your project URL and publishable key in the JavaScript.</p>
+            </div>
+        `;
+
+        return;
+    }
+
+    bottleGrid.innerHTML = `
+        <div class="loading">
+            ${translations[currentLanguage].loading}
+        </div>
+    `;
+
+    const { data, error } = await db
+        .from("bottle_messages")
+        .select("id, message, language, category, created_at")
+        .order("created_at", { ascending: false })
+        .limit(30);
+
+    if (error) {
+
+        console.error("Supabase load error:", error);
+
+        bottleGrid.innerHTML = `
+            <div class="empty-state">
+                <div class="empty-icon">🌧️</div>
+                <p>${escapeHTML(translations[currentLanguage].error)}</p>
+            </div>
+        `;
+
+        return;
+    }
+
+    approvedMessages = data || [];
+
+    renderMessages(approvedMessages);
+}
+
+
+/* =========================================
+   12. DISPLAY MESSAGES
+========================================= */
+
+function renderMessages(messages) {
+
+    bottleGrid.innerHTML = "";
+
+    if (!messages.length) {
+
+        const empty = document.createElement("div");
+
+        empty.className = "empty-state";
+
+        const icon = document.createElement("div");
+        icon.className = "empty-icon";
+        icon.textContent = "🫙";
+
+        const heading = document.createElement("h3");
+        heading.textContent = translations[currentLanguage].empty;
+
+        const description = document.createElement("p");
+        description.textContent =
+            translations[currentLanguage].emptyDescription;
+
+        empty.append(icon, heading, description);
+
+        bottleGrid.appendChild(empty);
+
+        return;
+    }
+
+    messages.forEach(item => {
+
+        bottleGrid.appendChild(createMessageCard(item));
+
+    });
+}
+
+
+/* =========================================
+   13. SUBMIT MESSAGE
+========================================= */
+
+messageForm.addEventListener("submit", async event => {
+
+    event.preventDefault();
+
+    if (!db) {
+        showToast(translations[currentLanguage].config);
+        return;
+    }
+
+    // Basic honeypot check.
+    if (document.getElementById("website").value.trim() !== "") {
+        return;
+    }
+
+    const message = messageInput.value.trim();
+    const category = categoryInput.value;
+
+    if (message.length < 10) {
+        showToast(translations[currentLanguage].short);
+        return;
+    }
+
+    if (message.length > 1200) {
+        showToast(translations[currentLanguage].long);
+        return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = translations[currentLanguage].sending;
+
+    try {
+
+        const { error } = await db
+            .from("bottle_messages")
+            .insert({
+                message: message,
+                language: currentLanguage,
+                category: category
+            });
+
+        if (error) {
+            throw error;
+        }
+
+        // New submissions are pending moderation.
+        // They are intentionally not displayed immediately.
+
+        showToast(translations[currentLanguage].success);
+
+        messageForm.reset();
+
+        document.getElementById("charCount").textContent = "0";
+
+        writeSection.classList.remove("show");
+
+    } catch (error) {
+
+        console.error("Submission error:", error);
+
+        showToast(translations[currentLanguage].error);
+
+    } finally {
+
+        submitBtn.disabled = false;
+        submitBtn.textContent = translations[currentLanguage].send;
+
+    }
+
+});
+
+
+/* =========================================
+   14. RANDOM BOTTLE
+========================================= */
+
+function discoverRandomBottle() {
+
+    if (!approvedMessages.length) {
+
+        randomResult.innerHTML = `
+            <div class="message-card">
+                <div class="message-bottle">🌊</div>
+                <p class="message-text">
+                    ${escapeHTML(translations[currentLanguage].noRandom)}
+                </p>
+            </div>
+        `;
+
+        return;
+    }
+
+    const randomIndex = Math.floor(
+        Math.random() * approvedMessages.length
+    );
+
+    const selectedMessage = approvedMessages[randomIndex];
+
+    randomResult.innerHTML = "";
+
+    randomResult.appendChild(
+        createMessageCard(selectedMessage)
+    );
+
+    randomResult.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+}
+
+
+document.getElementById("discoverBtn").addEventListener("click", () => {
+
+    document.getElementById("discoveryArea").scrollIntoView({
+        behavior: "smooth"
+    });
+
+    discoverRandomBottle();
+
+});
+
+
+document.getElementById("randomBtn").addEventListener("click", () => {
+
+    discoverRandomBottle();
+
+});
+
+
+/* =========================================
+   15. REFRESH BUTTON
+========================================= */
+
+document.getElementById("refreshBtn").addEventListener("click", () => {
+
+    randomResult.innerHTML = "";
+
+    loadMessages();
+
+});
+
+
+/* =========================================
+   16. INITIALIZE
+========================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    loadMessages();
+
+});
+
+</script>
+
+</body>
+</html>
