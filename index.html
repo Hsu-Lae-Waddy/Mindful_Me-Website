@@ -695,6 +695,131 @@
                 font-size: 23px;
             }
         }
+        /* =====================================
+   MODAL STYLES
+===================================== */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(25, 45, 55, 0.65);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.modal.show {
+    display: flex;
+    animation: modalFadeIn 0.3s ease;
+}
+
+.modal-content {
+    position: relative;
+
+    background: white;
+    width: 100%;
+    max-width: 550px;
+
+    max-height: 85vh;
+    overflow-y: auto;
+
+    padding: 30px;
+    border-radius: 22px;
+
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+
+    animation: modalSlideIn 0.3s ease;
+}
+
+.modal-content h2 {
+    font-size: 25px;
+    font-weight: 900;
+    color: #7351b8;
+    margin-bottom: 15px;
+}
+
+.modal-content p {
+    line-height: 1.8;
+}
+
+.modal-content ul {
+    padding-left: 20px;
+}
+
+.modal-content li {
+    margin: 12px 0;
+    line-height: 1.8;
+}
+
+.close {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+
+    font-size: 32px;
+    font-weight: bold;
+
+    color: #8296a2;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.close:hover {
+    color: #e05275;
+    transform: scale(1.15);
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 500px) {
+    .modal-content {
+        padding: 25px 18px;
+    }
+}
+
+#circle {
+    transition: width 4s ease-in-out, height 4s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+}
+
+#breathText {
+    white-space: pre-line;
+    text-align: center;
+    font-weight: bold;
+}
+
     </style>
 <body>
     <header class="headerForMindFul">
@@ -741,163 +866,8 @@
 
     </div>
     </section>
-    <!-- The Modal -->
-<!-- Modal Background -->
-<div id="breathingModal" class="modal">
 
-    <!-- Modal Box -->
-    <div class="modal-content">
-
-        <!-- Close Button -->
-        <span class="close">&times;</span>
-
-        <h2 data-key="breathingexercise">Breathing Exercise</h2>
-       
-
-<div class="brcircle1">
-    <div class="brcircle" id="circle">
-        <span class="text" id="breathText">
- <div class="buttons">
-    <button onclick="startBeginner()" class="Bbuttons p-2 m-1" >Beginner</button>
-    <button onclick="startIntermediate()" class="Ibuttons p-2 m-1">Intermediate</button>
-</div>
-        </span>
-    </div>
-</div>
-
-<p id="guideText"></p>
-
-    </div>
-</div>
-<!-- Modal Background -->
-<div id="groundingModal" class="modal">
-
-    <!-- Modal Box -->
-    <div class="modal-content">
-
-        <!-- Close Button -->
-        <span class="close">&times;</span>
-        <h2 data-key="Grounding5">5-4-3-2-1 Grounding</h2>
-        <p class="transition-colors text-[#5a7d65]" data-key="G1">
-            Focus on your senses to anchor yourself in the present.
-        </p>
-        <div>
-            <div class="flex items-center gap-3 bg-[#7de89c] rounded-lg px-4 py-3 shadow-sm m-1">
-            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-[#04e044] text-black text-s font-medium flex items-center justify-center"> <i class="fa-solid fa-eye p-2" ></i></span>
-            <p class="text-m text-black" data-key="Gstep1">5 Things you can <strong>see</strong></p>
-        </div>
-        <div class="flex items-center gap-3 bg-[#7de89c] rounded-lg px-4 py-3 shadow-sm m-1">
-            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-[#04e044] text-black text-s font-medium flex items-center justify-center"><i class="fa-solid fa-hand-pointer p-2"></i></span>
-            <p class="text-m text-black"  data-key="Gstep2">4 Things you can <strong>touch</strong></p>
-        </div>
-        <div class="flex items-center gap-3 bg-[#7de89c] rounded-lg px-4 py-3 shadow-sm m-1">
-            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-[#04e044] text-black text-s font-medium flex items-center justify-center"><i class="fa-solid fa-ear-listen p-2"></i></span>
-            <p class="text-m text-black"  data-key="Gstep3">3 Things you can <strong>hear</strong></p>
-        </div>
-        <div class="flex items-center gap-3 bg-[#7de89c] rounded-lg px-4 py-3 shadow-sm m-1">
-            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-[#04e044] text-black text-s font-medium flex items-center justify-center"><img src="assets/nose.png" class="w-6 h-6"></span>
-            <p class="text-m text-black"  data-key="Gstep4">2 Things you can <strong>smell</strong></p>
-        </div>
-        <div class="flex items-center gap-3 bg-[#7de89c] rounded-lg px-4 py-3 shadow-sm m-1">
-            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-[#04e044] text-black text-s font-medium flex items-center justify-center"><img src="assets/mouth-icon.png" class="w-6 h-6"></span>
-            <p class="text-m text-black"  data-key="Gstep5">1 Things you can <strong>taste</strong></p>
-        </div>
-        </div>
-
-    </div>
-</div>
-
-<div id="relaxationModal" class="modal">
-
-    <!-- Modal Box -->
-    <div class="modal-content">
-
-        <!-- Close Button -->
-        <span class="close">&times;</span>
-
-        <h2 data-key="MuscleRelaxation">Muscle Relaxation</h2>
-        <p class="transition-colors text-[#5a7d65]" data-key="tension">When overwhelmed, the body holds tension.</p>
-
-        <div class="flex items-center gap-3 bg-[#7de89c] rounded-lg px-4 py-3 shadow-sm m-1">
-            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-[#04e044] text-black text-xs font-medium flex items-center justify-center">1</span>
-            <p class="text-sm text-black" data-key="Mstep1">Tighten your fists for 5 seconds → release.</p>
-        </div>
-        <div class="flex items-center gap-3 bg-[#7de89c] rounded-lg px-4 py-3 shadow-sm m-1">
-            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-[#04e044] text-black text-xs font-medium flex items-center justify-center">2</span>
-            <p class="text-sm text-black" data-key="Mstep2">Shoulders tightly → release.</p>
-        </div>
-        <div class="flex items-center gap-3 bg-[#7de89c] rounded-lg px-4 py-3 shadow-sm m-1">
-            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-[#04e044] text-black text-xs font-medium flex items-center justify-center">3</span>
-           <p class="text-sm text-black" data-key="Mstep3"> Clench jaw → release.</p>
-        </div>
-        <div class="flex items-center gap-3 bg-[#7de89c] rounded-lg px-4 py-3 shadow-sm m-1">
-            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-[#04e044] text-black text-xs font-medium flex items-center justify-center">4</span>
-           <p class="text-sm text-black" data-key="Mstep4"> Press toes downward → release.</p>
-        </div>
-        
-
-    </div>
-</div>
-
-<div id="resetQModal" class="modal">
-
-    <!-- Modal Box -->
-    <div class="modal-content">
-
-        <!-- Close Button -->
-        <span class="close">&times;</span>
-
-        <h2 class="text-[#310c87]" data-key="CognitiveQ">Cognitive Reset Questions</h2>
-        <p class="transition-colors text-[#8365c9]" data-key="askQ">After calming your body, ask:</p>
-        <ul> 
-            <li><p class="text-[#310c87] ">Question 1</p>
-                <p data-key="Q1ForResetQ">What exactly am I afraid will happen?</p></li>
-            <li><p class="text-[#310c87] ">Question 2</p>
-                <p data-key="Q2ForResetQ">Is this a current threat or a future possibility?</p></li>
-            <li><p class="text-[#310c87] ">Question 3</p>
-                <p data-key="Q3ForResetQ">What is one small action I can take now?</p></li>
-        </ul>
-
-    
-     <div class="PrecisionFooter w-full" > 
-            <p><i class="fa-solid fa-file-pen"></i></p>
-        <p data-key="ResetQFooter">Precision reduces anxiety.</p>
-        <p class="transition-colors text-[#310c87]" data-key="ResetQFooter2">            Take your time with each question. <br>
-             Write your answers if it helps.</p>
-        </div>
-        </div>
-</div>
-
-<!-- Modal Background -->
-<div id="EmergencyModal" class="modal">
-
-    <!-- Modal Box -->
-    <div class="modal-content">
-
-        <!-- Close Button -->
-        <span class="close">&times;</span>
-
-       
-        <div class="SOScontacts">
-         
-        <div class="bg-red-200/80 red m-3">
-            <h2 class="text-red text-2xl">🆘 Crisis Resources</h2>
-            <p class="text-red text-bold" data-key="dangertext">If you're in immediate danger: </p>
-            <p class="text-red" data-key="dangertext2">Please contact emergency services or a crisis helpline.</p>
-        </div>
-            <ul>
-                <li>📞 Mental Health Support Line: <span style="color: forestgreen;">+95 9 765 400 200 </span></li>
-                <li>📞 Call or  💬 text: <span style="color: forestgreen;">988</span></li>
-                <li>🌐International Association: <span style="color: forestgreen;">findahelpline.com</span></li>
-            </ul>
-        </div>
-        <p class="transition-colors text-[#5a7d65]" data-key="dangerTextfooter">You matter. Help is available. 💙</p>
-
-    </div>
-</div>
-
-
-<!-- MAIN -->
+    <!-- MAIN -->
 <main class="main-container">
 
     <h2 class="section-title" data-key="sectionTitle">
@@ -1081,6 +1051,163 @@
     </section>
 
 </main>
+    <!-- The Modal -->
+<!-- Modal Background -->
+<div id="breathingModal" class="modal">
+
+    <!-- Modal Box -->
+    <div class="modal-content">
+
+        <!-- Close Button -->
+        <span class="close">&times;</span>
+
+        <h2 data-key="breathingexercise">Breathing Exercise</h2>
+       
+
+<div class="brcircle1">
+    <div class="brcircle" id="circle">
+        <span class="text" id="breathText">
+ <div class="buttons">
+    <button onclick="startBeginner()" class="Bbuttons p-2 m-1" >Beginner</button>
+    <button onclick="startIntermediate()" class="Ibuttons p-2 m-1">Intermediate</button>
+</div>
+        </span>
+    </div>
+</div>
+
+<p id="guideText"></p>
+
+    </div>
+</div>
+<!-- Modal Background -->
+<div id="groundingModal" class="modal">
+
+    <!-- Modal Box -->
+    <div class="modal-content">
+
+        <!-- Close Button -->
+        <span class="close">&times;</span>
+        <h2 data-key="Grounding5">5-4-3-2-1 Grounding</h2>
+        <p class="transition-colors text-[#5a7d65]" data-key="G1">
+            Focus on your senses to anchor yourself in the present.
+        </p>
+        <div>
+            <div class="flex items-center gap-3 bg-[#7de89c] rounded-lg px-4 py-3 shadow-sm m-1">
+            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-[#04e044] text-black text-s font-medium flex items-center justify-center"> <i class="fa-solid fa-eye p-2" ></i></span>
+            <p class="text-m text-black" data-key="Gstep1">5 Things you can <strong>see</strong></p>
+        </div>
+        <div class="flex items-center gap-3 bg-[#7de89c] rounded-lg px-4 py-3 shadow-sm m-1">
+            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-[#04e044] text-black text-s font-medium flex items-center justify-center"><i class="fa-solid fa-hand-pointer p-2"></i></span>
+            <p class="text-m text-black"  data-key="Gstep2">4 Things you can <strong>touch</strong></p>
+        </div>
+        <div class="flex items-center gap-3 bg-[#7de89c] rounded-lg px-4 py-3 shadow-sm m-1">
+            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-[#04e044] text-black text-s font-medium flex items-center justify-center"><i class="fa-solid fa-ear-listen p-2"></i></span>
+            <p class="text-m text-black"  data-key="Gstep3">3 Things you can <strong>hear</strong></p>
+        </div>
+        <div class="flex items-center gap-3 bg-[#7de89c] rounded-lg px-4 py-3 shadow-sm m-1">
+            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-[#04e044] text-black text-s font-medium flex items-center justify-center"><img src="assets/nose.png" class="w-6 h-6"></span>
+            <p class="text-m text-black"  data-key="Gstep4">2 Things you can <strong>smell</strong></p>
+        </div>
+        <div class="flex items-center gap-3 bg-[#7de89c] rounded-lg px-4 py-3 shadow-sm m-1">
+            <span class="flex-shrink-0 w-10 h-10 rounded-full bg-[#04e044] text-black text-s font-medium flex items-center justify-center"><img src="assets/mouth-icon.png" class="w-6 h-6"></span>
+            <p class="text-m text-black"  data-key="Gstep5">1 Things you can <strong>taste</strong></p>
+        </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="relaxationModal" class="modal">
+
+    <!-- Modal Box -->
+    <div class="modal-content">
+
+        <!-- Close Button -->
+        <span class="close">&times;</span>
+
+        <h2 data-key="MuscleRelaxation">Muscle Relaxation</h2>
+        <p class="transition-colors text-[#5a7d65]" data-key="tension">When overwhelmed, the body holds tension.</p>
+
+        <div class="flex items-center gap-3 bg-[#7de89c] rounded-lg px-4 py-3 shadow-sm m-1">
+            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-[#04e044] text-black text-xs font-medium flex items-center justify-center">1</span>
+            <p class="text-sm text-black" data-key="Mstep1">Tighten your fists for 5 seconds → release.</p>
+        </div>
+        <div class="flex items-center gap-3 bg-[#7de89c] rounded-lg px-4 py-3 shadow-sm m-1">
+            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-[#04e044] text-black text-xs font-medium flex items-center justify-center">2</span>
+            <p class="text-sm text-black" data-key="Mstep2">Shoulders tightly → release.</p>
+        </div>
+        <div class="flex items-center gap-3 bg-[#7de89c] rounded-lg px-4 py-3 shadow-sm m-1">
+            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-[#04e044] text-black text-xs font-medium flex items-center justify-center">3</span>
+           <p class="text-sm text-black" data-key="Mstep3"> Clench jaw → release.</p>
+        </div>
+        <div class="flex items-center gap-3 bg-[#7de89c] rounded-lg px-4 py-3 shadow-sm m-1">
+            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-[#04e044] text-black text-xs font-medium flex items-center justify-center">4</span>
+           <p class="text-sm text-black" data-key="Mstep4"> Press toes downward → release.</p>
+        </div>
+        
+
+    </div>
+</div>
+
+<div id="resetQModal" class="modal">
+
+    <!-- Modal Box -->
+    <div class="modal-content">
+
+        <!-- Close Button -->
+        <span class="close">&times;</span>
+
+        <h2 class="text-[#310c87]" data-key="CognitiveQ">Cognitive Reset Questions</h2>
+        <p class="transition-colors text-[#8365c9]" data-key="askQ">After calming your body, ask:</p>
+        <ul> 
+            <li><p class="text-[#310c87] ">Question 1</p>
+                <p data-key="Q1ForResetQ">What exactly am I afraid will happen?</p></li>
+            <li><p class="text-[#310c87] ">Question 2</p>
+                <p data-key="Q2ForResetQ">Is this a current threat or a future possibility?</p></li>
+            <li><p class="text-[#310c87] ">Question 3</p>
+                <p data-key="Q3ForResetQ">What is one small action I can take now?</p></li>
+        </ul>
+
+    
+     <div class="PrecisionFooter w-full" > 
+            <p><i class="fa-solid fa-file-pen"></i></p>
+        <p data-key="ResetQFooter">Precision reduces anxiety.</p>
+        <p class="transition-colors text-[#310c87]" data-key="ResetQFooter2">            Take your time with each question. <br>
+             Write your answers if it helps.</p>
+        </div>
+        </div>
+</div>
+
+<!-- Modal Background -->
+<div id="EmergencyModal" class="modal">
+
+    <!-- Modal Box -->
+    <div class="modal-content">
+
+        <!-- Close Button -->
+        <span class="close">&times;</span>
+
+       
+        <div class="SOScontacts">
+         
+        <div class="bg-red-200/80 red m-3">
+            <h2 class="text-red text-2xl">🆘 Crisis Resources</h2>
+            <p class="text-red text-bold" data-key="dangertext">If you're in immediate danger: </p>
+            <p class="text-red" data-key="dangertext2">Please contact emergency services or a crisis helpline.</p>
+        </div>
+            <ul>
+                <li>📞 Mental Health Support Line: <span style="color: forestgreen;">+95 9 765 400 200 </span></li>
+                <li>📞 Call or  💬 text: <span style="color: forestgreen;">988</span></li>
+                <li>🌐International Association: <span style="color: forestgreen;">findahelpline.com</span></li>
+            </ul>
+        </div>
+        <p class="transition-colors text-[#5a7d65]" data-key="dangerTextfooter">You matter. Help is available. 💙</p>
+
+    </div>
+</div>
+
+
+
 
 
 <!-- FOOTER -->
@@ -1552,12 +1679,183 @@ document.addEventListener("DOMContentLoaded", () => {
     loadMessages();
 
 });
+/* =========================================
+   17. MODAL OPEN AND CLOSE SYSTEM
+========================================= */
+
+// Connect each card to its corresponding modal
+const modalConnections = {
+    BreathingCard: "breathingModal",
+    GroundingCard: "groundingModal",
+    RelaxationCard: "relaxationModal",
+    ResetQCard: "resetQModal",
+    EmergencyCard: "EmergencyModal"
+};
+
+
+// Open a modal
+function openModal(modalId) {
+
+    const modal = document.getElementById(modalId);
+
+    if (!modal) {
+        console.error("Modal not found:", modalId);
+        return;
+    }
+
+    modal.classList.add("show");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+// Close a modal
+function closeModal(modal) {
+
+    if (!modal) return;
+
+    modal.classList.remove("show");
+
+    // Restore page scrolling if no other modal is open
+    const anotherModalOpen = document.querySelector(".modal.show");
+
+    if (!anotherModalOpen) {
+        document.body.style.overflow = "";
+    }
+
+}
+
+
+// Add click events to all five cards
+Object.entries(modalConnections).forEach(([cardId, modalId]) => {
+
+    const card = document.getElementById(cardId);
+
+    if (!card) {
+        console.error("Card not found:", cardId);
+        return;
+    }
+
+    card.addEventListener("click", () => {
+        openModal(modalId);
+    });
+
+});
+
+
+// Close buttons inside all modals
+document.querySelectorAll(".modal .close").forEach(closeButton => {
+
+    closeButton.addEventListener("click", () => {
+
+        const modal = closeButton.closest(".modal");
+
+        closeModal(modal);
+
+    });
+
+});
+
+
+// Close modal when clicking outside the modal content
+document.querySelectorAll(".modal").forEach(modal => {
+
+    modal.addEventListener("click", event => {
+
+        if (event.target === modal) {
+            closeModal(modal);
+        }
+
+    });
+
+});
+
+
+// Close modal using Escape key
+document.addEventListener("keydown", event => {
+
+    if (event.key === "Escape") {
+
+        document.querySelectorAll(".modal.show").forEach(modal => {
+            closeModal(modal);
+        });
+
+    }
+
+});
+
+console.log("Mindful Me modal system initialized!");
+
+let interval;
+let timeout1;
+let timeout2;
+
+function stopBreathing() {
+    clearInterval(interval);
+    clearTimeout(timeout1);
+    clearTimeout(timeout2);
+}
+
+function startBeginner() {
+    stopBreathing();
+
+    const circle = document.getElementById("circle");
+    const text = document.getElementById("breathText");
+    const guide = document.getElementById("guideText");
+
+    guide.innerText = "Inhale (ရှူသွင်းပါ) 4s • Exhale (ရှူထုတ်ပါ) 4s";
+
+    function cycle() {
+        text.innerText = "Inhale\nရှူသွင်းပါ";
+        circle.style.width = "200px";
+        circle.style.height = "200px";
+
+        timeout1 = setTimeout(() => {
+            text.innerText = "Exhale\nရှူထုတ်ပါ";
+            circle.style.width = "80px";
+            circle.style.height = "80px";
+        }, 4000);
+    }
+
+    cycle();
+    interval = setInterval(cycle, 8000);
+}
+
+function startIntermediate() {
+    stopBreathing();
+
+    const circle = document.getElementById("circle");
+    const text = document.getElementById("breathText");
+    const guide = document.getElementById("guideText");
+
+    guide.innerText = "Inhale 4s • Hold 4s • Exhale 4s";
+
+    function cycle() {
+        text.innerText = "Inhale\nရှူသွင်းပါ";
+        circle.style.width = "200px";
+        circle.style.height = "200px";
+
+        timeout1 = setTimeout(() => {
+            text.innerText = "Hold\nခဏအောင့်ထားပါ";
+        }, 4000);
+
+        timeout2 = setTimeout(() => {
+            text.innerText = "Exhale\nရှူထုတ်ပါ";
+            circle.style.width = "80px";
+            circle.style.height = "80px";
+        }, 8000);
+    }
+
+    cycle();
+    interval = setInterval(cycle, 12000);
+}
+
 
 </script>
 
 </body>
     <footer data-key="footer" class="transition-colors text-[#5a7d65]">💚 Remember: You're not alone. Help is always available.</footer>
 </body>
-<script src="script.js"></script>
 </html>
 
