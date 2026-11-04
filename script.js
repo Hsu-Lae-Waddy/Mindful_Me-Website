@@ -151,7 +151,7 @@ const translations = {
         med_s6_d: "Open your eyes slowly. Notice how you feel.",
         
         // Footer
-        footer: "You can practice mindfulness in small moments — walking, eating, or listening to music.",
+        footerform: "You can practice mindfulness in small moments — walking, eating, or listening to music.",
         checklist_title: "📋 MoodTracker",
     //readingArticles
 title:"📚 Reading Articles",
@@ -187,7 +187,7 @@ a3_content3li4:"Focus on what you can control.",
 a3_content3li5:"Let go of unnecessary worries.",
 ref:"Reference:",
 
-footer:
+footerforw:
 "🌿 Read slowly, reflect deeply, and be kind to yourself.",
 
 sectionTitle: "What would you like to do?",
@@ -424,7 +424,7 @@ med_s6: "ဖြည်းဖြည်းချင်း အဆုံးသတ်�
 med_s6_d: "မျက်လုံးကို ဖြည်းဖြည်းချင်း ဖွင့်ပြီး ကိုယ့်ရဲ့ ခံစားချက်ကို သတိထားကြည့်ပါ။",
 
 // Footer
-footer: "လမ်းလျှောက်နေစဉ်၊ အစာစားနေစဉ် သို့မဟုတ် သီချင်းနားထောင်နေစဉ်ကဲ့သို့ နေ့စဉ်အချိန်လေးများတွင်လည်း Mindfulness ကို လေ့ကျင့်နိုင်ပါတယ်။",
+footerform: "လမ်းလျှောက်နေစဉ်၊ အစာစားနေစဉ် သို့မဟုတ် သီချင်းနားထောင်နေစဉ်ကဲ့သို့ နေ့စဉ်အချိန်လေးများတွင်လည်း Mindfulness ကို လေ့ကျင့်နိုင်ပါတယ်။",
  checklist_title: "📋 စိတ်ခံစားချက် မှတ်တမ်း",
    //Reading Articles
     title:"📚 ဖတ်ရှုလေ့လာရန် ဆောင်းပါးများ",
@@ -459,7 +459,7 @@ a3_content3li4:"မိမိလုပ်နိုင်သော အရာမျ
 a3_content3li5:"မလိုအပ်သော စိုးရိမ်မှုများကို လျှော့ချပါ။",
 ref:"ကိုးကားချက်:",
 
-footer:
+footerforw:
 "🌿 ဖြည်းဖြည်းချင်း ဖတ်ပါ၊ စဉ်းစားဆင်ခြင်ပါ၊ ကိုယ့်ကိုယ်ကို ကြင်နာပါ။",
 sectionTitle: "ဒီနေ့ ဘာလုပ်ချင်ပါသလဲ။",
         sectionDescription:
